@@ -103,7 +103,7 @@ nav{border-bottom:2px solid var(--ink);background:var(--bone)}
 .story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,84px);align-items:start}
 .story-grid > *{min-width:0}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin-bottom:16px}
-.story h2,.counter h2,.menu h2,.reviews h2,.gallery h2,.visit h2{font-size:clamp(1.9rem,3.1vw,2.9rem);margin-bottom:22px}
+.story h2,.counter h2,.menu h2,.reviews h2,.visit h2{font-size:clamp(1.9rem,3.1vw,2.9rem);margin-bottom:22px}
 .story p{color:var(--ink2);max-width:58ch}
 .story p + p{margin-top:18px}
 .spec{margin-top:34px;border-top:2px solid var(--ink)}
@@ -139,10 +139,19 @@ nav{border-bottom:2px solid var(--ink);background:var(--bone)}
 .card .frame{aspect-ratio:4/3;box-shadow:var(--shadow)}
 .card h3{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:16px 0 8px}
 .card p{font-size:15px;color:var(--taupe)}
-.card .sign-crop{position:relative;overflow:hidden}
-.card .sign-crop img{position:absolute;left:-14%;top:0;width:114%;max-width:none;height:100%;object-fit:cover;object-position:50% 8%}
-.card .mark-crop img{object-position:50% 82%}
 .card .cup-crop img{object-position:50% 30%}
+/* typed panels: one photo one place, so the sign lives in the hero and the mark on the menu */
+.card .frame.tpanel{display:flex;flex-direction:column;justify-content:center;padding:clamp(18px,2vw,28px) clamp(16px,1.9vw,24px)}
+.card .tp-kick{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.tp-board{list-style:none;margin-top:10px;border-top:2px solid var(--ink)}
+.tp-board li{padding:7px 2px;border-bottom:1px solid var(--line);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.02rem,1.3vw,1.25rem);line-height:1.2;letter-spacing:-.01em}
+.card .tp-foot{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
+.card .frame.inked{background:var(--ink);color:var(--bone);align-items:center;text-align:center}
+.card .inked .tp-kick{color:rgba(244,239,229,.62)}
+.card .tp-word{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2rem,2.9vw,2.8rem);line-height:1;letter-spacing:-.015em;margin-top:10px;color:var(--bone)}
+.card .tp-lock{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-top:9px;color:rgba(244,239,229,.85)}
+.tp-rule{display:block;width:44px;border-top:2px solid rgba(244,239,229,.5);margin:14px auto 12px}
+.card .inked .tp-foot{margin-top:0;color:rgba(244,239,229,.62)}
 
 /* ---------- menu ---------- */
 .menu{background:var(--bone2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:clamp(76px,9vw,124px) 0}
@@ -170,17 +179,6 @@ nav{border-bottom:2px solid var(--ink);background:var(--bone)}
 .qmark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:44px;line-height:.6;padding-top:10px}
 .q p{font-size:16px;color:var(--ink2)}
 .q cite{margin-top:auto;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
-
-/* ---------- gallery ---------- */
-.gallery{padding:clamp(72px,9vw,120px) 0;background:var(--bone)}
-.gal{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,34px);margin-top:10px}
-.gal > *{min-width:0}
-.gal .frame{position:relative}
-.g-tall .frame{aspect-ratio:9/11}
-.g-mid .frame{aspect-ratio:10/9.8}
-.gal .sf{position:relative;overflow:hidden}
-.gal .sf img{position:absolute;left:-14%;top:0;width:114%;max-width:none;height:100%;object-fit:cover;object-position:50% 45%}
-.gal .low img{object-position:50% 100%}
 
 /* ---------- visit + order ahead ---------- */
 .visit{background:var(--bone2);border-top:2px solid var(--ink);padding:clamp(76px,9vw,124px) 0}
@@ -262,9 +260,6 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
   .wrap{padding-left:20px;padding-right:20px}
   .hero-grid{padding-left:20px;padding-right:20px}
   .cards{grid-template-columns:1fr}
-  .gal{grid-template-columns:1fr}
-  .g-tall .frame{aspect-ratio:9/10.5}
-  .g-mid .frame{aspect-ratio:1/1}
   .hero-ctas .btn{flex:1;justify-content:center}
   .hero-ctas .ig-btn{flex:1 1 100%}
   .strip p{letter-spacing:.09em}
@@ -291,7 +286,6 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
       <a href="#story">Story</a>
       <a href="#scroll">The Scroll</a>
       <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
       <a href="#visit">Visit</a>
     </div>
     <a class="btn nav-cta" href="#book">Order ahead</a>
@@ -379,19 +373,34 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
     <h2>Three things regulars point at.</h2>
     <div class="cards">
       <div class="card">
+        <div class="frame tpanel">
+          <p class="tp-kick">Cinnamon scrolls &middot; daily</p>
+          <ul class="tp-board">
+            <li>Original</li>
+            <li>Seasonal</li>
+            <li>Savoury</li>
+            <li>Ham &amp; cheese</li>
+          </ul>
+          <p class="tp-foot">Priced at the counter</p>
+        </div>
+        <h3>The scroll board</h3>
+        <p>Four ways out of the oven. The seasonal one changes without warning.</p>
+      </div>
+      <div class="card">
         <div class="frame cup-crop"><img src="img/05.jpg" alt="A hot chocolate dusted with cocoa and a morning muffin on a steel tray, with a HEART printed napkin"></div>
         <h3>Hot chocolate</h3>
         <p>Dusted heavy, with the morning muffin riding on steel. The napkin underneath says HEART three times.</p>
       </div>
       <div class="card">
-        <div class="frame sign-crop"><img src="img/01.jpg" alt="The painted Heart Coffee street sign hanging above the footpath on Burnley Street"></div>
-        <h3>The sign</h3>
-        <p>Ink on cream, swinging over the footpath. You cannot miss the corner.</p>
-      </div>
-      <div class="card">
-        <div class="frame mark-crop"><img src="img/02.jpg" alt="The bottom of the printed Heart Coffee menu, with the wordmark inked by hand"></div>
-        <h3>The mark</h3>
-        <p>The same hand that painted the window inked the foot of the menu.</p>
+        <div class="frame tpanel inked">
+          <p class="tp-kick">Beans by</p>
+          <p class="tp-word">Dukes</p>
+          <p class="tp-lock">Coffee Roasters</p>
+          <span class="tp-rule"></span>
+          <p class="tp-foot">Black or white &middot; seven days</p>
+        </div>
+        <h3>The beans</h3>
+        <p>What the machine runs on, every day the doors open.</p>
       </div>
     </div>
   </div>
@@ -474,31 +483,6 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
         <p>I love the clean interior and all the indoor plants. They brew with Dukes Coffee beans and have a great variety of sandwiches</p>
         <cite>weisikmui</cite>
       </figure>
-    </div>
-  </div>
-</section>
-
-<section class="gallery" id="gallery">
-  <div class="wrap">
-    <p class="eyebrow">Gallery</p>
-    <h2>The corner, framed.</h2>
-    <div class="gal">
-      <div class="g-tall">
-        <div class="frame sf"><img src="img/01.jpg" alt="The Heart Coffee shopfront with the painted window wordmark and hanging sign"></div>
-        <p class="fig-cap">The shopfront</p>
-      </div>
-      <div class="g-tall">
-        <div class="frame low"><img src="img/03.jpg" alt="A glazed cinnamon scroll and a black coffee on a round white table"></div>
-        <p class="fig-cap">Scroll, black coffee</p>
-      </div>
-      <div class="g-mid">
-        <div class="frame"><img src="img/04.jpg" alt="Overhead view of a flat white with heart latte art"></div>
-        <p class="fig-cap">The heart, poured</p>
-      </div>
-      <div class="g-mid">
-        <div class="frame"><img src="img/05.jpg" alt="Hot chocolate and a morning muffin on a steel tray with a HEART napkin"></div>
-        <p class="fig-cap">Hot chocolate, morning muffin</p>
-      </div>
     </div>
   </div>
 </section>

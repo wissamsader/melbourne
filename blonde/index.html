@@ -255,20 +255,6 @@ h1,h2,h3{margin:0;font-weight:500}
 .mfoot p{margin:0;font-size:13px;color:var(--pan-mut);max-width:58ch}
 .mfoot .drk{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--bone)}
 
-/* ---------- gallery ---------- */
-.gal{background:var(--bone);padding:92px 0 100px}
-.gal h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.2vw,40px);margin-bottom:8px}
-.gsub{color:var(--mut);font-size:14.5px;margin:0 0 44px}
-.gstrip{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:start}
-.gf{margin:0;border:1px solid var(--line);background:#F7F3E9;padding:8px;min-width:0}
-.gf img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.gf.tall img{object-position:50% 24%}
-.gf figcaption{
-  display:flex;justify-content:space-between;gap:8px;
-  font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);
-  font-weight:600;padding:9px 2px 3px;
-}
-
 /* ---------- reviews ---------- */
 .rev{background:var(--bone3);border-top:1px solid var(--line-soft);padding:100px 0 104px;text-align:center}
 .rev .kick{margin-bottom:30px}
@@ -406,8 +392,6 @@ footer{background:var(--pan);color:var(--pan-mut);padding:30px 0 110px}
 /* ---------- responsive ---------- */
 @media(max-width:1000px){
   .mcols{grid-template-columns:1fr;gap:0}
-  .gstrip{grid-template-columns:repeat(3,1fr)}
-  .gf:nth-child(4),.gf:nth-child(5){display:none}
   .sgrid{grid-template-columns:1fr;gap:48px}
   .sfig{justify-self:start}
   .vgrid{grid-template-columns:1fr;gap:56px}
@@ -448,9 +432,7 @@ footer{background:var(--pan);color:var(--pan-mut);padding:30px 0 110px}
   .hplate{width:150px;flex:none;align-self:flex-end}
   .hplate figcaption{display:none}
   .tick p{font-size:10px;letter-spacing:.2em}
-  .story,.high,.menu,.gal,.rev,.visit{padding-top:70px;padding-bottom:76px}
-  .gstrip{grid-template-columns:1fr 1fr;gap:14px}
-  .gf:nth-child(4){display:block}
+  .story,.high,.menu,.rev,.visit{padding-top:70px;padding-bottom:76px}
   .qgrid{grid-template-columns:1fr;margin-top:44px}
   .bcard{padding:28px 22px 32px}
   .f2{grid-template-columns:1fr;gap:16px}
@@ -472,7 +454,6 @@ footer{background:var(--pan);color:var(--pan-mut);padding:30px 0 110px}
       <div class="nlinks">
         <a href="#story">Story</a>
         <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit</a>
       </div>
@@ -670,37 +651,6 @@ footer{background:var(--pan);color:var(--pan-mut);padding:30px 0 110px}
     <div class="mfoot">
       <p class="drk">Espresso, batch and matcha at the counter, drink prices in store.</p>
       <p>The kitchen works with dairy, nuts and gluten, so cross contamination cannot be fully ruled out. Speak to the staff about any dietary requirement.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY ================= -->
-<section class="gal" id="gallery">
-  <div class="wrap">
-    <p class="kick">Contact prints</p>
-    <h2>From the room and the pass</h2>
-    <p class="gsub">Shot at the cafe, nothing staged.</p>
-    <div class="gstrip">
-      <figure class="gf">
-        <img src="img/01.jpg" alt="The sage green dining room at Blonde" width="1200" height="1600">
-        <figcaption><span>01</span><span>The room</span></figcaption>
-      </figure>
-      <figure class="gf">
-        <img src="img/03.jpg" alt="Mocha and espresso on the dark timber table" width="1200" height="1600">
-        <figcaption><span>02</span><span>The cup</span></figcaption>
-      </figure>
-      <figure class="gf tall">
-        <img src="img/05.jpg" alt="Two matcha lattes seen from above" width="900" height="1600">
-        <figcaption><span>03</span><span>Matcha</span></figcaption>
-      </figure>
-      <figure class="gf">
-        <img src="img/04.jpg" alt="Shakshuka skillet with toast, served inside" width="1200" height="1600">
-        <figcaption><span>04</span><span>The pan</span></figcaption>
-      </figure>
-      <figure class="gf">
-        <img src="img/06.jpg" alt="Shakshuka skillet in bright sun on the footpath table" width="1600" height="1600">
-        <figcaption><span>05</span><span>Outside</span></figcaption>
-      </figure>
     </div>
   </div>
 </section>

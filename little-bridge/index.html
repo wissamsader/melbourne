@@ -3,231 +3,230 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta name="theme-color" content="#EAD3CB">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#A32014">
 <title>Little Bridge Cafe · Lebanese home cooking, Richmond</title>
-<meta name="description" content="Lebanese home cooking on Bridge Road, Richmond. Mezze and sweets made on site every morning, weekdays 7am to 3pm. 4.9 from 215 Google reviews.">
+<meta name="description" content="Lebanese home cooking on Bridge Road, Richmond. The cabinet fills at seven every morning: hummus, labneh, za'atar mana'ish, falafel and wraps to order. Weekdays 7am to 3pm. 4.9 from 215 Google reviews.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --rose:#EAD3CB; --rose-wash:#F4E7E1; --rose-deep:#E0C0B5; --rose-line:#CBA99D;
-  --navy:#1C2742; --navy-deep:#141D33; --ink:#232F4B; --mut:#5C5A6E; --mut-rose:#4A4560;
-  --cream:#FAF4F0; --paper:#FDFAF8; --on-navy:#EAD3CB; --on-navy-mut:#C7B2A9;
-  --disp:'Fraunces',Georgia,serif; --body:'Karla','Helvetica Neue',Arial,sans-serif;
+  --red:#A32014; --red-deep:#7E150C; --red-dark:#65100A;
+  --saff:#E9A83C; --saff-deep:#D8931E;
+  --olive:#4C5722; --olive-deep:#3A421A;
+  --cream:#F8EFDB; --cream2:#F1E3C2; --paper:#FDF8EC;
+  --ink:#251C10; --mut:#5E5138;
+  --disp:'Alfa Slab One',Georgia,serif;
+  --body:'Figtree','Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
 body{font-family:var(--body);color:var(--ink);background:var(--cream);font-size:17px;line-height:1.6}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}
-h1,h2,h3{font-family:var(--disp);font-weight:560;color:var(--navy);line-height:1.08}
-.eyebrow{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--mut-rose);margin-bottom:14px}
+.wrap{width:min(1140px,calc(100% - 48px));margin-inline:auto}
+h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.06;letter-spacing:.005em}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;margin-bottom:16px}
 section{position:relative}
 
 /* ---------- nav ---------- */
-.nav{display:flex;align-items:center;gap:28px;padding:22px 0}
-.nav .brand{font-family:var(--disp);font-size:26px;font-weight:600;color:var(--navy);text-decoration:none;letter-spacing:.01em}
-.nav-links{display:flex;gap:26px;margin-left:auto;align-items:center}
-.nav-links a{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--navy)}
-.nav-links a:not(.pill){border-bottom:2px solid transparent;padding-bottom:2px}
-.nav-links a:not(.pill):hover{border-bottom-color:var(--navy)}
-.pill{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.06em;text-decoration:none;border-radius:999px;padding:11px 22px;border:1.5px solid var(--navy)}
-.pill.solid{background:var(--navy);color:var(--rose)}
-.pill.solid:hover{background:var(--navy-deep)}
-.pill.line{color:var(--navy)}
-.pill.line:hover{background:rgba(28,39,66,.08)}
-.nav .pill{margin-left:4px}
+.nav{display:flex;align-items:center;gap:26px;padding:20px 0}
+.nav .brand{font-family:var(--disp);font-size:25px;color:var(--red);text-decoration:none;line-height:1}
+.nav-links{display:flex;gap:24px;margin-left:auto;align-items:center}
+.nav-links a{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;padding-bottom:2px}
+.nav-links a:hover{border-bottom-color:var(--red)}
+.callpill{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.04em;text-decoration:none;border-radius:999px;padding:12px 24px;background:var(--red);color:var(--cream);border:2px solid var(--red)}
+.callpill:hover{background:var(--red-deep);border-color:var(--red-deep)}
+.nav .callpill{margin-left:2px}
 
 /* ---------- hero ---------- */
-.hero{background:var(--rose);min-height:clamp(600px,92svh,820px);max-height:860px;display:flex;flex-direction:column;overflow:hidden}
-.hero-head{text-align:left;padding-top:clamp(18px,4vh,44px)}
-.mark{width:46px;height:auto;margin:0 0 14px;display:block}
-.hero-head h1{font-size:clamp(42px,5vw,68px);font-weight:600;letter-spacing:-.015em}
-.hero-sub{max-width:52ch;margin:12px 0 0;color:var(--mut-rose);font-size:18px}
-.chips{display:flex;gap:10px;justify-content:flex-start;flex-wrap:wrap;margin-top:20px}
-.chip{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--navy);border:1.5px solid rgba(28,39,66,.45);border-radius:999px;padding:7px 16px;background:rgba(250,244,240,.35)}
-.hero-band{margin-top:auto;width:100%;max-width:1300px;margin-inline:auto;border-top:2px solid var(--navy);padding-top:0}
-.hero-band img{width:100%;height:clamp(360px,52svh,520px);object-fit:cover;object-position:50% 60%;display:block}
+.hero{background:var(--cream);min-height:clamp(600px,92svh,820px);max-height:860px;display:flex;flex-direction:column;overflow:hidden}
+.hero-head{padding-top:clamp(14px,3vh,34px)}
+.hero-micro{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
+.hero-micro .st{color:var(--red)}
+.hero-head h1{font-size:clamp(40px,6vw,86px);color:var(--red);text-transform:uppercase}
+.hero-head h1 .hb{display:block;color:var(--olive)}
+.hero-sub{max-width:62ch;margin:16px 0 0;color:var(--ink);font-size:18px;font-weight:500}
+.hero-band{margin-top:auto;flex:1 1 auto;min-height:450px;background:var(--red);border-top:6px solid var(--red);display:flex;justify-content:center}
+.hero-band .ph{width:min(1240px,100%);position:relative;overflow:hidden;border-radius:16px 16px 0 0}
+.hero-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
 
 /* ---------- ticker ---------- */
-.ticker{background:var(--navy);color:var(--on-navy);padding:16px 0}
-.ticker .row{display:flex;flex-wrap:wrap;justify-content:center;column-gap:14px;row-gap:6px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-.ticker .dot{color:var(--on-navy-mut)}
+.ticker{background:var(--red);color:var(--cream);padding:18px 0}
+.ticker .row{display:flex;flex-wrap:wrap;justify-content:center;column-gap:16px;row-gap:6px;font-family:var(--disp);font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.ticker .dot{color:var(--saff)}
 
 /* ---------- story ---------- */
-.story{background:var(--cream);padding:96px 0 90px}
-.story .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
-.story h2{font-size:clamp(34px,4vw,52px);margin-bottom:26px}
-.story h2 em{font-style:italic;font-weight:500}
-.story p{margin-bottom:18px;max-width:56ch}
-.story p b{color:var(--navy)}
-.sfig{min-width:0}
-.frame{background:var(--paper);border:1px solid rgba(28,39,66,.28);border-radius:10px;padding:10px;box-shadow:0 12px 30px rgba(28,39,66,.10)}
-.frame img{border-radius:5px}
-.figcap{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);padding:10px 4px 2px;text-align:center}
-.story .fact{display:flex;gap:26px;margin-top:30px;border-top:1px solid var(--rose-line);padding-top:22px}
-.fact div{font-size:14px;color:var(--mut)}
-.fact b{display:block;font-family:var(--disp);font-size:26px;color:var(--navy);font-weight:600}
+.story{background:var(--cream);padding:100px 0 96px}
+.story .cols{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:start}
+.story .eyebrow{color:var(--olive)}
+.story h2{font-size:clamp(32px,3.8vw,52px);color:var(--red);margin-bottom:26px}
+.story p{margin-bottom:18px;max-width:58ch}
+.story p b{color:var(--red-deep)}
+.fact{display:flex;gap:34px;margin-top:32px;border-top:3px solid var(--red);padding-top:22px;flex-wrap:wrap}
+.fact div{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.fact b{display:block;font-family:var(--disp);font-size:30px;color:var(--ink);font-weight:400;letter-spacing:0;text-transform:none}
+.sfig{min-width:0;position:relative}
+.photocard{background:var(--saff);border-radius:18px;padding:14px 14px 0;box-shadow:0 16px 34px rgba(37,28,16,.16)}
+.photocard img{border-radius:10px}
+.photocard .pclab{font-family:var(--disp);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);padding:12px 4px;text-align:center}
+.stamp{position:absolute;top:-46px;right:-14px;width:118px;height:118px;pointer-events:none}
+.stamp svg{width:100%;height:100%;display:block}
+.stamp text{font-family:var(--body);font-weight:700;font-size:10.6px;letter-spacing:.22em;fill:var(--red)}
 
-/* ---------- highlights ---------- */
-.plates{background:var(--rose-wash);padding:90px 0 96px}
-.plates .head{max-width:640px;margin-bottom:44px}
-.plates h2{font-size:clamp(32px,3.6vw,46px)}
-.plates .lead{color:var(--mut);margin-top:12px}
-.pgrid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:26px}
-.pcard{background:var(--paper);border:1px solid rgba(28,39,66,.25);border-radius:10px;padding:10px;min-width:0;display:flex;flex-direction:column;box-shadow:0 10px 26px rgba(28,39,66,.08)}
-.pcard img{border-radius:5px;width:100%;aspect-ratio:4/3;object-fit:cover}
-.pcard.tall{grid-column:3;grid-row:1 / span 2}
-.pcard.tall img{aspect-ratio:3/4;height:100%}
-.pcard .cap{padding:16px 8px 8px}
-.pcard h3{font-size:22px;margin-bottom:6px}
-.pcard .cap p{font-size:15px;color:var(--mut)}
-.pcard:nth-child(1){grid-column:1 / span 1}
-.pcard:nth-child(2){grid-column:2}
-.pwide{grid-column:1 / span 2;grid-row:2;background:var(--navy);border-radius:10px;padding:36px 40px;display:flex;flex-direction:column;justify-content:center;min-width:0}
-.pwide h3{font-style:italic;font-weight:500;color:var(--rose);font-size:clamp(24px,2.4vw,32px);margin-bottom:10px}
-.pwide p{color:var(--on-navy-mut);font-size:15px;max-width:54ch}
+/* ---------- cabinet grid ---------- */
+.cabinet{background:var(--cream2);padding:96px 0 104px}
+.cabinet .head{max-width:720px;margin-bottom:48px}
+.cabinet .eyebrow{color:var(--red)}
+.cabinet h2{font-size:clamp(32px,4vw,54px);color:var(--red);text-transform:uppercase}
+.cabinet .lead{color:var(--ink);margin-top:14px;font-size:18px;max-width:52ch}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.cell{border-radius:18px;padding:14px;display:flex;flex-direction:column;min-width:0;box-shadow:0 12px 28px rgba(37,28,16,.12)}
+.cell img{border-radius:10px;width:100%}
+.cell .clab{font-family:var(--disp);font-size:17px;letter-spacing:.04em;text-transform:uppercase;padding:14px 4px 4px}
+.cell .cnote{font-size:14.5px;line-height:1.55;padding:2px 4px 6px}
+.cell.saffron{background:var(--saff)}
+.cell.saffron .clab,.cell.saffron .cnote{color:var(--ink)}
+.cell.olive{background:var(--olive)}
+.cell.olive .clab,.cell.olive .cnote{color:var(--cream)}
+.cell.redcell{background:var(--red)}
+.cell.redcell .clab,.cell.redcell .cnote{color:var(--cream)}
+.cell.tall{grid-row:span 2}
+.cell.txt{justify-content:center;padding:30px 26px}
+.cell.txt .clab{font-size:21px;padding:0 0 10px}
+.cell.txt .cnote{font-size:15.5px;padding:0}
 
 /* ---------- menu ---------- */
-.menu{background:var(--navy);color:var(--on-navy);padding:96px 0}
+.menu{background:var(--olive-deep);color:var(--cream);padding:100px 0}
 .menu .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:start}
-.menu .eyebrow{color:var(--on-navy-mut)}
-.menu h2{color:var(--rose);font-size:clamp(34px,4vw,50px);margin-bottom:10px}
-.menu .lead{color:var(--on-navy-mut);margin-bottom:36px;max-width:48ch}
-.mhead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid rgba(234,211,203,.35);padding-bottom:12px;margin-bottom:16px}
-.mhead h3{color:var(--rose);font-size:26px}
-.msizes{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-mut)}
-.mrow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:12px 0;border-bottom:1px solid rgba(234,211,203,.16)}
-.mrow .nm{font-family:var(--disp);font-size:21px;color:var(--cream)}
-.mrow .prs{display:flex;gap:22px;white-space:nowrap}
-.pr{font-family:var(--disp);font-weight:600;font-size:19px;color:var(--rose);font-style:normal}
-.prlbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-mut);display:block;text-align:right;margin-bottom:2px}
-.cab{margin-top:46px}
+.menu .eyebrow{color:var(--saff)}
+.menu h2{color:var(--cream);font-size:clamp(32px,3.8vw,50px);text-transform:uppercase;margin-bottom:12px}
+.menu .lead{color:var(--cream2);margin-bottom:38px;max-width:50ch}
+.mrow{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 0;border-bottom:2px solid rgba(248,239,219,.22)}
+.mrow .nm{font-family:var(--disp);font-size:clamp(21px,2vw,27px);color:var(--cream)}
+.prs{display:flex;gap:10px;white-space:nowrap}
+.prchip{background:var(--saff);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700;display:inline-flex;gap:6px;align-items:baseline}
+.prchip .pr{font-family:var(--disp);font-weight:400;font-size:16px;font-style:normal}
+.cab{margin-top:48px}
+.cab .cabhead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.cab h3{font-size:22px;color:var(--saff);text-transform:uppercase}
+.instore{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cream2)}
+.cab .mrow{padding:13px 0;border-bottom:1px solid rgba(248,239,219,.18)}
 .cab .mrow .nm{font-size:19px}
-.cab .note{font-size:14px;color:var(--on-navy-mut)}
-.instore{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-mut)}
+.cab .note{font-size:14px;color:var(--cream2);text-align:right}
+.menu-foot{margin-top:34px;font-size:14.5px;color:var(--cream2);max-width:48ch}
 .menu-fig{min-width:0}
-.menu-fig .frame{background:var(--navy-deep);border-color:rgba(234,211,203,.3);box-shadow:0 14px 34px rgba(0,0,0,.35);max-width:380px;margin-inline:auto}
-.menu-fig .figcap{color:var(--on-navy-mut)}
-.menu-foot{margin-top:34px;font-size:14px;color:var(--on-navy-mut);max-width:48ch}
-
-/* ---------- gallery ---------- */
-.gallery{background:var(--cream);padding:96px 0}
-.gallery h2{font-size:clamp(32px,3.6vw,46px);margin-bottom:8px}
-.gallery .lead{color:var(--mut);margin-bottom:40px}
-.ggrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
-.gcell{min-width:0}
-.gcell img{width:100%;border-radius:5px}
-.gcell.land img{aspect-ratio:4/3;object-fit:cover}
-.gcell.port img{aspect-ratio:3/4;object-fit:cover}
+.menu-fig .photocard{background:var(--cream);max-width:400px;margin-inline:auto}
+.menu-fig .photocard .pclab{color:var(--red-deep)}
 
 /* ---------- reviews ---------- */
-.reviews{background:var(--rose-wash);padding:96px 0}
-.reviews .head{text-align:center;margin-bottom:44px}
-.reviews h2{font-size:clamp(32px,3.8vw,48px)}
-.stars{color:var(--navy);letter-spacing:.2em;font-size:18px;margin-top:10px}
-.rq-featured{background:var(--rose);border:1px solid rgba(28,39,66,.25);border-radius:12px;padding:44px 48px;text-align:center;margin-bottom:26px}
-.rq-featured blockquote{font-family:var(--disp);font-style:italic;font-weight:500;font-size:clamp(21px,2.6vw,30px);line-height:1.35;color:var(--navy);max-width:26em;margin-inline:auto}
-.rq-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-.rq{background:var(--paper);border:1px solid rgba(28,39,66,.2);border-radius:10px;padding:30px 32px;min-width:0}
-.rq blockquote{font-size:17px;color:var(--ink);line-height:1.65}
+.reviews{background:var(--cream);padding:100px 0}
+.reviews .head{text-align:center;margin-bottom:48px}
+.reviews .eyebrow{color:var(--olive)}
+.reviews h2{font-size:clamp(30px,3.8vw,50px);color:var(--red);text-transform:uppercase}
+.stars{color:var(--red);letter-spacing:.24em;font-size:19px;margin-top:12px}
+.rq-featured{background:var(--paper);border-radius:18px;border-left:10px solid var(--red);padding:44px 50px;margin-bottom:24px;box-shadow:0 12px 28px rgba(37,28,16,.10)}
+.rq-featured blockquote{font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:500;line-height:1.45;color:var(--ink);max-width:34em}
+.rq-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.rq{background:var(--paper);border-radius:18px;padding:32px 34px;min-width:0;box-shadow:0 12px 28px rgba(37,28,16,.08)}
+.rq.tsaff{border-top:8px solid var(--saff)}
+.rq.tolive{border-top:8px solid var(--olive)}
+.rq blockquote{font-size:17px;font-style:italic;color:var(--ink);line-height:1.65}
 .rq-by{margin-top:18px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.rq-by b{color:var(--navy)}
+.rq-by b{color:var(--red-deep)}
 
-/* ---------- book ---------- */
-.book{background:var(--rose-deep);padding:96px 0}
-.book .cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.book h2{font-size:clamp(34px,4vw,50px);margin-bottom:16px}
-.book .lead{color:var(--mut-rose);max-width:46ch;margin-bottom:26px}
-.bform{background:var(--paper);border:1px solid rgba(28,39,66,.3);border-radius:12px;padding:34px;box-shadow:0 16px 36px rgba(28,39,66,.14)}
-.bform .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin:0 0 6px}
-.bform .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
-.bform .frow.one{grid-template-columns:1fr}
-.bform input{width:100%;font-family:var(--body);font-size:16px;color:var(--ink);background:var(--cream);border:1.5px solid #CDB6AC;border-radius:8px;padding:12px 14px}
-.bform input:focus{outline:none;border-color:var(--navy)}
-.tsel{display:flex;gap:10px;margin-bottom:20px}
-.tsel input{position:absolute;opacity:0;pointer-events:none;left:0;top:0;width:1px;height:1px}
-.tsel span{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.06em;border:1.5px solid var(--navy);border-radius:999px;padding:9px 20px;color:var(--navy);cursor:pointer}
-.tsel input:checked + span{background:var(--navy);color:var(--rose)}
-.preview{background:var(--rose-wash);border:1px dashed rgba(28,39,66,.4);border-radius:8px;padding:18px 20px;font-family:var(--disp);font-style:italic;font-size:17px;color:var(--navy);line-height:1.5;margin-bottom:22px;white-space:pre-line}
-.bbtns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.bnote{font-size:13px;color:var(--mut);margin-top:16px}
-.bside p{margin-bottom:16px;color:var(--mut-rose);max-width:50ch}
-.bside .fact{border-top:1px solid rgba(28,39,66,.3);padding-top:20px;margin-top:26px;display:flex;gap:30px}
+/* ---------- lunch: hours + call ---------- */
+.lunch{background:var(--saff);padding:100px 0}
+.lunch .eyebrow{color:var(--red-deep)}
+.lunch h2{font-size:clamp(32px,4vw,54px);color:var(--ink);text-transform:uppercase;max-width:16em}
+.lunch .lead{margin-top:14px;max-width:56ch;font-size:18px;color:var(--ink)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin:44px 0 0}
+.day{background:var(--cream);border-radius:14px;padding:18px 10px;text-align:center;min-width:0;box-shadow:0 8px 18px rgba(37,28,16,.10)}
+.day .d{display:block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.day .h{display:block;font-family:var(--disp);font-size:19px;color:var(--ink);margin-top:8px}
+.day.off{background:var(--cream2)}
+.day.off .h{color:var(--red);font-size:15px;letter-spacing:.04em}
+.callpanel{margin-top:44px;background:var(--cream);border-radius:20px;padding:44px 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;box-shadow:0 16px 34px rgba(37,28,16,.14)}
+.callpanel h3{font-size:clamp(22px,2.4vw,30px);color:var(--red);text-transform:uppercase;margin-bottom:12px}
+.callpanel p{max-width:50ch;margin-bottom:10px}
+.bignum{text-align:center}
+.bignum a.tel{font-family:var(--disp);font-size:clamp(27px,3vw,40px);color:var(--ink);text-decoration:none;display:block;line-height:1.1;white-space:nowrap}
+.bignum a.tel:hover{color:var(--red)}
+.bignum .callpill{margin-top:18px;font-size:15px;padding:14px 30px}
+.bignum .cnote{display:block;font-size:13px;font-weight:600;color:var(--mut);margin-top:12px}
 
 /* ---------- visit ---------- */
-.visit{background:var(--navy-deep);color:var(--on-navy);padding:96px 0 80px}
-.visit .cols{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
-.visit .eyebrow{color:var(--on-navy-mut)}
-.visit h2{color:var(--rose);font-size:clamp(34px,4vw,50px);margin-bottom:26px}
-.vrow{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid rgba(234,211,203,.16);align-items:baseline}
-.vrow .k{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--on-navy-mut)}
-.vrow .v{font-size:18px;color:var(--cream)}
-.vrow .v a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(234,211,203,.45)}
-.vrow .v a:hover{border-bottom-color:var(--rose)}
-.vbtns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
-.vbtn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:700;letter-spacing:.06em;text-decoration:none;border-radius:999px;padding:12px 24px;border:1.5px solid var(--rose);color:var(--navy);background:var(--rose)}
-.vbtn:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
-.vbtn.line{background:transparent;color:var(--rose)}
-.vbtn.line:hover{background:rgba(234,211,203,.12)}
+.visit{background:var(--red-deep);color:var(--cream);padding:100px 0 0;overflow:hidden}
+.visit .eyebrow{color:var(--saff)}
+.visit h2{color:var(--cream);font-size:clamp(32px,3.8vw,50px);text-transform:uppercase;margin-bottom:34px}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.vcard{border:2px solid rgba(248,239,219,.35);border-radius:16px;padding:26px 28px;min-width:0}
+.vcard .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--saff);display:block;margin-bottom:10px}
+.vcard .v{font-size:17px;line-height:1.55;color:var(--cream)}
+.vcard .v a{color:var(--cream);text-decoration:none;border-bottom:2px solid rgba(248,239,219,.5)}
+.vcard .v a:hover{border-bottom-color:var(--saff)}
+.vbtns{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.vbtn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:700;letter-spacing:.05em;text-decoration:none;border-radius:999px;padding:13px 26px;background:var(--cream);color:var(--red-deep)}
+.vbtn:hover{background:var(--cream2)}
+.vbtn.line{background:transparent;color:var(--cream);border:2px solid rgba(248,239,219,.6)}
+.vbtn.line:hover{border-color:var(--cream)}
 .vbtn svg{width:16px;height:16px;fill:currentColor}
-.visit .frame{background:#0F1626;border-color:rgba(234,211,203,.3)}
-.visit .figcap{color:var(--on-navy-mut)}
-.foot{border-top:1px solid rgba(234,211,203,.16);margin-top:70px;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--on-navy-mut)}
+.gwm{font-family:var(--disp);font-size:clamp(30px,10vw,158px);color:var(--cream);text-transform:uppercase;text-align:center;white-space:nowrap;line-height:1;margin-top:76px;letter-spacing:.01em;width:100vw;margin-inline:calc(50% - 50vw);padding:0 10px}
+.foot{border-top:1px solid rgba(248,239,219,.25);margin-top:34px;padding:22px 0 26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--cream2)}
+.foot a{color:var(--cream2);text-decoration:none}
 
 /* ---------- sticky bar ---------- */
 .bar{display:none}
 
-/* ---------- mobile ---------- */
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .story .cols,.menu .cols{grid-template-columns:1fr;gap:48px}
+  .cgrid{grid-template-columns:1fr 1fr}
+  .callpanel{grid-template-columns:1fr;padding:34px 30px}
+  .bignum{text-align:left}
+  .vgrid{grid-template-columns:1fr}
+  .days{grid-template-columns:repeat(4,1fr)}
+  .day:nth-child(n+5){grid-column:auto}
+}
 @media (max-width:840px){
   .nav-links{display:none}
-  .nav .pill{margin-left:auto}
-  .bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;gap:10px;background:var(--navy);border-top:2px solid var(--rose);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
-  .bar .bbrand{font-family:var(--disp);font-style:italic;font-size:17px;color:var(--rose);margin-right:auto;white-space:nowrap}
+  .nav .callpill{margin-left:auto}
+  .bar{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:12px;background:var(--red);border-radius:18px;padding:10px 12px 10px 18px;box-shadow:0 10px 30px rgba(37,28,16,.35)}
+  .bar .bbrand{font-family:var(--disp);font-size:15px;color:var(--cream);margin-right:auto;white-space:nowrap;letter-spacing:.02em}
   .bar a{text-decoration:none}
-  .bar .bcall{background:var(--rose);color:var(--navy);font-weight:700;font-size:14px;letter-spacing:.05em;border-radius:999px;padding:10px 20px;border:1.5px solid var(--rose)}
-  .bar .bres{color:var(--rose);font-weight:700;font-size:14px;letter-spacing:.05em;border-radius:999px;padding:10px 16px;border:1.5px solid rgba(234,211,203,.7)}
-  .bar .bres svg{width:15px;height:15px;fill:currentColor;display:block}
-  body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
-}
-@media (max-width:900px){
-  .story .cols,.menu .cols,.book .cols,.visit .cols{grid-template-columns:1fr;gap:44px}
-  .pgrid{grid-template-columns:1fr 1fr}
-  .pcard:nth-child(1){grid-column:1 / span 2}
-  .pcard:nth-child(2){grid-column:1;grid-row:2}
-  .pcard.tall{grid-column:2;grid-row:2}
-  .pcard.tall img{aspect-ratio:4/3;height:auto}
-  .pwide{grid-column:1 / span 2;grid-row:3}
+  .bar .bfb{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:2px solid rgba(248,239,219,.65);color:var(--cream)}
+  .bar .bfb svg{width:17px;height:17px;fill:currentColor;display:block}
+  .bar .bcall{background:var(--saff);color:var(--ink);font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:999px;padding:11px 22px}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
 }
 @media (max-width:700px){
   body{font-size:16px}
-  .hero-head h1{font-size:clamp(38px,11vw,52px)}
+  .hero{min-height:clamp(560px,88svh,780px)}
+  .hero-head h1{font-size:clamp(38px,11.4vw,52px)}
   .hero-sub{font-size:16px}
-  .hero-band img{height:clamp(240px,38svh,340px)}
-  .story,.plates,.menu,.gallery,.reviews,.book,.visit{padding-top:64px;padding-bottom:64px}
-  .pgrid{grid-template-columns:1fr}
-  .pcard:nth-child(1){grid-column:1}
-  .pcard:nth-child(2){grid-column:1;grid-row:auto}
-  .pcard.tall{grid-column:1;grid-row:auto}
-  .pwide{grid-column:1;grid-row:auto;padding:28px 24px}
-  .ggrid{grid-template-columns:1fr}
-  .gcell.land img{aspect-ratio:4/3}
-  .gcell.port img{aspect-ratio:3/4}
+  .hero-band{min-height:300px}
+  .story,.cabinet,.menu,.reviews,.lunch{padding-top:68px;padding-bottom:68px}
+  .visit{padding-top:68px}
+  .cgrid{grid-template-columns:1fr}
+  .cell.tall{grid-row:auto}
+  .stamp{top:-40px;right:2px;width:96px;height:96px}
   .rq-grid{grid-template-columns:1fr}
-  .rq-featured{padding:32px 24px}
-  .bform{padding:24px 20px}
-  .bform .frow{grid-template-columns:1fr}
-  .vrow{grid-template-columns:1fr;gap:4px}
-  .fact{flex-wrap:wrap}
+  .rq-featured{padding:30px 24px;border-left-width:8px}
+  .days{grid-template-columns:1fr;gap:8px;margin-top:36px}
+  .day{display:flex;justify-content:space-between;align-items:center;text-align:left;padding:14px 18px}
+  .day .h{margin-top:0;font-size:17px}
+  .callpanel{padding:28px 22px;margin-top:36px}
+  .bignum a.tel{font-size:clamp(24px,7.4vw,30px)}
+  .mrow{flex-wrap:wrap;row-gap:8px}
+  .gwm{margin-top:52px}
+  .fact{gap:24px}
 }
 </style>
 <style data-fx-orn>
-.mark{animation:markPulse 12.5s ease-in-out infinite;transform-origin:50% 50%}
-@keyframes markPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
-@media (prefers-reduced-motion:reduce){.mark{animation:none}}
+.stamp{animation:stampTurn 84s linear infinite;transform-origin:50% 50%}
+@keyframes stampTurn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.stamp{animation:none}}
 </style>
 </head>
 <body>
@@ -236,34 +235,26 @@ section{position:relative}
 <header class="hero" id="top">
   <div class="wrap">
     <nav class="nav">
-      <a class="brand" href="#top">little bridge</a>
+      <a class="brand" href="#top">Little Bridge</a>
       <div class="nav-links">
         <a href="#story">Story</a>
+        <a href="#cabinet">Cabinet</a>
         <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#visit">Visit</a>
-        <a class="pill line" href="#book">Reserve</a>
       </div>
-      <a class="pill solid" href="tel:+61394281194">Call the cafe</a>
+      <a class="callpill" href="tel:+61394281194">Call the cafe</a>
     </nav>
   </div>
   <div class="hero-head wrap">
-    <svg class="mark" viewBox="0 0 96 60" fill="none" aria-hidden="true">
-      <path d="M8 34 C30 10, 66 10, 88 34" stroke="#1C2742" stroke-width="7" stroke-linecap="round"/>
-      <path d="M22 46 C36 32, 60 32, 74 46" stroke="#1C2742" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
-    </svg>
-    <p class="eyebrow">Lebanese cafe · Bridge Road, Richmond</p>
-    <h1>little bridge</h1>
-    <p class="hero-sub">Lebanese home cooking, made on site every morning. The cabinet fills at seven, the wraps are rolled to order, and regulars get a hello habibi at the counter.</p>
-    <div class="chips">
-      <span class="chip">★ <b class="rating">4.9</b> · <b class="rcount">215</b> Google reviews</span>
-      <span class="chip">34 Bridge Rd, Richmond</span>
-      <span class="chip">Weekdays 7am to 3pm</span>
-    </div>
+    <p class="hero-micro"><span class="st">★ 4.9</span> from 215 Google reviews · Lebanese cafe · Bridge Road, Richmond</p>
+    <h1>Come in hungry, <span class="hb">habibi.</span></h1>
+    <p class="hero-sub">Lebanese home cooking on Bridge Road. The cabinet fills at seven every morning, the wraps are rolled to order, and when the trays empty, that is lunch.</p>
   </div>
   <div class="hero-band">
-    <img src="img/01.jpg" alt="The food display cabinet at Little Bridge Cafe, filled with mezze, falafel, spiced rice, roast chicken, tomatoes and fresh parsley" width="1600" height="1200">
+    <div class="ph">
+      <img src="img/01.jpg" alt="The display cabinet at Little Bridge Cafe, loaded with mezze: hummus and labneh in painted bowls, spiced rice, falafel, roast chicken, tomatoes and fresh parsley" width="1600" height="1200">
+    </div>
   </div>
 </header>
 
@@ -283,58 +274,64 @@ section{position:relative}
 <section class="story" id="story">
   <div class="wrap cols">
     <div>
-      <p class="eyebrow">The cook</p>
-      <h2>Hello <em>habibi</em>. Come in hungry.</h2>
-      <p>The cabinet at Little Bridge is filled on site every morning by the cook the reviews keep naming. Hummus and labneh in the painted bowls, za'atar mana'ish warm from the press, falafel fried in small batches, a soup of the day, and a pot of something slow, fasolia with rice on a good day. When the cabinet empties, that is lunch over.</p>
-      <p>She runs the room the way she runs the pots, personally. Walk in twice and she remembers you, your order and all, and greets you with a <b>hello habibi</b> over the counter, however deep the lunch queue gets. Nothing fancy, nothing styled. Proper Lebanese home cooking, generous plates, and board prices that make you look twice. Regulars call it one of Richmond's best-kept secrets, then keep telling people anyway.</p>
+      <p class="eyebrow">The cook behind the counter</p>
+      <h2>Everything you see was made here this morning.</h2>
+      <p>The cook the reviews keep naming fills the cabinet herself, every weekday, before Richmond is properly awake. Hummus and labneh in the painted bowls, za'atar mana'ish warm off the press, falafel fried in small batches, a soup of the day, and a pot of something slow, <b>fasolia w riz</b> on a good day. When the cabinet empties, lunch is over.</p>
+      <p>Walk in twice and she remembers you, order and all, and greets you with a <b>hello habibi</b> over the counter, however deep the lunch queue runs. Nothing fancy, nothing styled: generous plates, board prices that make you look twice, and everything down to the doughnuts, custard tarts and baklava-style sweets made on site. Regulars call it one of Richmond's best-kept secrets, then keep telling people anyway.</p>
       <div class="fact">
-        <div><b class="rating">4.9</b>Google rating</div>
-        <div><b class="rcount">215</b>Reviews</div>
+        <div><b>4.9</b>Google rating</div>
+        <div><b>215</b>Reviews</div>
         <div><b>7 to 3</b>Weekdays only</div>
       </div>
     </div>
     <figure class="sfig">
-      <div class="frame">
-        <img src="img/06.jpg" alt="A hand holding a rolled Little Bridge wrap, salad and pickles tucked into grilled flatbread" width="1200" height="1600">
-        <figcaption class="figcap">Rolled to order, wrapped to go</figcaption>
+      <div class="photocard">
+        <img src="img/06.jpg" alt="A hand holding a rolled Little Bridge wrap, salad, pickles and red onion tucked into grilled flatbread" width="1200" height="1600" loading="lazy">
+        <figcaption class="pclab">Rolled to order, wrapped to go</figcaption>
       </div>
+      <span class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 118 118">
+          <circle cx="59" cy="59" r="56" fill="none" stroke="#A32014" stroke-width="2.5"/>
+          <circle cx="59" cy="59" r="41" fill="none" stroke="#A32014" stroke-width="1.5"/>
+          <path id="stc" d="M59 12 a47 47 0 1 1 -0.01 0" fill="none"/>
+          <text><textPath href="#stc">MADE ON SITE · EVERY MORNING · LEBANESE HOME COOKING ·</textPath></text>
+        </svg>
+      </span>
     </figure>
   </div>
 </section>
 
-<!-- ============ HIGHLIGHTS ============ -->
-<section class="plates" id="plates">
+<!-- ============ CABINET GRID ============ -->
+<section class="cabinet" id="cabinet">
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">From the cabinet</p>
-      <h2>What comes over the counter</h2>
-      <p class="lead">Photographed as served, on Bridge Road, by the people eating it.</p>
+      <h2>The cabinet is the menu</h2>
+      <p class="lead">Trays go in at seven, the glass fogs up by noon, and lunch comes straight over the counter. Photographed as served, by the people eating it.</p>
     </div>
-    <div class="pgrid">
-      <div class="pcard">
-        <img src="img/03.jpg" alt="Za'atar wrap opened in its takeaway box with lettuce, tomato, pickles and red onion" width="1600" height="1200">
-        <div class="cap">
-          <h3>Za'atar wrap, boxed</h3>
-          <p>Grilled flatbread with za'atar through the fold, then pickles, tomato, red onion and garlic sauce.</p>
-        </div>
+    <div class="cgrid">
+      <div class="cell olive">
+        <img src="img/03.jpg" alt="Za'atar wrap opened in its takeaway box with lettuce, tomato, pickles and red onion" width="1600" height="1200" loading="lazy">
+        <p class="clab">Za'atar wrap, boxed</p>
+        <p class="cnote">Grilled flatbread with za'atar through the fold, then pickles, tomato, red onion and garlic sauce.</p>
       </div>
-      <div class="pcard">
-        <img src="img/04.jpg" alt="Fasolia, a lamb and white bean stew, served with rice, flatbread and lemon" width="1600" height="1200">
-        <div class="cap">
-          <h3>Fasolia w riz</h3>
-          <p>Slow lamb and white beans in tomato, over rice, lemon on the side. The pot changes with the day.</p>
-        </div>
+      <div class="cell redcell tall">
+        <img src="img/05.jpg" alt="Open za'atar mana'ish loaded with salad, pickles, tomato and garlic sauce before rolling" width="1200" height="1600" loading="lazy">
+        <p class="clab">Mana'ish, loaded</p>
+        <p class="cnote">Opened flat and stacked with salad and pickles, a moment before it is rolled shut.</p>
       </div>
-      <div class="pcard tall">
-        <img src="img/05.jpg" alt="Open za'atar mana'ish loaded with salad, pickles and garlic sauce before rolling" width="1200" height="1600">
-        <div class="cap">
-          <h3>Mana'ish, loaded</h3>
-          <p>Za'atar mana'ish opened flat and stacked with salad and pickles, a moment before it is rolled.</p>
-        </div>
+      <div class="cell saffron">
+        <img src="img/04.jpg" alt="Fasolia, a slow lamb and white bean stew in tomato, served with rice, flatbread and lemon" width="1600" height="1200" loading="lazy">
+        <p class="clab">Fasolia w riz</p>
+        <p class="cnote">Slow lamb and white beans in tomato, over rice, lemon on the side. The pot changes with the day.</p>
       </div>
-      <div class="pwide">
-        <h3>Even the sweets are made here</h3>
-        <p>Doughnuts, custard tarts, muffins and baklava-style sweets, all out of the same small kitchen, sitting beside the savoury cabinet until they are gone.</p>
+      <div class="cell saffron txt">
+        <p class="clab">Even the sweets are made here</p>
+        <p class="cnote">Doughnuts, custard tarts, muffins and baklava-style sweets, all out of the same small kitchen, sitting beside the savoury trays until they are gone.</p>
+      </div>
+      <div class="cell olive txt">
+        <p class="clab">Soup of the day</p>
+        <p class="cnote">One pot, ladled until it is empty. Ask at the counter what this morning brought, then trust it.</p>
       </div>
     </div>
   </div>
@@ -344,81 +341,41 @@ section{position:relative}
 <section class="menu" id="menu">
   <div class="wrap cols">
     <div>
-      <p class="eyebrow">The board</p>
-      <h2>Chalk on the wall</h2>
-      <p class="lead">Their board, word for word. Everything else sits in the cabinet and is priced in store.</p>
-      <div class="mhead">
-        <h3>Wraps</h3>
-        <span class="msizes">Large / Small</span>
-      </div>
+      <p class="eyebrow">Chalk on the wall</p>
+      <h2>The wraps board, word for word</h2>
+      <p class="lead">Their board, transcribed as written. Everything else sits in the cabinet and is priced in store.</p>
       <div class="mrow">
         <span class="nm">Roast Chicken</span>
-        <span class="prs"><b class="pr">$12</b><b class="pr">$10</b></span>
+        <span class="prs"><span class="prchip">Lge <b class="pr">$12</b></span><span class="prchip">Sml <b class="pr">$10</b></span></span>
       </div>
       <div class="mrow">
         <span class="nm">Pulled Lamb</span>
-        <span class="prs"><b class="pr">$12</b><b class="pr">$10</b></span>
+        <span class="prs"><span class="prchip">Lge <b class="pr">$12</b></span><span class="prchip">Sml <b class="pr">$10</b></span></span>
       </div>
       <div class="mrow">
         <span class="nm">Falafel</span>
-        <span class="prs"><b class="pr">$12</b><b class="pr">$10</b></span>
+        <span class="prs"><span class="prchip">Lge <b class="pr">$12</b></span><span class="prchip">Sml <b class="pr">$10</b></span></span>
       </div>
       <div class="cab">
-        <div class="mhead">
+        <div class="cabhead">
           <h3>From the cabinet</h3>
           <span class="instore">Priced in store</span>
         </div>
         <div class="mrow"><span class="nm">Hummus and labneh</span><span class="note">In the painted bowls, front shelf</span></div>
-        <div class="mrow"><span class="nm">Za'atar mana'ish</span><span class="note">Warm from the press</span></div>
+        <div class="mrow"><span class="nm">Za'atar mana'ish</span><span class="note">Warm off the press</span></div>
         <div class="mrow"><span class="nm">Falafel plates</span><span class="note">Fried in small batches</span></div>
         <div class="mrow"><span class="nm">The pot of the day</span><span class="note">With rice, while it lasts</span></div>
         <div class="mrow"><span class="nm">Soup of the day</span><span class="note">Ladled until the pot is empty</span></div>
-        <div class="mrow"><span class="nm">Cabinet salads</span><span class="note">Parsley, tomato, cos, cut fresh</span></div>
-        <div class="mrow"><span class="nm">Sweets, made here</span><span class="note">Doughnuts, custard tarts, muffins, baklava-style</span></div>
+        <div class="mrow"><span class="nm">Sweets, made here</span><span class="note">Doughnuts, custard tarts, muffins</span></div>
       </div>
       <p class="menu-foot">Everything is made on site, down to the sweets. What you see through the glass is what there is, and at lunch it empties quickly.</p>
     </div>
     <figure class="menu-fig">
-      <div class="frame">
-        <img src="img/02.jpg" alt="The Little Bridge chalkboard listing wraps: roast chicken, pulled lamb and falafel, large twelve dollars, small ten dollars" width="1200" height="1600">
-        <figcaption class="figcap">The wraps board, on the wall</figcaption>
+      <div class="photocard">
+        <img src="img/02.jpg" alt="The Little Bridge chalkboard listing wraps: roast chicken, pulled lamb and falafel, large twelve dollars, small ten dollars" width="1200" height="1600" loading="lazy">
+        <figcaption class="pclab">Their board, on the wall</figcaption>
       </div>
     </figure>
-  </div>
-</section>
-
-<!-- ============ GALLERY ============ -->
-<section class="gallery" id="gallery">
-  <div class="wrap">
-    <p class="eyebrow">In pictures</p>
-    <h2>Six honest photographs</h2>
-    <p class="lead">No styling, no studio. The cafe as it looks at lunch.</p>
-    <div class="ggrid">
-      <figure class="gcell land frame">
-        <img src="img/01.jpg" alt="The full mezze cabinet at Little Bridge" width="1600" height="1200">
-        <figcaption class="figcap">The cabinet at noon</figcaption>
-      </figure>
-      <figure class="gcell land frame">
-        <img src="img/03.jpg" alt="A za'atar wrap in its open takeaway box" width="1600" height="1200">
-        <figcaption class="figcap">Za'atar wrap, boxed</figcaption>
-      </figure>
-      <figure class="gcell land frame">
-        <img src="img/04.jpg" alt="Fasolia with rice and lemon on a serving board" width="1600" height="1200">
-        <figcaption class="figcap">Fasolia w riz</figcaption>
-      </figure>
-      <figure class="gcell port frame">
-        <img src="img/02.jpg" alt="The handwritten wraps chalkboard" width="1200" height="1600">
-        <figcaption class="figcap">The wraps board</figcaption>
-      </figure>
-      <figure class="gcell port frame">
-        <img src="img/05.jpg" alt="Open mana'ish stacked with salad and pickles" width="1200" height="1600">
-        <figcaption class="figcap">Mana'ish, loaded</figcaption>
-      </figure>
-      <figure class="gcell port frame">
-        <img src="img/06.jpg" alt="A rolled wrap held in one hand" width="1200" height="1600">
-        <figcaption class="figcap">To go, in hand</figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 
@@ -427,7 +384,7 @@ section{position:relative}
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">What regulars say</p>
-      <h2><b class="rating">4.9</b> from <b class="rcount">215</b> Google reviews</h2>
+      <h2>4.9 from 215 Google reviews</h2>
       <div class="stars" aria-label="Five stars">★★★★★</div>
     </div>
     <div class="rq-featured">
@@ -435,11 +392,11 @@ section{position:relative}
       <p class="rq-by"><b>Alex Rahimi</b> · Google review</p>
     </div>
     <div class="rq-grid">
-      <div class="rq">
+      <div class="rq tsaff">
         <blockquote>“Best Lebanese food! A must for lunch if you're in Richmond. Can't believe how flavourful and cheap the food is”</blockquote>
         <p class="rq-by"><b>Tommy S</b> · Google review</p>
       </div>
-      <div class="rq">
+      <div class="rq tolive">
         <blockquote>“Hands down, most wholesome and flavourful food in Melbourne. Nothing fancy, a rustic homey place where Lena cooks proper food”</blockquote>
         <p class="rq-by"><b>Daniel Han</b> · Google review</p>
       </div>
@@ -447,151 +404,81 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ============ BOOK ============ -->
-<section class="book" id="book">
-  <div class="wrap cols">
-    <div class="bside">
-      <p class="eyebrow">Book direct</p>
-      <h2>Reserve a lunch table</h2>
-      <p class="lead">The cafe runs weekdays, 7am to 3pm, and lunch is the rush. For a table today the phone is fastest. For tomorrow onwards, or for a catering order, write it below, send it as an email, and the cafe confirms by reply.</p>
-      <p>Feeding a crowd? The cabinet was made for it. Send a catering enquiry with your date and numbers and take it from there.</p>
-      <div class="fact">
-        <div><b>Noon</b>The queue starts</div>
-        <div><b>Reply</b>Confirms your table</div>
+<!-- ============ LUNCH: HOURS + CALL ============ -->
+<section class="lunch" id="lunch">
+  <div class="wrap">
+    <p class="eyebrow">Plan your lunch</p>
+    <h2>Weekdays, seven to three. That is the whole rhythm.</h2>
+    <p class="lead">Lebanese breakfast from 7am, the queue from noon, pots empty by 3pm. Closed Saturday and Sunday, back at the stove Monday morning.</p>
+    <div class="days">
+      <div class="day"><span class="d">Mon</span><span class="h">7 to 3</span></div>
+      <div class="day"><span class="d">Tue</span><span class="h">7 to 3</span></div>
+      <div class="day"><span class="d">Wed</span><span class="h">7 to 3</span></div>
+      <div class="day"><span class="d">Thu</span><span class="h">7 to 3</span></div>
+      <div class="day"><span class="d">Fri</span><span class="h">7 to 3</span></div>
+      <div class="day off"><span class="d">Sat</span><span class="h">Closed</span></div>
+      <div class="day off"><span class="d">Sun</span><span class="h">Closed</span></div>
+    </div>
+    <div class="callpanel">
+      <div>
+        <h3>For a table, ring the counter</h3>
+        <p>The room is small and lunch is the rush, so for a table today the phone is the way in: ask for a table on the call and it is done.</p>
+        <p>Feeding a crowd? The cabinet was made for trays. Ring with your date and numbers and the kitchen will tell you what it can do.</p>
+      </div>
+      <div class="bignum">
+        <a href="tel:+61394281194" class="tel">(03) 9428 1194</a>
+        <a class="callpill" href="tel:+61394281194">Call the cafe</a>
+        <span class="cnote">Answered weekdays, 7am to 3pm</span>
       </div>
     </div>
-    <form class="bform" id="bookform">
-      <span class="lbl">I'm asking about</span>
-      <div class="tsel">
-        <label><input type="radio" name="btype" value="table" checked><span>A lunch table</span></label>
-        <label><input type="radio" name="btype" value="catering"><span>Catering</span></label>
-      </div>
-      <div class="frow">
-        <div>
-          <label class="lbl" for="bname">Your name</label>
-          <input id="bname" type="text" autocomplete="name" placeholder="Your name">
-        </div>
-        <div>
-          <label class="lbl" for="bparty">People</label>
-          <input id="bparty" type="number" min="1" max="60" value="2">
-        </div>
-      </div>
-      <div class="frow">
-        <div>
-          <label class="lbl" for="bdate">Date</label>
-          <input id="bdate" type="date">
-        </div>
-        <div>
-          <label class="lbl" for="btime">Time</label>
-          <input id="btime" type="time" value="12:30">
-        </div>
-      </div>
-      <span class="lbl">Your request, written for you</span>
-      <p class="preview" id="bpreview"></p>
-      <div class="bbtns">
-        <a class="pill line" href="tel:+61394281194">Call (03) 9428 1194</a>
-      </div>
-      <p class="bnote">The email opens in your own mail app, ready to send. Requests are confirmed when the cafe replies.</p>
-    </form>
   </div>
 </section>
 
 <!-- ============ VISIT ============ -->
 <section class="visit" id="visit">
-  <div class="wrap cols">
-    <div>
-      <p class="eyebrow">Visit</p>
-      <h2>On Bridge Road</h2>
-      <div class="vrow">
+  <div class="wrap">
+    <p class="eyebrow">Find us</p>
+    <h2>On Bridge Road, Richmond</h2>
+    <div class="vgrid">
+      <div class="vcard">
         <span class="k">Address</span>
         <span class="v adr">34 Bridge Rd, Richmond VIC 3121</span>
       </div>
-      <div class="vrow">
+      <div class="vcard">
         <span class="k">Phone</span>
         <span class="v"><a href="tel:+61394281194" class="tel">(03) 9428 1194</a></span>
       </div>
-      <div class="vrow">
+      <div class="vcard">
         <span class="k">Hours</span>
-        <span class="v hrs">Monday to Friday, 7am to 3pm · Closed Saturday and Sunday</span>
-      </div>
-      <div class="vrow">
-        <span class="k">Good to know</span>
-        <span class="v">Lebanese breakfast from seven, lunch until three. Generous plates, small room, worth the queue at noon.</span>
-      </div>
-      <div class="vbtns">
-        <a class="vbtn" href="https://www.google.com/maps?cid=1439285076559381082" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.8.4.3 1 .3 1.4 0C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-          Open in Maps
-        </a>
-        <a class="vbtn line" href="https://www.facebook.com/profile.php?id=119337904797972" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H9v3h2.3v7h2.2z"/></svg>
-          Little Bridge on Facebook
-        </a>
+        <span class="v hrs">Monday to Friday, 7am to 3pm. Closed Saturday and Sunday.</span>
       </div>
     </div>
-    <figure>
-      <div class="frame">
-        <img src="img/04.jpg" alt="Fasolia and rice served at Little Bridge Cafe" width="1600" height="1200">
-        <figcaption class="figcap">Come hungry, come early</figcaption>
-      </div>
-    </figure>
-  </div>
-  <div class="wrap foot">
-    <span>Little Bridge Cafe · Lebanese home cooking</span>
-    <span><span class="adr">34 Bridge Rd, Richmond VIC 3121</span> · <a href="tel:+61394281194" class="tel" style="color:inherit;text-decoration:none">(03) 9428 1194</a></span>
+    <div class="vbtns">
+      <a class="vbtn" href="https://www.google.com/maps?cid=1439285076559381082" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.8.4.3 1 .3 1.4 0C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+        Open in Maps
+      </a>
+      <a class="vbtn line" href="https://www.facebook.com/profile.php?id=119337904797972" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H9v3h2.3v7h2.2z"/></svg>
+        Little Bridge on Facebook
+      </a>
+    </div>
+    <p class="gwm">Little Bridge</p>
+    <div class="foot">
+      <span>Little Bridge Cafe · Lebanese home cooking</span>
+      <span><span class="adr">34 Bridge Rd, Richmond VIC 3121</span> · <a href="tel:+61394281194" class="tel">(03) 9428 1194</a></span>
+    </div>
   </div>
 </section>
 
 <!-- ============ STICKY BAR (phones) ============ -->
 <div class="bar">
-  <span class="bbrand">little bridge</span>
-  <a class="bres" href="#book">Reserve</a>
-  <a class="bres" href="https://www.facebook.com/profile.php?id=119337904797972" target="_blank" rel="noopener" aria-label="Little Bridge Cafe on Facebook">
+  <span class="bbrand">Little Bridge</span>
+  <a class="bfb" href="https://www.facebook.com/profile.php?id=119337904797972" target="_blank" rel="noopener" aria-label="Little Bridge Cafe on Facebook">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H9v3h2.3v7h2.2z"/></svg>
   </a>
   <a class="bcall" href="tel:+61394281194">Call</a>
 </div>
 
-<script>
-(function(){
-  var $=function(id){return document.getElementById(id)};
-  var form=$('bookform');
-  function fmtDate(v){
-    if(!v) return 'a day this week';
-    var d=new Date(v+'T00:00:00');
-    if(isNaN(d)) return v;
-    var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    var mons=['January','February','March','April','May','June','July','August','September','October','November','December'];
-    return days[d.getDay()]+' '+d.getDate()+' '+mons[d.getMonth()];
-  }
-  function fmtTime(v){
-    if(!v) return 'midday';
-    var p=v.split(':'), h=parseInt(p[0],10), m=p[1];
-    var ap=h>=12?'pm':'am'; h=h%12; if(h===0)h=12;
-    return h+(m==='00'?'':':'+m)+ap;
-  }
-  function update(){
-    var type=form.querySelector('input[name="btype"]:checked').value;
-    var name=$('bname').value.trim();
-    var party=$('bparty').value||'2';
-    var date=fmtDate($('bdate').value);
-    var time=fmtTime($('btime').value);
-    var body, subject;
-    if(type==='table'){
-      subject='Lunch table for '+party+', '+date;
-      body='Hello Little Bridge,\n\nCould I reserve a lunch table for '+party+' on '+date+' at '+time+'?\n\n'+(name?name:'')+'\n';
-    }else{
-      subject='Catering enquiry for '+party+' people';
-      body='Hello Little Bridge,\n\nI would like to ask about catering for '+party+' people on '+date+'. Could you let me know what the kitchen can do?\n\n'+(name?name:'')+'\n';
-    }
-    $('bpreview').textContent=body.replace(/\n\n/g,'\n').trim();
-    /* no email exists for this business: the call button is the honest channel */
-  }
-  form.addEventListener('input',update);
-  form.addEventListener('change',update);
-  form.addEventListener('submit',function(e){e.preventDefault()});
-  update();
-})();
-</script>
 </body>
 </html>

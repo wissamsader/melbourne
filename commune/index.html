@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex,nofollow">
 <title>Commune · Specialty Coffee and Modern Turkish Brunch · Fitzroy</title>
 <meta name="description" content="Commune, 359 Brunswick St, Fitzroy. Specialty coffee with Spectrum Coffee, modern Turkish brunch, house baked pastries. Doors at 6am. Rated 5.0 across 436 Google reviews.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{font-family:'Archivo',sans-serif;background:var(--dusk);color:var(--cream);font-size:16px;line-height:1.65}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -36,6 +37,11 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:'Fraunces',serif;font-weight:380;line-height:1.08}
 .grain{position:relative}
 .grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E")}
+.btn{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px;border-radius:2px}
+.btn-amber{background:var(--amber);color:var(--dusk)}
+.btn-amber:hover{background:var(--amber-soft)}
+.btn-ghost{border:1px solid rgba(240,189,126,.45);color:var(--cream);background:rgba(27,19,11,.35)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber-soft)}
 
 /* ---------- NAV ---------- */
 nav{position:absolute;top:0;left:0;right:0;z-index:30}
@@ -47,43 +53,31 @@ nav{position:absolute;top:0;left:0;right:0;z-index:30}
 .nav-call{background:var(--amber);color:var(--dusk);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:11px 20px;border-radius:2px}
 .nav-call:hover{background:var(--amber-soft)}
 
-/* ---------- HERO ---------- */
+/* ---------- HERO · wordmark, one line, one action, the cabinet low ---------- */
 header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;overflow:hidden;background:
   radial-gradient(70% 55% at 82% 90%, rgba(226,155,75,.12), transparent 60%),var(--dusk)}
-.hero-in{position:relative;z-index:6;max-width:1200px;margin:0 auto;padding:138px 48px 56px;display:flex;flex-direction:column;min-height:inherit;height:100%}
-.hero-top .eyebrow{display:block;margin-bottom:16px}
-h1{font-size:clamp(68px,9.5vw,128px);color:var(--cream);font-weight:340;letter-spacing:-.01em;margin-bottom:22px}
-.routine-line{border-left:1px solid var(--amber);padding:6px 0 8px 20px;max-width:600px}
-.routine-line .rl-caps{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--cream);display:block;margin-bottom:7px}
-.routine-line .rl-it{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--amber-soft);display:block;margin-bottom:9px}
-.routine-line .rl-spec{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--cream-dim);display:block}
-.routine-line .rl-spec b{color:var(--amber-soft);font-weight:700}
-.hero-foot{margin-top:auto;position:relative;z-index:7;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
-.rating{display:flex;align-items:center;gap:16px}
-.stars{color:var(--amber);font-size:17px;letter-spacing:4px}
-.rating .score{font-family:'Fraunces',serif;font-size:46px;color:var(--cream);line-height:1}
-.rating .of{font-size:13px;color:var(--cream);line-height:1.45;text-shadow:0 1px 8px rgba(27,19,11,.8)}
-.cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:15px 26px;border-radius:2px}
-.btn-amber{background:var(--amber);color:var(--dusk)}
-.btn-amber:hover{background:var(--amber-soft)}
-.btn-ghost{border:1px solid rgba(240,189,126,.45);color:var(--cream);background:rgba(27,19,11,.35)}
-.btn-ghost:hover{border-color:var(--amber);color:var(--amber-soft)}
-.hero-photo{position:absolute;right:0;bottom:0;width:min(64%,900px);height:58%;z-index:4;border-top:1px solid var(--line-d);border-left:1px solid var(--line-d);margin:0}
-.hero-photo::before{content:"";position:absolute;top:10px;left:10px;right:0;bottom:0;border-top:1px solid var(--line-d);border-left:1px solid var(--line-d);z-index:2;pointer-events:none}
-.hero-photo::after{content:"";position:absolute;inset:0;z-index:1;background:
-  linear-gradient(90deg, rgba(37,26,17,.92) 0%, rgba(37,26,17,.5) 24%, rgba(37,26,17,0) 52%),
-  linear-gradient(0deg, rgba(27,19,11,.45) 0%, rgba(27,19,11,0) 34%)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 54%}
-.hero-photo .ph-tag{position:absolute;right:0;bottom:22px;background:var(--board);color:var(--cream-dim);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;z-index:3}
-.orn{position:absolute;top:96px;right:56px;width:138px;height:138px;z-index:6}
-.orn svg{width:100%;height:100%;overflow:visible}
-.orn text{font-family:'Archivo',sans-serif;font-size:10.4px;font-weight:600;letter-spacing:.22em;fill:var(--amber-soft)}
-.orn .orn-star{font-size:20px;fill:var(--amber)}
+.hero-in{position:relative;z-index:6;max-width:1200px;margin:0 auto;padding:158px 48px 48px;display:flex;flex-direction:column;min-height:inherit;height:100%}
+h1{font-size:clamp(84px,11.5vw,158px);color:var(--cream);font-weight:340;letter-spacing:-.01em;line-height:.96}
+.hero-line{margin-top:26px;font-size:14px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--cream-dim)}
+.hero-line i{font-style:normal;color:var(--amber);padding:0 8px}
+.hero-cta{margin-top:38px;align-self:flex-start}
+.hero-band{margin-top:auto;padding-top:44px}
+.hero-band .hb-frame{border:1px solid var(--line-d);padding:10px;background:rgba(27,19,11,.5)}
+.hero-band img{width:100%;height:clamp(220px,30vh,320px);object-fit:cover;object-position:center 46%}
+
+/* ---------- SCORE · the one confident element ---------- */
+.score-band{background:var(--board);border-top:1px solid var(--line-d);padding:84px 0 90px}
+.score-in{display:flex;align-items:center;gap:64px;flex-wrap:wrap}
+.score-big{font-family:'Fraunces',serif;font-size:clamp(120px,15vw,184px);line-height:.82;color:var(--cream)}
+.score-tx{max-width:520px}
+.score-tx .stars{display:block;color:var(--amber);font-size:24px;letter-spacing:8px;margin-bottom:14px}
+.score-line{font-family:'Fraunces',serif;font-size:clamp(22px,2.6vw,30px);color:var(--cream);line-height:1.3}
+.score-line b{font-weight:600;color:var(--amber-soft)}
+.score-sub{margin-top:12px;font-size:15px;color:var(--cream-dim);max-width:44ch}
 
 /* ---------- ROUTINE ---------- */
-.routine{background:var(--dusk2);border-top:1px solid var(--line-d);padding:88px 0 96px}
-.routine-head{margin-bottom:52px;max-width:640px}
+.routine{background:var(--dusk2);border-top:1px solid var(--line-d);padding:96px 0 104px}
+.routine-head{margin-bottom:56px;max-width:640px}
 .routine-head h2{font-size:clamp(34px,4vw,50px);color:var(--cream);margin-top:14px}
 .slots{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
 .slot{border-top:1px solid var(--line-d);padding-top:24px}
@@ -93,7 +87,7 @@ h1{font-size:clamp(68px,9.5vw,128px);color:var(--cream);font-weight:340;letter-s
 
 /* ---------- STORY ---------- */
 .light{background:var(--paper);color:var(--ink)}
-.story{padding:100px 0}
+.story{padding:110px 0}
 .story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:start}
 .story h2{font-size:clamp(36px,4.4vw,54px);color:var(--ink);margin:16px 0 28px}
 .story p{color:var(--ink);font-size:17px;margin-bottom:20px;max-width:56ch}
@@ -104,35 +98,21 @@ h1{font-size:clamp(68px,9.5vw,128px);color:var(--cream);font-weight:340;letter-s
 .story-photo img{width:100%;height:560px;object-fit:cover;object-position:center 62%}
 .story-photo figcaption{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);padding:14px 4px 4px}
 
-/* ---------- HIGHLIGHTS ---------- */
-.counter{background:var(--dusk);padding:96px 0 104px;border-top:1px solid var(--line-d)}
-.counter-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:50px;flex-wrap:wrap}
+/* ---------- COUNTER ---------- */
+.counter{background:var(--dusk);padding:104px 0 112px;border-top:1px solid var(--line-d)}
+.counter-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:54px;flex-wrap:wrap}
 .counter-head h2{font-size:clamp(34px,4vw,50px);color:var(--cream);margin-top:14px}
 .counter-head p{max-width:340px;font-size:14px;color:var(--cream-dim)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .card{border:1px solid var(--line-d);background:var(--dusk2)}
 .card .card-ph{padding:10px 10px 0}
-.card img{width:100%;height:330px;object-fit:cover}
-.card .card-tx{padding:22px 24px 28px}
-.card h3{font-size:25px;color:var(--cream);margin-bottom:10px}
-.card p{font-size:14px;color:var(--cream-dim)}
-
-/* ---------- GALLERY ---------- */
-.gallery{padding:96px 0 104px}
-.gallery-head{margin-bottom:44px}
-.gallery h2{font-size:clamp(34px,4vw,50px);color:var(--ink);margin-top:14px}
-.g-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:340px;gap:18px;
-  grid-template-areas:"a a b" "c d e"}
-.g-grid figure{position:relative;overflow:hidden;border:1px solid var(--line-l);background:#fff;padding:8px}
-.g-grid img{width:100%;height:100%;object-fit:cover}
-.ga{grid-area:a}.gb{grid-area:b}.gc{grid-area:c}.gd{grid-area:d}.ge{grid-area:e}
-.gb img{object-position:center 30%}
-.gc img{object-position:center 65%}
-.ge img{object-position:center 55%}
-.g-note{margin-top:22px;font-size:13px;color:var(--ink-soft);letter-spacing:.06em}
+.card img{width:100%;height:420px;object-fit:cover}
+.card .card-tx{padding:26px 28px 32px}
+.card h3{font-size:27px;color:var(--cream);margin-bottom:10px}
+.card p{font-size:14.5px;color:var(--cream-dim);max-width:52ch}
 
 /* ---------- DRINKS BOARD ---------- */
-.drinks{background:var(--board);padding:100px 0 110px;border-top:1px solid var(--line-d)}
+.drinks{background:var(--board);padding:104px 0 114px;border-top:1px solid var(--line-d)}
 .drinks-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
 .board-photo{border:1px solid var(--line-d);padding:12px;background:var(--dusk2);max-width:430px}
 .board-photo img{width:100%;height:auto}
@@ -156,12 +136,10 @@ h1{font-size:clamp(68px,9.5vw,128px);color:var(--cream);font-weight:340;letter-s
 .cab-note{margin-top:14px;font-size:13px;color:var(--cream-dim)}
 
 /* ---------- REVIEWS ---------- */
-.reviews{padding:100px 0 110px}
-.rev-head{display:flex;gap:56px;align-items:center;margin-bottom:56px;flex-wrap:wrap}
-.rev-score{font-family:'Fraunces',serif;font-size:120px;line-height:.9;color:var(--ink)}
-.rev-head .rh-tx .stars{color:var(--amber-ink);margin-bottom:8px;display:block}
-.rev-head .rh-tx p{max-width:44ch;color:var(--ink-soft);font-size:16px}
-.rev-head .rh-tx b{color:var(--ink)}
+.reviews{padding:104px 0 114px}
+.rev-head{margin-bottom:52px;max-width:640px}
+.rev-head h2{font-size:clamp(34px,4vw,50px);color:var(--ink);margin-top:14px}
+.rev-head .stars{display:block;color:var(--amber-ink);font-size:17px;letter-spacing:5px;margin-top:16px}
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
 .quote{border:1px solid var(--line-l);background:#fff;padding:30px 28px;display:flex;flex-direction:column}
 .quote .qm{font-family:'Fraunces',serif;font-size:54px;line-height:.6;color:var(--amber);margin-bottom:18px}
@@ -169,7 +147,7 @@ h1{font-size:clamp(68px,9.5vw,128px);color:var(--cream);font-weight:340;letter-s
 .quote cite{margin-top:auto;font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
 
 /* ---------- BOOK ---------- */
-.book{background:var(--dusk);padding:100px 0 110px;border-top:1px solid var(--line-d)}
+.book{background:var(--dusk);padding:104px 0 114px;border-top:1px solid var(--line-d)}
 .book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
 .book h2{font-size:clamp(36px,4.2vw,52px);color:var(--cream);margin:14px 0 18px}
 .book .bl{font-size:16px;color:var(--cream-dim);max-width:44ch;margin-bottom:26px}
@@ -185,30 +163,32 @@ h1{font-size:clamp(68px,9.5vw,128px);color:var(--cream);font-weight:340;letter-s
 .f-cell input:focus,.f-cell select:focus{outline:none;border-color:var(--amber)}
 .b-actions{display:flex;flex-direction:column;gap:12px}
 .b-actions .btn{text-align:center}
-.b-alt{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .b-note{margin-top:18px;font-size:12.5px;color:var(--cream-dim)}
 
 /* ---------- VISIT ---------- */
-.visit{padding:100px 0 110px}
-.visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:start}
+.visit{padding:104px 0 114px}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .visit h2{font-size:clamp(36px,4.2vw,52px);color:var(--ink);margin:14px 0 24px}
 .addr{font-family:'Fraunces',serif;font-size:clamp(26px,3vw,36px);color:var(--ink);line-height:1.25;margin-bottom:8px}
 .addr-2{font-family:'Fraunces',serif;font-size:clamp(20px,2.2vw,26px);color:var(--ink-soft);margin-bottom:26px}
 .visit-note{font-size:15px;color:var(--ink-soft);max-width:46ch;margin-bottom:30px}
-.visit-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
 .btn-ink{background:var(--ink);color:var(--paper)}
 .btn-ink:hover{background:#241a10}
 .btn-oline{border:1px solid var(--line-l);color:var(--ink)}
 .btn-oline:hover{border-color:var(--amber-ink);color:var(--amber-ink)}
+.visit-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
 .visit-phone{font-size:14px;color:var(--ink-soft)}
 .visit-phone b{color:var(--ink);font-weight:600;letter-spacing:.04em}
-.hours{border:1px solid var(--line-l);background:#fff;padding:34px 36px}
+.hours{border:1px solid var(--line-l);background:#fff;padding:34px 36px;margin-top:40px}
 .hours h3{font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--amber-ink);margin-bottom:8px}
 .hours .early{font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--ink);margin-bottom:20px}
 .h-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line-l);font-size:14.5px}
 .h-row:last-of-type{border-bottom:none}
 .h-row .d{letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);font-size:12.5px;padding-top:2px}
 .h-row .t{color:var(--ink);font-weight:500}
+.street-photo{border:1px solid var(--line-l);padding:12px;background:#fff}
+.street-photo img{width:100%;height:auto}
+.street-photo figcaption{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);padding:14px 4px 4px}
 
 /* ---------- FOOTER ---------- */
 footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0 130px}
@@ -227,57 +207,45 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
   .bar .bar-brand small{display:block;font-family:'Archivo',sans-serif;font-size:9.5px;letter-spacing:.18em;color:var(--amber);font-weight:600}
   .bar a{flex:none}
   .bar .bt{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:11px 14px;border-radius:2px}
-  .bar .bt-email{background:var(--amber);color:var(--board)}
+  .bar .bt-book{background:var(--amber);color:var(--board)}
   .bar .bt-call{border:1px solid var(--line-d);color:var(--cream)}
   .bar .bt-wa{border:1px solid var(--line-d);color:var(--cream);padding:9px 11px;display:flex;align-items:center}
   .bar .bt-wa svg{width:17px;height:17px;fill:currentColor}
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width:1060px){
-  h1{font-size:clamp(64px,9vw,100px)}
-  .orn{display:none}
-}
 @media (max-width:900px){
   .wrap{padding:0 20px}
   .nav-in{padding:16px 20px}
   .nav-links{display:none}
   header{min-height:clamp(600px,92svh,820px);max-height:860px}
-  .hero-in{padding:92px 20px 252px}
-  h1{font-size:clamp(54px,15vw,72px);margin-bottom:16px}
-  .routine-line .rl-it{font-size:15px}
-  .routine-line .rl-spec{font-size:10px}
-  .hero-foot{flex-direction:column;align-items:flex-start;gap:16px;padding-bottom:18px}
-  .rating .score{font-size:36px}
-  .cta-row .btn{padding:13px 18px;font-size:12px}
-  .hero-photo{width:100%;height:232px;border-left:none}
-  .hero-photo::before{display:none}
-  .hero-photo::after{background:linear-gradient(0deg, rgba(27,19,11,.35) 0%, rgba(27,19,11,0) 30%)}
-  .hero-photo .ph-tag{bottom:10px;font-size:10px}
+  .hero-in{padding:104px 20px 28px}
+  h1{font-size:clamp(58px,16vw,84px)}
+  .hero-line{margin-top:18px;font-size:11px;letter-spacing:.2em}
+  .hero-line i{padding:0 5px}
+  .hero-cta{margin-top:26px}
+  .hero-band{padding-top:30px}
+  .hero-band img{height:200px}
+  .score-band{padding:60px 0 66px}
+  .score-in{gap:28px}
+  .score-big{font-size:clamp(88px,26vw,120px)}
+  .score-tx .stars{font-size:19px;letter-spacing:6px}
+  .routine,.counter,.drinks,.book{padding:68px 0 76px}
+  .reviews,.visit{padding:68px 0 76px}
+  .story{padding:68px 0}
   .slots{grid-template-columns:1fr;gap:26px}
-  .routine,.counter,.gallery,.drinks,.reviews,.book,.visit{padding:64px 0 72px}
-  .story{padding:64px 0}
   .story-grid,.drinks-grid,.book-grid,.visit-grid{grid-template-columns:1fr;gap:44px}
   .story-photo img{height:420px}
   .cards{grid-template-columns:1fr;gap:22px}
   .card img{height:300px}
-  .g-grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px;gap:12px;
-    grid-template-areas:"a a" "b c" "d e"}
-  .rev-head{gap:26px;margin-bottom:36px}
-  .rev-score{font-size:84px}
   .quotes{grid-template-columns:1fr;gap:20px}
   .board-photo{max-width:100%}
   .m-row{grid-template-columns:1fr 58px 58px}
   .f-grid{grid-template-columns:1fr;margin-bottom:22px}
   .f-cell.full{grid-column:auto}
-  .b-alt{grid-template-columns:1fr}
+  .hours{margin-top:32px}
   footer{padding:44px 0 150px}
 }
-</style>
-<style data-fx-orn>
-.orn svg{animation:ornspin 84s linear infinite;transform-origin:50% 50%}
-@keyframes ornspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion: reduce){.orn svg{animation:none}}
 </style>
 </head>
 <body>
@@ -287,7 +255,7 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
     <a class="brand" href="#top">commune</a>
     <div class="nav-links">
       <a href="#story">Story</a>
-      <a href="#cabinet">Cabinet</a>
+      <a href="#counter">Counter</a>
       <a href="#drinks">Drinks</a>
       <a href="#reviews">Reviews</a>
       <a href="#visit">Visit</a>
@@ -297,43 +265,28 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
 </nav>
 
 <header id="top" class="grain">
-  <figure class="hero-photo">
-    <img src="img/01.jpg" alt="The Commune storefront at dusk, black awning lit over Brunswick Street" fetchpriority="high">
-    <figcaption class="ph-tag">359 Brunswick St, at dusk</figcaption>
-  </figure>
-  <div class="orn" aria-hidden="true">
-    <svg viewBox="0 0 160 160">
-      <defs>
-        <path id="cir" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"/>
-      </defs>
-      <circle cx="80" cy="80" r="76" fill="none" stroke="rgba(240,189,126,.3)" stroke-width="1"/>
-      <text><textPath href="#cir">COFFEE ROUTINE &#183; SINCE 6AM &#183; FITZROY &#183;&#160;</textPath></text>
-      <text class="orn-star" x="80" y="88" text-anchor="middle">&#9733;</text>
-    </svg>
-  </div>
   <div class="hero-in">
-    <div class="hero-top">
-      <span class="eyebrow">Fitzroy · Brunswick Street</span>
-      <h1>commune</h1>
-      <div class="routine-line">
-        <span class="rl-caps">Specialty coffee · Modern Turkish brunch</span>
-        <span class="rl-it">The coffee routine, kept daily from six in the morning.</span>
-        <span class="rl-spec">Coffee in collaboration with <b>Spectrum Coffee</b></span>
+    <h1>commune</h1>
+    <p class="hero-line">Specialty coffee<i>·</i>Modern Turkish brunch<i>·</i>Fitzroy</p>
+    <a class="btn btn-amber hero-cta" href="#book">Book a table</a>
+    <figure class="hero-band">
+      <div class="hb-frame">
+        <img src="img/05.jpg" alt="The house baked cabinet at Commune: almond croissants, caneles and muffins with handwritten tags" fetchpriority="high">
       </div>
-    </div>
-    <div class="hero-foot">
-      <div class="rating">
-        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="score">5.0</span>
-        <span class="of">across 436 Google reviews.<br>As high as the scale goes.</span>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-amber" href="#book">Book a table</a>
-        <a class="btn btn-ghost" href="#drinks">The drinks board</a>
-      </div>
-    </div>
+    </figure>
   </div>
 </header>
+
+<section class="score-band grain">
+  <div class="wrap score-in">
+    <div class="score-big">5.0</div>
+    <div class="score-tx">
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p class="score-line">across <b>436 Google reviews</b>. As high as the scale goes.</p>
+      <p class="score-sub">A perfect score is rare anywhere. Holding one across this many reviews, on Melbourne's most contested cafe strip, almost never happens.</p>
+    </div>
+  </div>
+</section>
 
 <section class="routine grain">
   <div class="wrap">
@@ -384,55 +337,31 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
   </div>
 </section>
 
-<section id="cabinet" class="counter grain">
+<section id="counter" class="counter grain">
   <div class="wrap">
     <div class="counter-head">
       <div>
         <span class="eyebrow">From the counter</span>
-        <h2>Coffee, cabinet, kitchen</h2>
+        <h2>Coffee and the oven</h2>
       </div>
-      <p>Three reasons the strip keeps walking through this particular door.</p>
+      <p>Two reasons the strip keeps walking through this particular door.</p>
     </div>
     <div class="cards">
       <article class="card">
         <div class="card-ph"><img src="img/04.jpg" alt="Flat white with latte art on a timber table" loading="lazy"></div>
         <div class="card-tx">
           <h3>The coffee</h3>
-          <p>Spectrum Coffee through the machine: black, white, batch brew, and a pour over worth sitting down for.</p>
+          <p>Spectrum Coffee through the machine: black, white, batch brew, and a pour over worth sitting down for. The first cup leaves the counter at six.</p>
         </div>
       </article>
       <article class="card">
         <div class="card-ph"><img src="img/06.jpg" alt="Pain au chocolat and canele beside a flat white" loading="lazy"></div>
         <div class="card-tx">
           <h3>House baked</h3>
-          <p>Pain au chocolat and canele on one plate, baked in house, best claimed before the mid-morning rush.</p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-ph"><img src="img/05.jpg" alt="The pastry cabinet, croissants and muffins with handwritten tags" loading="lazy"></div>
-        <div class="card-tx">
-          <h3>The cabinet</h3>
-          <p>Almond croissants, caneles, blueberry and chocolate muffins. All house baked, priced on the tags.</p>
+          <p>Pain au chocolat, almond croissants, caneles and muffins, all baked in house and priced on the handwritten tags. Best claimed before the mid-morning rush.</p>
         </div>
       </article>
     </div>
-  </div>
-</section>
-
-<section id="gallery" class="gallery light">
-  <div class="wrap">
-    <div class="gallery-head">
-      <span class="eyebrow">The room</span>
-      <h2>Dusk outside, warm inside</h2>
-    </div>
-    <div class="g-grid">
-      <figure class="ga"><img src="img/05.jpg" alt="The full pastry cabinet at Commune" loading="lazy"></figure>
-      <figure class="gb"><img src="img/01.jpg" alt="The lit awning at dusk" loading="lazy"></figure>
-      <figure class="gc"><img src="img/03.jpg" alt="Coffee at the window counter" loading="lazy"></figure>
-      <figure class="gd"><img src="img/04.jpg" alt="Flat white on timber" loading="lazy"></figure>
-      <figure class="ge"><img src="img/06.jpg" alt="Pastries and coffee on the table" loading="lazy"></figure>
-    </div>
-    <p class="g-note">Photographs from the room itself: the awning at dusk, the cabinet, the window seat.</p>
   </div>
 </section>
 
@@ -481,11 +410,9 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
 <section id="reviews" class="reviews light">
   <div class="wrap">
     <div class="rev-head">
-      <div class="rev-score">5.0</div>
-      <div class="rh-tx">
-        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p><b>436 reviews on Google. Average: five point zero.</b> A perfect score is rare anywhere. Holding one across this many reviews, on Melbourne's most contested cafe strip, almost never happens.</p>
-      </div>
+      <span class="eyebrow">From the 436</span>
+      <h2>What the reviews keep saying</h2>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
     </div>
     <div class="quotes">
       <blockquote class="quote">
@@ -513,10 +440,10 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
       <div>
         <span class="eyebrow">Book direct</span>
         <h2>Book a table</h2>
-        <p class="bl">Tell us who and when. <b>Email is fastest</b>: your message opens ready to send and the owner confirms by reply. Prefer to talk? Call, or send the same message on WhatsApp.</p>
+        <p class="bl">Tell us who and when. <b>Your message opens in WhatsApp already written</b>, and the owner confirms by reply. Prefer to talk? Call instead.</p>
         <div class="book-steps">
           <span>1 · Fill in the four fields</span>
-          <span>2 · Open the booking email, it is already written</span>
+          <span>2 · Open WhatsApp, the message is already written</span>
           <span>3 · Send. You get a reply, not a robot</span>
         </div>
       </div>
@@ -543,10 +470,8 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
           </div>
         </div>
         <div class="b-actions">
-          <a id="btnEmail" class="btn btn-amber" href="https://wa.me/61432453304" target="_blank" rel="noopener">Send the booking on WhatsApp</a>
-          <div class="b-alt">
-            <a class="btn btn-ghost" href="tel:+61432453304">Call &#183; 0432 453 304</a>
-          </div>
+          <a id="btnBook" class="btn btn-amber" href="https://wa.me/61432453304" target="_blank" rel="noopener">Send the booking on WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+61432453304">Call &#183; 0432 453 304</a>
         </div>
         <p class="b-note">No deposits, no booking platform, no fees. Your message goes straight to the cafe.</p>
       </div>
@@ -567,19 +492,23 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
           <a class="btn btn-ink" href="https://maps.google.com/?cid=2671142176385043551" target="_blank" rel="noopener">Open in Google Maps</a>
           <a class="btn btn-oline" href="tel:+61432453304">Call the cafe</a>
         </div>
-        <p class="visit-phone">Phone: <b>+61 432 453 304</b></p>
+        <p class="visit-phone">Phone: <b class="ph">+61 432 453 304</b></p>
+        <div class="hours">
+          <h3>Hours</h3>
+          <p class="early">Doors at six in the morning, early even for Melbourne.</p>
+          <div class="h-row"><span class="d">Monday</span><span class="t">6:00am to 2:00pm</span></div>
+          <div class="h-row"><span class="d">Tuesday</span><span class="t">6:00am to 2:00pm</span></div>
+          <div class="h-row"><span class="d">Wednesday</span><span class="t">6:00am to 2:00pm</span></div>
+          <div class="h-row"><span class="d">Thursday</span><span class="t">6:00am to 2:00pm</span></div>
+          <div class="h-row"><span class="d">Friday</span><span class="t">6:00am to 2:00pm</span></div>
+          <div class="h-row"><span class="d">Saturday</span><span class="t">6:00am to 2:00pm</span></div>
+          <div class="h-row"><span class="d">Sunday</span><span class="t">6:30am to 1:30pm</span></div>
+        </div>
       </div>
-      <div class="hours">
-        <h3>Hours</h3>
-        <p class="early">Doors at six in the morning, early even for Melbourne.</p>
-        <div class="h-row"><span class="d">Monday</span><span class="t">6:00am to 2:00pm</span></div>
-        <div class="h-row"><span class="d">Tuesday</span><span class="t">6:00am to 2:00pm</span></div>
-        <div class="h-row"><span class="d">Wednesday</span><span class="t">6:00am to 2:00pm</span></div>
-        <div class="h-row"><span class="d">Thursday</span><span class="t">6:00am to 2:00pm</span></div>
-        <div class="h-row"><span class="d">Friday</span><span class="t">6:00am to 2:00pm</span></div>
-        <div class="h-row"><span class="d">Saturday</span><span class="t">6:00am to 2:00pm</span></div>
-        <div class="h-row"><span class="d">Sunday</span><span class="t">6:30am to 1:30pm</span></div>
-      </div>
+      <figure class="street-photo">
+        <img src="img/01.jpg" alt="The Commune storefront at dusk, the black awning lit over Brunswick Street" loading="lazy">
+        <figcaption>The black awning at dusk, lit and easy to spot</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -587,14 +516,14 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
 <footer>
   <div class="wrap foot">
     <span class="fb">commune</span>
-    <p>Specialty coffee · Modern Turkish brunch · 359 Brunswick St, Fitzroy VIC 3065</p>
+    <p>Specialty coffee · Modern Turkish brunch · <span class="ad">359 Brunswick St, Fitzroy VIC 3065</span></p>
     <p>&#169; 2026 Commune</p>
   </div>
 </footer>
 
 <div class="bar">
   <span class="bar-brand">commune<small>5.0 &#9733; &#183; 436 reviews</small></span>
-  <a class="bt bt-email" href="#book">Book</a>
+  <a class="bt bt-book" href="#book">Book</a>
   <a class="bt bt-call" href="tel:+61432453304">Call</a>
   <a class="bt bt-wa" href="https://wa.me/61432453304" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.1 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.2-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.4z"/></svg>
@@ -609,10 +538,8 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
     var d=$('bd').value||'(date)';
     var t=$('bt').value||'(time)';
     var g=$('bg').value;
-    var su=encodeURIComponent('Table booking: '+d+' '+t+', '+g+' guests');
     var bo=encodeURIComponent('Hi Commune,\n\nI would like to book a table.\n\nName: '+n+'\nDate: '+d+'\nTime: '+t+'\nGuests: '+g+'\n\nThank you.');
-    $('btnEmail').href='https://wa.me/61432453304?text='+bo;
-    $('btnWa').href='https://wa.me/61432453304?text='+encodeURIComponent('Hi Commune, I would like to book a table. Name: '+n+', date: '+d+', time: '+t+', guests: '+g+'.');
+    $('btnBook').href='https://wa.me/61432453304?text='+bo;
   }
   ['bn','bd','bt','bg'].forEach(function(i){$(i).addEventListener('input',upd);$(i).addEventListener('change',upd)});
   upd();

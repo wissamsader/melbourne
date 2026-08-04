@@ -111,9 +111,22 @@ h1,h2,h3{font-family:var(--dh);font-weight:400;line-height:1.02;letter-spacing:.
 .card{background:#fff;border:1.5px solid #d9ccab;min-width:0}
 .card .im{aspect-ratio:4/3.1;overflow:hidden}
 .card .im img{width:100%;height:100%;object-fit:cover}
-.card.c3 .im img{object-position:38% 55%}
 .card h3{font-size:1.25rem;color:var(--g);padding:16px 18px 4px;letter-spacing:.03em}
 .card p{font-size:.93rem;padding:0 18px 18px;color:#4c584f}
+.card.tp{grid-column:span 2;position:relative;overflow:hidden;background:var(--g);border-color:var(--g2);
+  color:var(--c);display:flex;flex-direction:column;justify-content:center;padding:36px 38px}
+.card.tp::before{content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;
+  background:
+   repeating-linear-gradient(0deg,transparent 0 84px,rgba(246,235,210,.6) 84px 85px),
+   repeating-linear-gradient(90deg,transparent 0 84px,rgba(246,235,210,.6) 84px 85px)}
+.card.tp>*{position:relative}
+.card.tp .kick{color:var(--gold)}
+.card.tp h3{font-size:clamp(1.9rem,3vw,2.7rem);color:var(--c);padding:12px 0 10px;line-height:1.05}
+.card.tp h3 em{font-style:normal;color:var(--gold)}
+.card.tp p{color:var(--c);opacity:.94;padding:0;font-size:.98rem;max-width:52ch}
+.card.tp .tgo{display:inline-block;align-self:flex-start;background:var(--r);color:var(--c);
+  font-weight:700;font-size:.95rem;padding:13px 22px;margin-top:20px}
+.card.tp .tgo:hover{background:var(--r2)}
 
 /* ---------- menu ---------- */
 .menu{background:var(--g);color:var(--c);padding-block:92px;position:relative}
@@ -139,19 +152,13 @@ h1,h2,h3{font-family:var(--dh);font-weight:400;line-height:1.02;letter-spacing:.
 .cof-list span{border:1.5px solid var(--g);color:var(--g);font-weight:600;font-size:.9rem;padding:8px 14px}
 .cof-note{padding:0 20px 20px;font-size:.85rem;color:#5c6a5f}
 
-/* ---------- gallery ---------- */
+/* ---------- the board in the window ---------- */
 .gal{background:var(--c);padding-block:86px}
 .gal .kick{color:var(--r)}
-.gal h2{font-size:clamp(2.4rem,4.6vw,3.7rem);color:var(--g);margin:12px 0 34px}
-.gal-g{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
-.gf{min-width:0}
-.gf.a{grid-column:span 7}.gf.b{grid-column:span 5}
-.gf.c{grid-column:span 12}
-.gf img{width:100%;height:auto;border:8px solid var(--g)}
-.gf.a img,.gf.b img{height:500px;object-fit:cover}
-.gf.b img{object-position:center 62%}
-.gf.c img{height:450px;object-fit:cover;object-position:center 40%}
-.gf figcaption{font-size:.85rem;font-weight:600;color:#4c584f;padding-top:9px}
+.gal h2{font-size:clamp(2.4rem,4.6vw,3.7rem);color:var(--g);margin:12px 0 18px}
+.gal .gnote{max-width:62ch;color:#4c584f;margin-bottom:34px}
+.gal img{width:100%;height:500px;object-fit:cover;object-position:center 35%;border:8px solid var(--g)}
+.gal figcaption{font-size:.85rem;font-weight:600;color:#4c584f;padding-top:9px}
 
 /* ---------- reviews ---------- */
 .rev{background:var(--g2);color:var(--c);padding-block:92px}
@@ -242,16 +249,14 @@ a.ph:hover{color:var(--gold)}
   .orn{width:94px;height:94px;right:14px;top:auto;bottom:calc(38% - 47px)}
   .story .wrap,.order .wrap,.visit .wrap{grid-template-columns:1fr;gap:44px}
   .hl-g{grid-template-columns:1fr}
+  .card.tp{grid-column:auto;padding:30px 24px}
   .tick{white-space:normal;text-align:center;padding:12px 20px}
   .tick .t1{font-size:1.05rem;letter-spacing:.07em}
   .tick .t2{display:none}
   .m-g{grid-template-columns:1fr}
   .coffee{grid-template-columns:1fr}
-  .gf.a img{height:auto}
-  .gf.c img{height:220px}
+  .gal img{height:auto}
   .rev-g{grid-template-columns:1fr}
-  .gf.a,.gf.b,.gf.c{grid-column:span 12}
-  .gf.b img{max-height:440px}
   .bar{display:block}
   .foot{padding-bottom:calc(150px + env(safe-area-inset-bottom))}
 }
@@ -277,7 +282,6 @@ a.ph:hover{color:var(--gold)}
     <div class="nav-l">
       <a href="#vegan">The Vegan Duck</a>
       <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
       <a href="#visit">Visit</a>
     </div>
@@ -359,19 +363,15 @@ a.ph:hover{color:var(--gold)}
     <h2>Small shop, serious output</h2>
     <div class="hl-g">
       <div class="card">
-        <div class="im"><img src="img/01.jpg" alt="2T Cafe shopfront on Gertrude St, green frontage under a black sign"></div>
-        <h3>THE GREEN CORNER</h3>
-        <p>Look for the deep-green frontage and the black 2T Café sign on Gertrude St, with the day's coffee list written on the window.</p>
-      </div>
-      <div class="card">
         <div class="im"><img src="img/05.jpg" alt="Crispy pork bánh mì from 2T Cafe, loaded with coriander and pickles"></div>
         <h3>THE CRISPY PORK</h3>
         <p>Crackling on, coriander and pickled carrot through the middle. The traditional crispy pork roll is the board's benchmark.</p>
       </div>
-      <div class="card c3">
-        <div class="im"><img src="img/03.jpg" alt="Close view inside a 2T Cafe bánh mì, pork, pickles and herbs"></div>
-        <h3>THE CROSS-SECTION</h3>
-        <p>Pork, crackling, pickles and herbs, stacked to the crust. This is what the reviews mean by best in town.</p>
+      <div class="card tp">
+        <p class="kick">Order direct</p>
+        <h3>NO APP IN <em>THE MIDDLE</em></h3>
+        <p>Online, these rolls live inside a delivery app that takes a cut of every order. Ring the shop or walk in, and the whole price goes to the small kitchen making them.</p>
+        <a class="tgo" href="#order">Order ahead</a>
       </div>
     </div>
   </div>
@@ -510,22 +510,13 @@ a.ph:hover{color:var(--gold)}
 
 <section class="gal" id="gallery">
   <div class="wrap">
-    <p class="kick">Gallery</p>
-    <h2>From Gertrude Street</h2>
-    <div class="gal-g">
-      <figure class="gf a">
-        <img src="img/05.jpg" alt="Crispy pork bánh mì overhead, crackling and herbs">
-        <figcaption>Crispy pork, crackling on</figcaption>
-      </figure>
-      <figure class="gf b">
-        <img src="img/06.jpg" alt="The 2T Cafe counter cabinet with rice paper rolls, herbs and cold drinks">
-        <figcaption>The cabinet: gỏi cuốn, herbs, pickles and the drinks wall</figcaption>
-      </figure>
-      <figure class="gf c">
-        <img src="img/01.jpg" alt="The 2T Cafe frontage on Gertrude St, black sign over green tiles">
-        <figcaption>The frontage on Gertrude St, coffee list on the glass</figcaption>
-      </figure>
-    </div>
+    <p class="kick">On the glass</p>
+    <h2>The board in the window</h2>
+    <p class="gnote">Every price above is read straight off this board, photographed on the window at 130 Gertrude St. What the glass says is what the counter charges.</p>
+    <figure>
+      <img src="img/02.jpg" alt="The 2T Cafe food menu board in the window: bánh mì, bún, steam rice, salads and rice paper rolls with prices">
+      <figcaption>The food menu board on the glass, prices as posted</figcaption>
+    </figure>
   </div>
 </section>
 
