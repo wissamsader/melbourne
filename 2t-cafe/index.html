@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>2T Cafe · Bánh Mì on Gertrude St, Fitzroy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#123A28; --g2:#0C2A1C; --r:#D2301F; --r2:#A82115;
+  --c:#F6EBD2; --c2:#EFE0BE; --gold:#EFC981; --ink:#17251D;
+  --dh:'Anton',sans-serif; --bd:'Be Vietnam Pro',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--bd);background:var(--c);color:var(--ink);font-size:16.5px;line-height:1.6}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--dh);font-weight:400;line-height:1.02;letter-spacing:.01em}
+.kick{font-family:var(--bd);font-weight:700;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase}
+
+/* ---------- top nav ---------- */
+.nav{background:var(--g2);color:var(--c);position:relative;z-index:40}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:66px}
+.wm{font-family:var(--dh);font-size:1.5rem;letter-spacing:.03em;display:flex;align-items:center;gap:10px;color:var(--c)}
+.wm b{font-weight:400;background:var(--r);color:var(--c);padding:2px 9px 1px;display:inline-block}
+.nav-l{display:flex;gap:22px;margin-left:auto}
+.nav-l a{font-weight:600;font-size:.92rem;color:var(--c);opacity:.92;border-bottom:2px solid transparent;padding:4px 0}
+.nav-l a:hover{border-bottom-color:var(--gold);opacity:1}
+.ncall{background:var(--r);color:var(--c);font-weight:700;font-size:.92rem;padding:11px 18px;white-space:nowrap}
+.ncall:hover{background:var(--r2)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--g);color:var(--c);overflow:hidden;
+  min-height:clamp(600px,92svh,820px);max-height:860px;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;opacity:.14;pointer-events:none;
+  background:
+   repeating-linear-gradient(0deg,transparent 0 118px,rgba(210,48,31,.55) 118px 119px),
+   repeating-linear-gradient(90deg,transparent 0 118px,rgba(210,48,31,.55) 118px 119px)}
+.hero-ph{position:absolute;top:0;bottom:0;right:0;width:min(63vw,920px);overflow:hidden;z-index:1}
+.hero-ph img{position:absolute;width:1320px;max-width:none;height:100%;object-fit:cover;object-position:54% 50%;top:0;left:-9%}
+.hero-ph::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,var(--g) 0%,rgba(18,58,40,0) 24%),
+             linear-gradient(90deg,var(--g) 0%,rgba(18,58,40,0) 18%)}
+.hero-in{position:relative;z-index:3;width:100%;padding-block:56px}
+.hero-red{position:absolute;left:-60px;top:calc(50% + 26px);transform:translateY(-50%);width:min(46vw,560px);height:70%;
+  background:var(--r);z-index:0}
+.ht{position:relative;max-width:640px}
+.ht .kick{color:var(--gold);margin-bottom:14px}
+.ht h1{font-size:clamp(4.2rem,11.5vw,10.5rem);color:var(--c);text-shadow:0 2px 0 rgba(12,42,28,.35)}
+.ht h1 .ln2{color:var(--gold)}
+.hsub{margin-top:16px;font-size:1.12rem;font-weight:600;max-width:30ch}
+.hrate{display:inline-flex;align-items:center;gap:9px;background:var(--c);color:var(--r);
+  font-weight:700;font-size:.95rem;padding:9px 16px;margin-top:22px}
+.hrate .st{letter-spacing:.12em}
+.hcta{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+.bt-r{background:var(--r);color:var(--c);font-weight:700;padding:15px 26px;font-size:1rem}
+.bt-r:hover{background:var(--r2)}
+.bt-o{border:2px solid var(--c);color:var(--c);font-weight:700;padding:13px 24px;font-size:1rem}
+.bt-o:hover{background:var(--c);color:var(--g)}
+.orn{position:absolute;z-index:4;width:132px;height:132px;right:38px;top:92px}
+.orn svg{width:100%;height:100%;overflow:visible}
+
+/* ---------- ticker band ---------- */
+.tick{background:var(--r);color:var(--c);overflow:hidden;overflow-x:clip;padding:13px 0 13px clamp(20px,3vw,44px);border-top:3px solid var(--g2);white-space:nowrap}
+.tick span{display:inline;font-family:var(--dh);font-size:1.35rem;letter-spacing:.09em}
+
+/* ---------- story ---------- */
+.story{padding-block:86px}
+.story .wrap{display:grid;grid-template-columns:1.25fr .85fr;gap:56px;align-items:center}
+.story .kick{color:var(--r)}
+.story h2{font-size:clamp(2.4rem,4.6vw,3.7rem);color:var(--g);margin:12px 0 20px}
+.story p{margin-bottom:16px;max-width:58ch}
+.stat{display:flex;gap:38px;margin-top:26px;flex-wrap:wrap}
+.stat div{border-top:3px solid var(--r);padding-top:10px}
+.stat b{font-family:var(--dh);font-weight:400;font-size:2rem;color:var(--g);display:block;line-height:1}
+.stat i{font-style:normal;font-size:.85rem;font-weight:600;color:#5c6a5f}
+.sph{position:relative;min-width:0}
+.sph img{width:100%;height:auto;border:10px solid var(--g)}
+.sph figcaption{background:var(--g);color:var(--c);font-size:.85rem;font-weight:600;padding:10px 14px;margin-top:-4px}
+
+/* ---------- vegan duck moment ---------- */
+.vegan{background:var(--r);color:var(--c);padding-block:92px;position:relative;overflow:hidden}
+.vegan::before{content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;
+  background:
+   repeating-linear-gradient(0deg,transparent 0 96px,rgba(246,235,210,.6) 96px 97px),
+   repeating-linear-gradient(90deg,transparent 0 96px,rgba(246,235,210,.6) 96px 97px)}
+.vegan .wrap{position:relative;text-align:center}
+.vegan .kick{color:var(--gold)}
+.vegan h2{font-size:clamp(3rem,7.5vw,6.2rem);margin:14px 0 8px}
+.vegan h2 em{font-style:normal;color:var(--gold)}
+.vprice{display:inline-block;background:var(--c);color:var(--r);font-family:var(--dh);
+  font-size:1.5rem;padding:7px 20px 5px;margin-top:10px}
+.vq{max-width:640px;margin:34px auto 10px;font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:600;line-height:1.45}
+.vq::before{content:"\201C";font-family:var(--dh);font-size:3.4rem;color:var(--gold);display:block;line-height:.6;margin-bottom:12px}
+.vwho{font-size:.9rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:14px}
+.vrow{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:40px}
+.vrow span{border:1.5px solid rgba(246,235,210,.65);font-size:.9rem;font-weight:600;padding:9px 16px}
+.vrow span b{font-weight:700;color:var(--gold)}
+.vnote{margin-top:22px;font-size:.95rem;opacity:.92}
+
+/* ---------- highlights ---------- */
+.hl{background:var(--c);padding-block:86px}
+.hl .kick{color:var(--r)}
+.hl h2{font-size:clamp(2.4rem,4.6vw,3.7rem);color:var(--g);margin:12px 0 34px}
+.hl-g{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border:1.5px solid #d9ccab;min-width:0}
+.card .im{aspect-ratio:4/3.1;overflow:hidden}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.card.c3 .im img{object-position:38% 55%}
+.card h3{font-size:1.25rem;color:var(--g);padding:16px 18px 4px;letter-spacing:.03em}
+.card p{font-size:.93rem;padding:0 18px 18px;color:#4c584f}
+
+/* ---------- menu ---------- */
+.menu{background:var(--g);color:var(--c);padding-block:92px;position:relative}
+.menu .kick{color:var(--gold)}
+.menu h2{font-size:clamp(2.6rem,5vw,4.2rem);margin:12px 0 10px}
+.mnote{font-size:.95rem;opacity:.9;max-width:62ch;margin-bottom:42px}
+.m-g{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.mcat{background:var(--c);color:var(--ink);min-width:0}
+.mh{background:var(--r);color:var(--c);padding:16px 20px 13px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.mh h3{font-size:1.6rem;letter-spacing:.03em}
+.mh i{font-style:normal;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.mdesc{font-size:.85rem;color:#5c6a5f;padding:14px 20px 4px;line-height:1.5}
+.mlist{list-style:none;padding:12px 20px 20px}
+.mlist li{display:flex;align-items:baseline;gap:8px;padding:6.5px 0;font-weight:600;font-size:.97rem}
+.mlist li::after{content:"";order:2;flex:1;border-bottom:2px dotted #c9b98f;transform:translateY(-4px)}
+.mlist .mi{order:1}
+.mlist .pr{order:3;font-family:var(--dh);font-weight:400;color:var(--r);font-size:1.05rem;letter-spacing:.02em}
+.msub{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--r);padding:10px 20px 0}
+.mfoot{font-size:.85rem;color:#5c6a5f;padding:0 20px 18px}
+.coffee{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:0}
+.coffee .mh{background:var(--g2)}
+.cof-list{display:flex;flex-wrap:wrap;gap:10px;padding:18px 20px}
+.cof-list span{border:1.5px solid var(--g);color:var(--g);font-weight:600;font-size:.9rem;padding:8px 14px}
+.cof-note{padding:0 20px 20px;font-size:.85rem;color:#5c6a5f}
+
+/* ---------- gallery ---------- */
+.gal{background:var(--c);padding-block:86px}
+.gal .kick{color:var(--r)}
+.gal h2{font-size:clamp(2.4rem,4.6vw,3.7rem);color:var(--g);margin:12px 0 34px}
+.gal-g{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.gf{min-width:0}
+.gf.a{grid-column:span 7}.gf.b{grid-column:span 5}
+.gf.c{grid-column:span 12}
+.gf img{width:100%;height:auto;border:8px solid var(--g)}
+.gf.a img,.gf.b img{height:500px;object-fit:cover}
+.gf.b img{object-position:center 62%}
+.gf.c img{height:450px;object-fit:cover;object-position:center 40%}
+.gf figcaption{font-size:.85rem;font-weight:600;color:#4c584f;padding-top:9px}
+
+/* ---------- reviews ---------- */
+.rev{background:var(--g2);color:var(--c);padding-block:92px}
+.rev-top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-bottom:40px}
+.rn{font-family:var(--dh);font-size:5rem;line-height:1;color:var(--gold)}
+.rev-top .st{color:var(--gold);letter-spacing:.14em;font-size:1.3rem}
+.rev-top p{font-weight:600}
+.rev-g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rq{border:1.5px solid rgba(246,235,210,.4);padding:26px 24px;min-width:0;display:flex;flex-direction:column}
+.rq p{font-size:1rem;line-height:1.6;flex:1}
+.rq p::before{content:"\201C"}.rq p::after{content:"\201D"}
+.rq b{margin-top:18px;font-size:.82rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- order ahead ---------- */
+.order{background:var(--c);padding-block:92px}
+.order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.order .kick{color:var(--r)}
+.order h2{font-size:clamp(2.6rem,5vw,4rem);color:var(--g);margin:12px 0 18px}
+.order p{max-width:52ch;margin-bottom:14px}
+.ocall{display:inline-flex;align-items:center;gap:10px;background:var(--g);color:var(--c);
+  font-weight:700;padding:16px 24px;margin-top:12px;font-size:1.05rem}
+.ocall:hover{background:var(--g2)}
+.oform{background:var(--g);padding:34px 32px;color:var(--c)}
+.oform h3{font-size:1.4rem;letter-spacing:.04em;margin-bottom:18px}
+.of-row{margin-bottom:16px}
+.of-row label{display:block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:7px;color:var(--gold)}
+.of-row input,.of-row textarea{width:100%;border:0;background:var(--c);color:var(--ink);
+  font-family:var(--bd);font-size:1rem;font-weight:600;padding:13px 14px}
+.of-row textarea{min-height:96px;resize:vertical}
+.of-btn{width:100%;border:0;cursor:pointer;background:var(--r);color:var(--c);
+  font-family:var(--bd);font-weight:700;font-size:1.05rem;padding:16px}
+.of-btn:hover{background:var(--r2)}
+.of-note{font-size:.83rem;opacity:.85;margin-top:12px;line-height:1.5}
+
+/* ---------- visit ---------- */
+.visit{background:var(--g);color:var(--c);padding-block:88px}
+.visit .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.visit .kick{color:var(--gold)}
+.visit h2{font-size:clamp(2.6rem,5vw,4rem);margin:12px 0 22px}
+.vlist{list-style:none}
+.vlist li{padding:15px 0;border-bottom:1px solid rgba(246,235,210,.25);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.vlist .lb{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);min-width:92px}
+.vlist .ad,.vlist .ph,.vlist .hrs{font-weight:600;font-size:1.05rem;color:var(--c)}
+a.ph:hover{color:var(--gold)}
+.vmap{display:inline-block;background:var(--c);color:var(--g);font-weight:700;padding:14px 24px;margin-top:24px}
+.vmap:hover{background:var(--gold)}
+.vph img{width:100%;height:auto;border:10px solid var(--c)}
+.vph figcaption{font-size:.85rem;font-weight:600;padding-top:10px;opacity:.9}
+
+/* ---------- footer ---------- */
+.foot{background:var(--g2);color:var(--c);padding:44px 0 calc(120px + env(safe-area-inset-bottom))}
+.foot .wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.foot .wm{font-size:1.25rem}
+.foot p{font-size:.88rem;opacity:.85}
+.foot .fr{margin-left:auto;font-size:.88rem;font-weight:600}
+
+/* ---------- sticky order ticket bar ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+  background:var(--c);border-top:3px solid var(--g2);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background-image:radial-gradient(circle at 6px 0,var(--g2) 3px,transparent 3.5px);
+  background-size:24px 6px;background-repeat:repeat-x;background-position:0 -3px}
+.bar-in{display:flex;gap:10px;align-items:stretch}
+.bar a{flex:1;text-align:center;font-weight:700;font-size:.95rem;padding:14px 8px}
+.bar .cb{background:var(--r);color:var(--c)}
+.bar .ob{background:var(--g);color:var(--c)}
+.bar .mid{flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  font-family:var(--dh);color:var(--r);font-size:1.05rem;line-height:1;padding:0 6px;border-inline:2px dotted #c9b98f}
+.bar .mid i{font-style:normal;font-family:var(--bd);font-size:.62rem;font-weight:700;letter-spacing:.1em;color:#5c6a5f}
+
+/* ---------- responsive ---------- */
+@media(max-width:1060px){
+  .hero-ph{width:56vw}
+}
+@media(max-width:900px){
+  .nav-l{display:none}
+  .nav .wrap{height:60px}
+  .ncall{margin-left:auto;padding:9px 14px;font-size:.86rem}
+  .hero{align-items:flex-start}
+  .hero-in{padding-block:38px 0}
+  .hero-red{left:-40px;top:16px;transform:none;width:66vw;height:264px}
+  .ht h1{font-size:clamp(4rem,17vw,6rem)}
+  .ht .kick{color:var(--c)}
+  .hero-ph{left:0;right:0;top:auto;bottom:0;width:auto;height:38%}
+  .hero-ph img{height:auto;width:152%;top:auto;bottom:-12%;left:-34%}
+  .hero-ph::after{background:linear-gradient(180deg,var(--g) 0%,rgba(18,58,40,0) 30%),
+    linear-gradient(90deg,var(--g) 0%,rgba(18,58,40,0) 22%)}
+  .orn{width:94px;height:94px;right:14px;top:auto;bottom:calc(38% - 47px)}
+  .story .wrap,.order .wrap,.visit .wrap{grid-template-columns:1fr;gap:44px}
+  .hl-g{grid-template-columns:1fr}
+  .tick{white-space:normal;text-align:center;padding:12px 20px}
+  .tick .t1{font-size:1.05rem;letter-spacing:.07em}
+  .tick .t2{display:none}
+  .m-g{grid-template-columns:1fr}
+  .coffee{grid-template-columns:1fr}
+  .gf.a img{height:auto}
+  .gf.c img{height:220px}
+  .rev-g{grid-template-columns:1fr}
+  .gf.a,.gf.b,.gf.c{grid-column:span 12}
+  .gf.b img{max-height:440px}
+  .bar{display:block}
+  .foot{padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+}
+@media(max-width:420px){
+  .wrap{padding-inline:18px}
+  .hrate{font-size:.85rem}
+  .bt-r,.bt-o{padding:13px 18px;font-size:.93rem}
+  .hero-red{height:236px}
+  .rn{font-size:4rem}
+}
+</style>
+<style data-fx-orn>
+.orn svg{animation:ornspin 84s linear infinite;transform-origin:50% 50%}
+@keyframes ornspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.orn svg{animation:none}}
+</style>
+</head>
+<body id="top">
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="wm" href="#top"><b>2T</b> CAFÉ</a>
+    <div class="nav-l">
+      <a href="#vegan">The Vegan Duck</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="ncall" href="tel:+61370168822">Call (03) 7016 8822</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-red"></div>
+  <div class="hero-ph"><img src="img/03.jpg" alt="Cross-section of a 2T Cafe bánh mì, roast pork and pickled carrot in a crusty roll"></div>
+  <div class="orn" aria-hidden="true">
+    <svg viewBox="0 0 132 132">
+      <defs><path id="cir" d="M66,66 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs>
+      <circle cx="66" cy="66" r="63" fill="none" stroke="#F6EBD2" stroke-width="2"/>
+      <circle cx="66" cy="66" r="40" fill="none" stroke="#F6EBD2" stroke-width="1"/>
+      <text fill="#F6EBD2" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.1">
+        <textPath href="#cir">2T CAFÉ · FITZROY · BÁNH MÌ · GERTRUDE ST ·</textPath>
+      </text>
+    </svg>
+  </div>
+  <div class="wrap hero-in">
+    <div class="ht">
+      <p class="kick">Vietnamese eatery · 130 Gertrude St, Fitzroy</p>
+      <h1>BÁNH<br><span class="ln2">MÌ</span></h1>
+      <p class="hsub">Rolls built to order on Gertrude Street: crusty bread, homemade egg butter, pâté, pickles and coriander.</p>
+      <span class="hrate"><span class="st">★★★★★</span> 4.9 · 199 Google reviews</span>
+      <div class="hcta">
+        <a class="bt-r" href="#order">Order ahead</a>
+        <a class="bt-o" href="#menu">See the menu</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="tick" aria-hidden="true">
+  <span class="t1">BÁNH MÌ · BÚN · CƠM · GỎI CUỐN · CÀ PHÊ SỮA ĐÁ</span><span class="t2"> · BÁNH MÌ · BÚN · CƠM · GỎI CUỐN · CÀ PHÊ SỮA ĐÁ · BÁNH MÌ · BÚN · CƠM · GỎI CUỐN · CÀ PHÊ SỮA ĐÁ ·</span>
+</div>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div>
+      <p class="kick">The shop</p>
+      <h2>A tiny Vietnamese kitchen on Gertrude Street</h2>
+      <p>2T Cafe sits behind a deep-green shopfront at 130 Gertrude St, under a black hand-lettered sign. It is a small, quick, honest operation: the bread is crusty, the egg butter and pâté are made in house, and the pickled carrot and coriander go on to order, never before.</p>
+      <p>The bánh mì is the reason people cross Fitzroy for it, named in nearly every review, and the regulars treat the place like a daily habit: in, out, fed, for around ten dollars. The board runs deeper than the rolls, with bún noodle bowls, steam rice plates, garden salads and rice paper rolls packed fresh in the cabinet.</p>
+      <div class="stat">
+        <div><b>4.9</b><i>rating on Google</i></div>
+        <div><b>199</b><i>reviews and counting</i></div>
+        <div><b>16</b><i>bánh mì on the board</i></div>
+      </div>
+    </div>
+    <figure class="sph">
+      <img src="img/06.jpg" alt="The 2T Cafe cabinet stacked with rice paper rolls, herbs, pickles and cold drinks">
+      <figcaption>The cabinet: gỏi cuốn packed through the day</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="vegan" id="vegan">
+  <div class="wrap">
+    <p class="kick">The one people talk about</p>
+    <h2>THE <em>VEGAN DUCK</em> BÁNH MÌ</h2>
+    <span class="vprice"><b class="pr">$11.50</b></span>
+    <p class="vq">THE best vegan banh mi I've had. The vegan duck texture and marinade are perfect.</p>
+    <p class="vwho">James Mitchell · Google review</p>
+    <div class="vrow">
+      <span>Vegan Lemongrass Chicken <b>$11.50</b></span>
+      <span>Vegan BBQ Rib <b>$11.50</b></span>
+      <span>Fried Tofu, Pineapple Sauce <b>$10.50</b></span>
+      <span>Eggplant Tempura <b>$10.50</b></span>
+    </div>
+    <p class="vnote">The bún bowls and garden salads run the same vegan line, so nobody at the table is left with a side salad.</p>
+  </div>
+</section>
+
+<section class="hl" id="highlights">
+  <div class="wrap">
+    <p class="kick">Around the shop</p>
+    <h2>Small shop, serious output</h2>
+    <div class="hl-g">
+      <div class="card">
+        <div class="im"><img src="img/01.jpg" alt="2T Cafe shopfront on Gertrude St, green frontage under a black sign"></div>
+        <h3>THE GREEN CORNER</h3>
+        <p>Look for the deep-green frontage and the black 2T Café sign on Gertrude St, with the day's coffee list written on the window.</p>
+      </div>
+      <div class="card">
+        <div class="im"><img src="img/05.jpg" alt="Crispy pork bánh mì from 2T Cafe, loaded with coriander and pickles"></div>
+        <h3>THE CRISPY PORK</h3>
+        <p>Crackling on, coriander and pickled carrot through the middle. The traditional crispy pork roll is the board's benchmark.</p>
+      </div>
+      <div class="card c3">
+        <div class="im"><img src="img/03.jpg" alt="Close view inside a 2T Cafe bánh mì, pork, pickles and herbs"></div>
+        <h3>THE CROSS-SECTION</h3>
+        <p>Pork, crackling, pickles and herbs, stacked to the crust. This is what the reviews mean by best in town.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <p class="kick">The board</p>
+    <h2>MENU</h2>
+    <p class="mnote">Taken straight from the menu board in the window. Prices as posted; the kitchen moves fast, so ask at the counter for today's specials.</p>
+    <div class="m-g">
+
+      <div class="mcat">
+        <div class="mh"><h3>BÁNH MÌ</h3><i>Vietnamese bread roll</i></div>
+        <p class="mdesc">Homemade egg butter, pâté, cucumber, lettuce, pickled carrot, pickled onion, coriander, spring onion and chilli, with sauce and your choice of filling.</p>
+        <ul class="mlist">
+          <li><span class="mi">Traditional Cold Pork Loaf</span><b class="pr">$9.50</b></li>
+          <li><span class="mi">Traditional Crispy Pork</span><b class="pr">$11.50</b></li>
+          <li><span class="mi">Char Siu Pork</span><b class="pr">$11.50</b></li>
+          <li><span class="mi">Grilled Pork Chop (Boneless)</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">BBQ Pork</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Lemongrass Pork</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Grilled Chicken</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Chicken Schnitzel</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Crispy Fried Chicken</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Egg Salad</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Fried Tofu with Pineapple Sauce</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Eggplant Tempura</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Vegan Lemongrass Chicken</span><b class="pr">$11.50</b></li>
+          <li><span class="mi">Vegan Duck</span><b class="pr">$11.50</b></li>
+          <li><span class="mi">Vegan BBQ Rib</span><b class="pr">$11.50</b></li>
+          <li><span class="mi">Lemongrass Beef</span><b class="pr">$12.50</b></li>
+        </ul>
+      </div>
+
+      <div class="mcat">
+        <div class="mh"><h3>BÚN</h3><i>Rice noodle salad bowl</i></div>
+        <p class="mdesc">Rice noodle, lettuce, cucumber, mint, pickled carrot, pickled onion and spring onion, with fish sauce or soy sauce and your choice of topping.</p>
+        <ul class="mlist">
+          <li><span class="mi">Crispy Pork</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Char Siu Pork</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Grilled Pork Chop (Boneless)</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">BBQ Pork</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Lemongrass Pork</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Grilled Chicken</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Pork Spring Roll</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Tofu</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Vegan Duck</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Vegan Lemongrass Chicken</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Vegan BBQ Rib</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Add: Spring Roll (2 rolls)</span><b class="pr">$3.50</b></li>
+        </ul>
+      </div>
+
+      <div class="mcat">
+        <div class="mh"><h3>CƠM</h3><i>Steam rice</i></div>
+        <p class="mdesc">Steamed rice with your choice on top, extras on the side.</p>
+        <ul class="mlist">
+          <li><span class="mi">Crispy Pork</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Char Siu Pork</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Grilled Pork Chop (Boneless)</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">BBQ Pork</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Lemongrass Pork &amp; Egg</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Grilled Chicken</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Tofu</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Vegan Duck</span><b class="pr">$17.50</b></li>
+        </ul>
+        <p class="msub">Extra on the side</p>
+        <ul class="mlist">
+          <li><span class="mi">Grilled Chicken or Pork (per serve)</span><b class="pr">$7.50</b></li>
+          <li><span class="mi">Crispy Pork (per serve)</span><b class="pr">$10.00</b></li>
+          <li><span class="mi">Egg</span><b class="pr">$3.00</b></li>
+        </ul>
+      </div>
+
+      <div class="mcat">
+        <div class="mh"><h3>GARDEN SALAD BOWL</h3></div>
+        <p class="mdesc">Four-leaf salad mix, lettuce, cucumber, tomato and avocado with dressing sauce and your choice on top.</p>
+        <ul class="mlist">
+          <li><span class="mi">Crispy Pork</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Char Siu Pork</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Grilled Pork Chop (Boneless)</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">BBQ Pork</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Tuna</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Prawn</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Tofu</span><b class="pr">$16.50</b></li>
+          <li><span class="mi">Vegan Duck</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Vegan Lemongrass Chicken</span><b class="pr">$17.50</b></li>
+          <li><span class="mi">Vegan BBQ Rib</span><b class="pr">$17.50</b></li>
+        </ul>
+      </div>
+
+      <div class="mcat">
+        <div class="mh"><h3>GỎI CUỐN</h3><i>Rice paper roll</i></div>
+        <p class="mdesc">Rice noodle, mint, cucumber, pickled red cabbage, pickled carrot and lettuce, with hoisin dipping sauce. Char siu pork, BBQ pork, chicken, prawn, tofu or avocado.</p>
+        <ul class="mlist">
+          <li><span class="mi">Pack of 2 rolls</span><b class="pr">$8.00</b></li>
+          <li><span class="mi">Pack of 3 rolls</span><b class="pr">$10.50</b></li>
+          <li><span class="mi">Prawn &amp; Crispy Pork, pack of 2</span><b class="pr">$8.50</b></li>
+          <li><span class="mi">Prawn &amp; Crispy Pork, pack of 3</span><b class="pr">$11.50</b></li>
+        </ul>
+      </div>
+
+      <div class="mcat">
+        <div class="mh"><h3>SALAD ROLL</h3></div>
+        <p class="mdesc">Butter, mayo, salad mix, lettuce, cucumber, tomato and avocado.</p>
+        <ul class="mlist">
+          <li><span class="mi">Green Salad</span><b class="pr">$9.00</b></li>
+          <li><span class="mi">Tuna</span><b class="pr">$11.00</b></li>
+          <li><span class="mi">Egg and Bacon</span><b class="pr">$8.00</b></li>
+        </ul>
+        <p class="msub">Extras</p>
+        <ul class="mlist">
+          <li><span class="mi">Cheese</span><b class="pr">+$1.00</b></li>
+          <li><span class="mi">Salad</span><b class="pr">+$1.00</b></li>
+          <li><span class="mi">Tofu</span><b class="pr">+$2.00</b></li>
+          <li><span class="mi">Meat</span><b class="pr">+$3.00</b></li>
+          <li><span class="mi">Egg</span><b class="pr">+$3.00</b></li>
+        </ul>
+      </div>
+
+      <div class="mcat coffee">
+        <div class="mh"><h3>COFFEE</h3><i>From the window list</i></div>
+        <div>
+          <div class="cof-list">
+            <span>Latte</span><span>Cappuccino</span><span>Flat White</span><span>Espresso</span><span>Piccolo</span>
+            <span>Long Black</span><span>Hot Choc</span><span>Chai Latte</span><span>Iced Coffee</span><span>Vietnamese Iced Coffee (cà phê sữa đá)</span>
+          </div>
+          <p class="cof-note">Coffee prices at the counter.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="gal" id="gallery">
+  <div class="wrap">
+    <p class="kick">Gallery</p>
+    <h2>From Gertrude Street</h2>
+    <div class="gal-g">
+      <figure class="gf a">
+        <img src="img/05.jpg" alt="Crispy pork bánh mì overhead, crackling and herbs">
+        <figcaption>Crispy pork, crackling on</figcaption>
+      </figure>
+      <figure class="gf b">
+        <img src="img/06.jpg" alt="The 2T Cafe counter cabinet with rice paper rolls, herbs and cold drinks">
+        <figcaption>The cabinet: gỏi cuốn, herbs, pickles and the drinks wall</figcaption>
+      </figure>
+      <figure class="gf c">
+        <img src="img/01.jpg" alt="The 2T Cafe frontage on Gertrude St, black sign over green tiles">
+        <figcaption>The frontage on Gertrude St, coffee list on the glass</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <span class="rn">4.9</span>
+      <div>
+        <div class="st">★★★★★</div>
+        <p>199 Google reviews</p>
+      </div>
+    </div>
+    <div class="rev-g">
+      <div class="rq">
+        <p>THE best vegan banh mi I've had. The vegan duck texture and marinade are perfect</p>
+        <b>James Mitchell</b>
+      </div>
+      <div class="rq">
+        <p>Best banh mi in town! Decent price but tastes good! Great place for a quick bite</p>
+        <b>Benny Song</b>
+      </div>
+      <div class="rq">
+        <p>I come here literally everyday, the food is amazing and my favourites are the fried rice and banh mi</p>
+        <b>J S</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <div>
+      <p class="kick">Skip the queue</p>
+      <h2>ORDER AHEAD</h2>
+      <p>Lunch on Gertrude St moves fast. Send your order before you leave, or ring the shop, and it is packed and waiting when you walk in.</p>
+      <p>Ordering direct puts the whole order with the kitchen, straight over the counter, with no app in the middle.</p>
+      <a class="ocall" href="tel:+61370168822">Call the shop: (03) 7016 8822</a>
+    </div>
+    <form class="oform" id="oform">
+      <h3>SEND YOUR ORDER</h3>
+      <div class="of-row">
+        <label for="onm">Your name</label>
+        <input id="onm" type="text" autocomplete="name">
+      </div>
+      <div class="of-row">
+        <label for="otm">Pickup time</label>
+        <input id="otm" type="text" placeholder="Today, 12:30">
+      </div>
+      <div class="of-row">
+        <label for="oit">Your order</label>
+        <textarea id="oit" placeholder="2 crispy pork bánh mì, 1 Vietnamese iced coffee"></textarea>
+      </div>
+      <button class="of-btn" type="submit">Email the order</button>
+      <p class="of-note">Opens in your own mail app with everything filled in; the kitchen confirms by reply. In a hurry? The phone is faster.</p>
+    </form>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <p class="kick">Visit</p>
+      <h2>FIND THE GREEN SHOPFRONT</h2>
+      <ul class="vlist">
+        <li><span class="lb">Address</span><span class="ad">130 Gertrude St, Fitzroy VIC 3065</span></li>
+        <li><span class="lb">Phone</span><a class="ph" href="tel:+61370168822">(03) 7016 8822</a></li>
+        <li><span class="lb">Hours</span><span class="hrs">Call the shop for today's hours</span></li>
+        <li><span class="lb">Rating</span><span class="rt">4.9 stars from 199 Google reviews</span></li>
+      </ul>
+      <a class="vmap" href="https://maps.google.com/?cid=7606260918270599025" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+    <figure class="vph">
+      <img src="img/01.jpg" alt="The 2T Cafe shopfront to look for on Gertrude St">
+      <figcaption>Under the black sign, next to the Leonard St. corner</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="wm" href="#top"><b>2T</b> CAFÉ</a>
+    <p>130 Gertrude St, Fitzroy VIC 3065 · (03) 7016 8822</p>
+    <p class="fr">Bánh mì, bún, cơm, gỏi cuốn. Made fresh, priced fair.</p>
+  </div>
+</footer>
+
+<nav class="bar">
+  <div class="bar-in">
+    <a class="cb" href="tel:+61370168822">Call the shop</a>
+    <span class="mid">4.9<i>STARS</i></span>
+    <a class="ob" href="#order">Order ahead</a>
+  </div>
+</nav>
+
+<script>
+(function(){
+  var ORDER_EMAIL = ""; /* none exists; the order summary stays on screen to read out on the call */
+  var f = document.getElementById('oform');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nm = document.getElementById('onm').value.trim();
+    var tm = document.getElementById('otm').value.trim();
+    var it = document.getElementById('oit').value.trim();
+    var subject = 'Order ahead' + (nm ? ' from ' + nm : '');
+    var body = 'Hi 2T Cafe,%0D%0A%0D%0A'
+      + 'I would like to order ahead for pickup.%0D%0A%0D%0A'
+      + 'Name: ' + encodeURIComponent(nm || '...') + '%0D%0A'
+      + 'Pickup time: ' + encodeURIComponent(tm || '...') + '%0D%0A'
+      + 'Order: ' + encodeURIComponent(it || '...') + '%0D%0A%0D%0A'
+      + 'Please reply to confirm. Thank you!';
+    window.location.href = 'tel:+61370168822';
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Heart Coffee, Richmond. Cinnamon scrolls, Dukes Coffee, 378 Burnley St</title>
+<meta name="description" content="Heart Coffee, 378 Burnley St Richmond. Hand-painted sign, Dukes Coffee, toasted sandwiches and the cinnamon scroll regulars call the best in Melbourne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F4EFE5;
+  --bone2:#ECE5D6;
+  --ink:#171512;
+  --ink2:#221F1A;
+  --taupe:#6C5F4B;
+  --line:rgba(23,21,18,.18);
+  --shadow:6px 6px 0 rgba(23,21,18,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:"Instrument Sans",sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:var(--ink)}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-height:1.04;letter-spacing:-.015em}
+.mono{font-family:"IBM Plex Mono",monospace}
+.wrap{max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px}
+section{position:relative}
+[id]{scroll-margin-top:24px}
+
+/* ---------- buttons: the house signature, typed rectangles with a set-off shadow ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:13px 20px;border:2px solid var(--ink);border-radius:2px;text-decoration:none;
+  background:var(--ink);color:var(--bone);
+  box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease;
+  white-space:nowrap;
+}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:8px 8px 0 rgba(23,21,18,.14)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn svg{width:16px;height:16px;flex:none}
+.onink .btn{border-color:var(--bone);background:var(--bone);color:var(--ink);box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+.onink .btn.ghost{background:transparent;color:var(--bone)}
+
+/* ---------- nav ---------- */
+nav{border-bottom:2px solid var(--ink);background:var(--bone)}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:26px;height:64px}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:22px;margin-left:auto}
+.nav-links a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid transparent;padding:4px 0}
+.nav-links a:hover{border-bottom-color:var(--ink)}
+.nav-cta{margin-left:6px;box-shadow:none;padding:10px 15px}
+.nav-cta:hover{box-shadow:none;transform:none}
+
+/* ---------- hero: the painted wordmark, photographed, hanging from the top rule ---------- */
+.hero{overflow:hidden}
+.hero-grid{
+  max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px;
+  display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,4.5vw,72px);
+  min-height:clamp(600px,92svh,820px);max-height:860px;
+}
+.hero-copy{padding-top:clamp(56px,9vh,110px);padding-bottom:56px;min-width:0}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);display:flex;align-items:center;gap:10px}
+.orn{display:inline-block;font-size:17px;color:var(--ink);line-height:1}
+.hero-copy h1{font-size:clamp(2.35rem,4.6vw,4.35rem);margin:18px 0 20px;max-width:12ch}
+.hero-sub{font-size:clamp(1rem,1.35vw,1.2rem);color:var(--ink2);max-width:46ch}
+.score{display:inline-flex;align-items:center;gap:10px;margin-top:26px;border:1.5px solid var(--ink);border-radius:2px;padding:7px 13px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.05em}
+.score b{font-weight:600}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-hang{position:relative;min-width:0;display:flex;flex-direction:column;align-items:flex-end}
+.hang-frame{
+  width:min(100%,464px);
+  aspect-ratio:9/12.5;
+  border:2px solid var(--ink);border-top:none;border-radius:0 0 2px 2px;
+  box-shadow:10px 12px 0 rgba(23,21,18,.12);
+  position:relative;overflow:hidden;background:var(--bone2);
+}
+.clip01{position:absolute;left:-14%;top:0;width:114%;max-width:none;height:100%;object-fit:cover;object-position:50% 40%}
+.hang-cap{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);padding:12px 2px 20px;text-align:right}
+
+/* ---------- ticker strip ---------- */
+.strip{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--bone)}
+.strip p{
+  max-width:1180px;margin:0 auto;padding:16px 28px;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  text-align:center;color:var(--ink);
+}
+
+/* ---------- story ---------- */
+.story{padding:clamp(72px,9vw,120px) 0}
+.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,84px);align-items:start}
+.story-grid > *{min-width:0}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin-bottom:16px}
+.story h2,.counter h2,.menu h2,.reviews h2,.gallery h2,.visit h2{font-size:clamp(1.9rem,3.1vw,2.9rem);margin-bottom:22px}
+.story p{color:var(--ink2);max-width:58ch}
+.story p + p{margin-top:18px}
+.spec{margin-top:34px;border-top:2px solid var(--ink)}
+.spec div{display:flex;gap:18px;justify-content:space-between;align-items:baseline;padding:11px 2px;border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:13px}
+.spec dt{font-weight:600;letter-spacing:.1em;text-transform:uppercase;flex:none}
+.spec dd{color:var(--taupe);text-align:right}
+.frame{border:2px solid var(--ink);border-radius:2px;box-shadow:var(--shadow);overflow:hidden;background:var(--bone2)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.fig-cap{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);padding-top:12px}
+.story-side .frame{aspect-ratio:3/4}
+
+/* ---------- the scroll, ink field ---------- */
+.scrollband{background:var(--ink);color:var(--bone);padding:clamp(76px,9vw,130px) 0}
+.scrollband .eyebrow{color:rgba(244,239,229,.62)}
+.scroll-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,84px);align-items:center}
+.scroll-grid > *{min-width:0}
+.scrollband h2{font-size:clamp(2.3rem,4vw,3.7rem);margin-bottom:20px;color:var(--bone)}
+.scrollband .lead{color:rgba(244,239,229,.85);max-width:54ch}
+.vars{margin-top:32px;border-top:2px solid var(--bone)}
+.vars div{display:flex;gap:20px;align-items:baseline;padding:12px 2px;border-bottom:1px solid rgba(244,239,229,.28)}
+.vars dt{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.12em;flex:none;min-width:150px}
+.vars dd{color:rgba(244,239,229,.7);font-size:15px}
+.scroll-note{margin-top:26px;font-size:15px;color:rgba(244,239,229,.7);max-width:52ch}
+.scroll-note a{color:var(--bone)}
+.scroll-photo .frame{border-color:var(--bone);box-shadow:8px 10px 0 rgba(0,0,0,.4);aspect-ratio:10/14.5}
+.scroll-photo img{object-position:50% 100%}
+.scroll-photo .fig-cap{color:rgba(244,239,229,.6)}
+
+/* ---------- at the counter ---------- */
+.counter{padding:clamp(72px,9vw,120px) 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,34px);margin-top:16px}
+.cards > *{min-width:0}
+.card .frame{aspect-ratio:4/3;box-shadow:var(--shadow)}
+.card h3{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:16px 0 8px}
+.card p{font-size:15px;color:var(--taupe)}
+.card .sign-crop{position:relative;overflow:hidden}
+.card .sign-crop img{position:absolute;left:-14%;top:0;width:114%;max-width:none;height:100%;object-fit:cover;object-position:50% 8%}
+.card .mark-crop img{object-position:50% 82%}
+.card .cup-crop img{object-position:50% 30%}
+
+/* ---------- menu ---------- */
+.menu{background:var(--bone2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:clamp(76px,9vw,124px) 0}
+.menu-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,5vw,90px);align-items:start}
+.menu-grid > *{min-width:0}
+.menu-list{border-top:2px solid var(--ink)}
+.mi{padding:17px 2px;border-bottom:1px solid var(--line)}
+.mi-top{display:flex;align-items:baseline;gap:14px}
+.mi-top h3{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14.5px;letter-spacing:.07em;text-transform:uppercase}
+.mi-top .dots{flex:1;border-bottom:2px dotted rgba(23,21,18,.35);transform:translateY(-4px)}
+.pr{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14.5px;white-space:nowrap}
+.mi p{font-size:14.5px;color:var(--taupe);margin-top:5px;max-width:52ch}
+.menu-note{margin-top:24px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.06em;color:var(--taupe);max-width:48ch}
+.menu-side .frame{aspect-ratio:9/15;box-shadow:var(--shadow)}
+.menu-side img{object-fit:contain;background:var(--bone2)}
+
+/* ---------- reviews ---------- */
+.reviews{padding:clamp(76px,9vw,124px) 0}
+.rev-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:18px 34px;margin-bottom:34px}
+.rev-score{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(3rem,5vw,4.4rem);line-height:1}
+.rev-of{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,34px)}
+.quotes > *{min-width:0}
+.q{border:2px solid var(--ink);border-radius:2px;background:var(--bone);box-shadow:var(--shadow);padding:26px 24px;display:flex;flex-direction:column;gap:16px}
+.qmark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:44px;line-height:.6;padding-top:10px}
+.q p{font-size:16px;color:var(--ink2)}
+.q cite{margin-top:auto;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
+
+/* ---------- gallery ---------- */
+.gallery{padding:clamp(72px,9vw,120px) 0;background:var(--bone)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,34px);margin-top:10px}
+.gal > *{min-width:0}
+.gal .frame{position:relative}
+.g-tall .frame{aspect-ratio:9/11}
+.g-mid .frame{aspect-ratio:10/9.8}
+.gal .sf{position:relative;overflow:hidden}
+.gal .sf img{position:absolute;left:-14%;top:0;width:114%;max-width:none;height:100%;object-fit:cover;object-position:50% 45%}
+.gal .low img{object-position:50% 100%}
+
+/* ---------- visit + order ahead ---------- */
+.visit{background:var(--bone2);border-top:2px solid var(--ink);padding:clamp(76px,9vw,124px) 0}
+.visit-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(40px,5vw,90px);align-items:start}
+.visit-grid > *{min-width:0}
+.addr-big{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(1.25rem,1.9vw,1.7rem);line-height:1.25;max-width:20ch}
+.hours{margin-top:30px;border-top:2px solid var(--ink);max-width:430px}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 2px;border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:13.5px}
+.hours dt{font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+.hours dd .hx{font-style:normal}
+.nophone{margin-top:34px;border:2px solid var(--ink);border-radius:2px;background:var(--bone);box-shadow:var(--shadow);padding:22px 24px;max-width:470px}
+.nophone h3{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.nophone p{font-size:15px;color:var(--ink2)}
+.visit-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.book{background:var(--ink);color:var(--bone);border:2px solid var(--ink);border-radius:2px;box-shadow:10px 12px 0 rgba(23,21,18,.16);padding:clamp(28px,3vw,40px)}
+.book h3{font-size:clamp(1.6rem,2.4vw,2.1rem);color:var(--bone);margin-bottom:12px}
+.book > p{color:rgba(244,239,229,.78);font-size:15.5px;max-width:46ch}
+.field{margin-top:18px}
+.field label{display:block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,239,229,.65);margin-bottom:7px}
+.field input,.field select{
+  width:100%;background:var(--bone);color:var(--ink);border:2px solid var(--bone);border-radius:2px;
+  font-family:"IBM Plex Mono",monospace;font-size:14.5px;padding:12px 13px;appearance:none;
+}
+.field input:focus,.field select:focus{outline:3px solid rgba(244,239,229,.45);outline-offset:1px}
+.book-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;align-items:center}
+.book-alt{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.05em;color:rgba(244,239,229,.7)}
+.book-alt a{color:var(--bone)}
+.em-line{margin-top:18px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.05em;color:rgba(244,239,229,.6)}
+.em-line a{color:var(--bone);text-decoration:underline}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);padding:56px 0 120px}
+.foot{display:flex;flex-wrap:wrap;gap:26px 60px;align-items:baseline;justify-content:space-between}
+.foot-brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;letter-spacing:.01em}
+.foot-meta{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.08em;color:rgba(244,239,229,.62);display:flex;flex-wrap:wrap;gap:8px 26px}
+.foot-meta a{color:rgba(244,239,229,.85)}
+
+/* ---------- sticky bar, typed-rule signature, phones only ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+  background:var(--bone);
+  border-top:2px solid var(--ink);
+  box-shadow:0 -1px 0 var(--bone), 0 -3px 0 var(--ink), 0 -12px 24px rgba(23,21,18,.12);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+}
+.bar-in{display:flex;align-items:center;gap:10px}
+.bar-tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;line-height:1.35;color:var(--taupe);flex:1;min-width:0}
+.bar .btn{padding:11px 14px;font-size:12px;box-shadow:3px 3px 0 rgba(23,21,18,.16)}
+.bar .btn.icon{padding:11px 12px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .nav-links a:nth-child(2){display:none}
+}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;min-height:clamp(600px,92svh,820px);max-height:860px;gap:0}
+  .hero-hang{order:-1;align-items:center}
+  .hang-frame{width:min(100%,430px);aspect-ratio:10/11}
+  .clip01{object-position:50% 36%}
+  .hang-cap{text-align:center;padding-bottom:6px}
+  .hero-copy{padding-top:18px;padding-bottom:28px}
+  .hero-copy h1{font-size:clamp(2rem,7vw,2.7rem);margin-top:14px}
+  .hero-ctas{margin-top:22px}
+  .hero-ctas .ig-btn{display:none}
+  .score{margin-top:20px}
+  .story-grid,.scroll-grid,.menu-grid,.visit-grid{grid-template-columns:1fr}
+  .story-side{max-width:520px}
+  .scroll-photo{max-width:520px}
+  .menu-side{max-width:460px}
+  .cards{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  footer{padding-bottom:150px}
+}
+@media (max-width:880px){
+  .nav-links{display:none}
+  .bar{display:block}
+}
+@media (max-width:620px){
+  .wrap{padding-left:20px;padding-right:20px}
+  .hero-grid{padding-left:20px;padding-right:20px}
+  .cards{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .g-tall .frame{aspect-ratio:9/10.5}
+  .g-mid .frame{aspect-ratio:1/1}
+  .hero-ctas .btn{flex:1;justify-content:center}
+  .hero-ctas .ig-btn{flex:1 1 100%}
+  .strip p{letter-spacing:.09em}
+}
+@media (max-width:400px){
+  .bar-tag{display:none}
+  .bar-in{justify-content:space-between}
+  .bar .btn{flex:1;justify-content:center}
+  .bar .btn.icon{flex:0}
+}
+</style>
+<style data-fx-orn>
+.orn{animation:hpulse 12s ease-in-out infinite;transform-origin:center}
+@keyframes hpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+@media (prefers-reduced-motion: reduce){.orn{animation:none}}
+</style>
+</head>
+<body id="top">
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">Heart Coffee</a>
+    <div class="nav-links">
+      <a href="#story">Story</a>
+      <a href="#scroll">The Scroll</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="btn nav-cta" href="#book">Order ahead</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="kicker"><span class="orn">&#9829;</span> 378 Burnley St, Richmond</p>
+      <h1>The hand-painted heart of Burnley Street.</h1>
+      <p class="hero-sub">A bright, plant-filled Richmond coffee shop pouring Dukes Coffee, toasting sandwiches properly, and baking what regulars call the best cinnamon scroll in Melbourne.</p>
+      <p class="score">&#9733; <b>4.7</b> &nbsp;&middot;&nbsp; 208 Google reviews</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#book">Save a scroll</a>
+        <a class="btn ghost" href="#menu">See the menu</a>
+        <a class="btn ghost ig-btn" href="https://www.instagram.com/heartcoffeemelbourne/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+          @heartcoffeemelbourne
+        </a>
+      </div>
+    </div>
+    <div class="hero-hang">
+      <div class="hang-frame">
+        <img class="clip01" src="img/01.jpg" alt="The Heart Coffee shopfront on Burnley Street, with the hand-painted wordmark across the window and the painted sign hanging above the footpath">
+      </div>
+      <p class="hang-cap">The window at 378, painted by hand</p>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <p>Cinnamon scrolls baked through the morning &middot; Dukes Coffee &middot; Toasted sandwiches &middot; Plants in every corner &middot; Open seven days</p>
+</div>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div>
+        <p class="eyebrow">The corner</p>
+        <h2>Painted on, not printed.</h2>
+        <p>There is no vinyl logo at Heart Coffee. The name is painted by hand, twice: once in big white strokes across the shop window, and once in ink on the sign that hangs over the footpath. Behind the glass the room is bright, airy and minimalist, white walls and pale timber, a little modern and a little retro, with indoor plants in every corner.</p>
+        <p>The coffee is built on Dukes Coffee Roasters blends, black or white, with a heart poured into the flat whites more often than not. The kitchen keeps it simple and does it properly: toasted sandwiches stacked the right way, house-baked treats on the counter, and the cinnamon scrolls most people are really here for.</p>
+        <dl class="spec">
+          <div><dt>Beans</dt><dd>Dukes Coffee Roasters</dd></div>
+          <div><dt>Bakes</dt><dd>House-made, daily</dd></div>
+          <div><dt>Scrolls</dt><dd>Original, seasonal, savoury</dd></div>
+          <div><dt>Rating</dt><dd>4.7 of 5, from 208 reviews</dd></div>
+        </dl>
+      </div>
+      <div class="story-side">
+        <div class="frame"><img src="img/04.jpg" alt="A flat white with a heart poured in the milk, on a white table"></div>
+        <p class="fig-cap">Flat white, heart first</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scrollband" id="scroll">
+  <div class="wrap">
+    <div class="scroll-grid">
+      <div>
+        <p class="eyebrow">The signature</p>
+        <h2>The cinnamon scroll.</h2>
+        <p class="lead">Richly glazed, pillow-soft and served warm. It is the first thing most reviews mention, and one calls it the best in Melbourne outright. The scroll changes with the seasons, takes savoury turns, and the ham and cheese version has a following of its own.</p>
+        <dl class="vars">
+          <div><dt>Original</dt><dd>The glazed classic that made the name.</dd></div>
+          <div><dt>Seasonal</dt><dd>Changes through the year. Ask what today's is.</dd></div>
+          <div><dt>Savoury</dt><dd>For the not-sweet crowd.</dd></div>
+          <div><dt>Ham &amp; cheese</dt><dd>Named in the reviews by name.</dd></div>
+        </dl>
+        <p class="scroll-note">Baked through the morning and priced at the counter. When the tray is empty, that is it until tomorrow, so if you are crossing town for one, <a href="#book">ask us to put one aside</a>.</p>
+      </div>
+      <div class="scroll-photo">
+        <div class="frame"><img src="img/03.jpg" alt="A thickly glazed cinnamon scroll beside a black coffee on a white table at Heart Coffee"></div>
+        <p class="fig-cap">The original, with a black coffee</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="counter">
+  <div class="wrap">
+    <p class="eyebrow">At the counter</p>
+    <h2>Three things regulars point at.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="frame cup-crop"><img src="img/05.jpg" alt="A hot chocolate dusted with cocoa and a morning muffin on a steel tray, with a HEART printed napkin"></div>
+        <h3>Hot chocolate</h3>
+        <p>Dusted heavy, with the morning muffin riding on steel. The napkin underneath says HEART three times.</p>
+      </div>
+      <div class="card">
+        <div class="frame sign-crop"><img src="img/01.jpg" alt="The painted Heart Coffee street sign hanging above the footpath on Burnley Street"></div>
+        <h3>The sign</h3>
+        <p>Ink on cream, swinging over the footpath. You cannot miss the corner.</p>
+      </div>
+      <div class="card">
+        <div class="frame mark-crop"><img src="img/02.jpg" alt="The bottom of the printed Heart Coffee menu, with the wordmark inked by hand"></div>
+        <h3>The mark</h3>
+        <p>The same hand that painted the window inked the foot of the menu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-grid">
+      <div>
+        <p class="eyebrow">Eats</p>
+        <h2>The menu, as typed.</h2>
+        <div class="menu-list">
+          <div class="mi">
+            <div class="mi-top"><h3>Sourdough toast</h3><span class="dots"></span><b class="pr">9.5</b></div>
+            <p>Spreads: butter, raspberry jam, honey, peanut butter or Vegemite.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Morning muffin</h3><span class="dots"></span><b class="pr">11</b></div>
+            <p>English muffin, house baked egg, slice of cheese. Served with tomato relish, add bacon <b class="pr">2.00</b>.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Breakie burger</h3><span class="dots"></span><b class="pr">15.9</b></div>
+            <p>Brioche bun, greens, harissa mayo, bacon and egg. Served with tomato relish and pickle on the side.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Tuna melt</h3><span class="dots"></span><b class="pr">16.9</b></div>
+            <p>Aged cheddar cheese and gruyere cheese with greens.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Kimchi avo toastie</h3><span class="dots"></span><b class="pr">16.9</b></div>
+            <p>Kimchi, chilli mayo with aged cheddar cheese and Swiss cheese.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>The Reuben</h3><span class="dots"></span><b class="pr">16.9</b></div>
+            <p>Beef pastrami, sauerkraut, cheese and pickles.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Roasted chicken sandwich or toastie</h3><span class="dots"></span><b class="pr">16.9</b></div>
+            <p>Roasted chicken, house herb mayo, pickles and greens.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Vegie sandwich</h3><span class="dots"></span><b class="pr">16.9</b></div>
+            <p>Beetroot, avocado, tomato, carrot, greens, Swiss cheese. Served with chilli mayo.</p>
+          </div>
+          <div class="mi">
+            <div class="mi-top"><h3>Ham, cheese &amp; tomato toastie</h3><span class="dots"></span><b class="pr">15.9</b></div>
+            <p>Shaved ham, tomato and Swiss cheese.</p>
+          </div>
+        </div>
+        <p class="menu-note">Prices in Australian dollars. Coffee, hot chocolate, the scrolls and the rest of the baked things are priced at the counter.</p>
+      </div>
+      <div class="menu-side">
+        <div class="frame"><img src="img/02.jpg" alt="The Heart Coffee printed menu, typed in a typewriter face with the hand-inked wordmark at the bottom"></div>
+        <p class="fig-cap">Typed the old way, signed by hand</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <p class="eyebrow">Google reviews</p>
+    <div class="rev-head">
+      <span class="rev-score">4.7 &#9733;</span>
+      <span class="rev-of">from 208 reviews</span>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <span class="qmark">&#8220;</span>
+        <p>The best cinnamon scroll in Melbourne ever, it's so soft and delicious. We love the original scroll and the ham and cheese</p>
+        <cite>Kristine Subagiyo</cite>
+      </figure>
+      <figure class="q">
+        <span class="qmark">&#8220;</span>
+        <p>Their richly glazed, warm cinnamon scroll is absolutely addictive. It also comes in seasonal and savoury varieties</p>
+        <cite>Justas Pipinis</cite>
+      </figure>
+      <figure class="q">
+        <span class="qmark">&#8220;</span>
+        <p>I love the clean interior and all the indoor plants. They brew with Dukes Coffee beans and have a great variety of sandwiches</p>
+        <cite>weisikmui</cite>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow">Gallery</p>
+    <h2>The corner, framed.</h2>
+    <div class="gal">
+      <div class="g-tall">
+        <div class="frame sf"><img src="img/01.jpg" alt="The Heart Coffee shopfront with the painted window wordmark and hanging sign"></div>
+        <p class="fig-cap">The shopfront</p>
+      </div>
+      <div class="g-tall">
+        <div class="frame low"><img src="img/03.jpg" alt="A glazed cinnamon scroll and a black coffee on a round white table"></div>
+        <p class="fig-cap">Scroll, black coffee</p>
+      </div>
+      <div class="g-mid">
+        <div class="frame"><img src="img/04.jpg" alt="Overhead view of a flat white with heart latte art"></div>
+        <p class="fig-cap">The heart, poured</p>
+      </div>
+      <div class="g-mid">
+        <div class="frame"><img src="img/05.jpg" alt="Hot chocolate and a morning muffin on a steel tray with a HEART napkin"></div>
+        <p class="fig-cap">Hot chocolate, morning muffin</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div>
+        <p class="eyebrow">Visit</p>
+        <h2>Come by the corner.</h2>
+        <p class="addr-big"><span class="addr">378 Burnley St, Richmond VIC 3121</span></p>
+        <dl class="hours">
+          <div><dt>Mon</dt><dd><i class="hx">7:00am - 3:00pm</i></dd></div>
+          <div><dt>Tue</dt><dd><i class="hx">7:00am - 3:00pm</i></dd></div>
+          <div><dt>Wed</dt><dd><i class="hx">7:00am - 3:00pm</i></dd></div>
+          <div><dt>Thu</dt><dd><i class="hx">7:00am - 3:00pm</i></dd></div>
+          <div><dt>Fri</dt><dd><i class="hx">7:00am - 3:00pm</i></dd></div>
+          <div><dt>Sat</dt><dd><i class="hx">7:30am - 3:00pm</i></dd></div>
+          <div><dt>Sun</dt><dd><i class="hx">8:00am - 2:00pm</i></dd></div>
+        </dl>
+        <div class="nophone">
+          <h3>No phone, on purpose</h3>
+          <p>There is no phone number to call, and that is how the counter likes it. Send a DM or an email ahead, or do it the Richmond way and just walk in.</p>
+        </div>
+        <div class="visit-ctas">
+          <a class="btn" href="https://www.instagram.com/heartcoffeemelbourne/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+            @heartcoffeemelbourne
+          </a>
+          <a class="btn ghost" href="https://instagram.com/heartcoffeemelbourne" target="_blank" rel="noopener">Message us on Instagram</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Heart+Coffee+378+Burnley+St+Richmond+VIC+3121" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="book onink" id="book">
+        <h3>Order ahead.</h3>
+        <p>Fill this in and your own email app opens with the message already written. Nothing sends until you press send, and we confirm by reply.</p>
+        <div class="field">
+          <label for="bk-name">Your name</label>
+          <input id="bk-name" type="text" autocomplete="name" placeholder="Alex">
+        </div>
+        <div class="field">
+          <label for="bk-when">When you are coming</label>
+          <input id="bk-when" type="text" placeholder="Saturday, around 9:30am">
+        </div>
+        <div class="field">
+          <label for="bk-size">Scrolls to put aside, or seats</label>
+          <select id="bk-size">
+            <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6 or more</option>
+          </select>
+        </div>
+        <div class="book-ctas">
+          <a class="btn" id="bk-go" href="https://instagram.com/heartcoffeemelbourne" target="_blank" rel="noopener">Send it as an Instagram message</a>
+          <span class="book-alt">or <a href="https://www.instagram.com/heartcoffeemelbourne/" target="_blank" rel="noopener">DM us on Instagram</a></span>
+        </div>
+        <p class="em-line">Straight to us: <a class="em" href="https://instagram.com/heartcoffeemelbourne" target="_blank" rel="noopener">@heartcoffeemelbourne</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="foot-brand">Heart Coffee &#9829;</span>
+    <div class="foot-meta">
+      <span>378 Burnley St, Richmond VIC 3121</span>
+      <span>Open seven days</span>
+      <a href="https://www.instagram.com/heartcoffeemelbourne/" target="_blank" rel="noopener">@heartcoffeemelbourne</a>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-tag">Heart Coffee<br>Richmond</span>
+    <a class="btn" href="#book">Order ahead</a>
+    <a class="btn ghost icon" href="https://www.instagram.com/heartcoffeemelbourne/" target="_blank" rel="noopener" aria-label="Heart Coffee on Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Heart+Coffee+378+Burnley+St+Richmond+VIC+3121" target="_blank" rel="noopener">Map</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var go=document.getElementById('bk-go');
+  if(!go) return;
+  go.addEventListener('click',function(e){
+    var name=(document.getElementById('bk-name').value||'').trim();
+    var when=(document.getElementById('bk-when').value||'').trim();
+    var size=document.getElementById('bk-size').value;
+    var subject='Order ahead'+(name?': '+name:'');
+    var body='Hi Heart Coffee,\r\n\r\nCould you put this aside for us?\r\n\r\nName: '+(name||'')+'\r\nWhen: '+(when||'')+'\r\nScrolls or seats: '+size+'\r\n\r\nThanks,\r\n'+(name||'');
+    go.setAttribute('href','https://instagram.com/heartcoffeemelbourne');
+  });
+})();
+</script>
+
+</body>
+</html>

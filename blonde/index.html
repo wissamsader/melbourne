@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Blonde Food and Drink · All day cafe on Brunswick Street, Fitzroy</title>
+<meta name="description" content="Blonde Food and Drink, 443 Brunswick St, Fitzroy. All day food and coffee, weekdays 7am to 3pm. 4.7 from 427 Google reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F2EDE1;
+  --bone2:#EBE5D5;
+  --bone3:#E4DDC9;
+  --ink:#26271F;
+  --olive:#565E3C;
+  --olive-deep:#3E4430;
+  --mut:#77765F;
+  --line:rgba(38,39,31,.26);
+  --line-soft:rgba(38,39,31,.14);
+  --pan:#282B20;
+  --pan-line:rgba(242,237,225,.16);
+  --pan-mut:#BEBCA4;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Archivo',sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:28px}
+h1,h2,h3{margin:0;font-weight:500}
+
+/* ---------- kickers + rules ---------- */
+.kick{
+  font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--olive);font-weight:600;margin:0 0 14px;
+}
+.rulerow{
+  display:flex;justify-content:space-between;gap:18px;
+  border-top:1px solid var(--line);
+  padding-top:9px;
+  font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mut);font-weight:500;
+}
+.rulerow span{white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  min-height:clamp(600px,92svh,820px);
+  max-height:860px;
+  display:flex;flex-direction:column;
+  background:var(--bone);
+  overflow:hidden;
+}
+.hero > .wrap{width:100%}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.nav{
+  position:relative;z-index:3;
+  display:flex;align-items:center;gap:26px;
+  padding:20px 0 14px;
+}
+.brand{
+  font-family:'Fraunces',serif;font-size:21px;font-weight:500;
+  letter-spacing:.04em;
+}
+.nlinks{display:flex;gap:24px;margin-left:auto}
+.nlinks a{
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+  color:var(--ink);border-bottom:1px solid transparent;padding-bottom:2px;
+}
+.nlinks a:hover{border-bottom-color:var(--ink)}
+.ncall{
+  background:var(--olive);color:var(--bone);
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  padding:10px 20px;border-radius:99px;
+}
+.ncall:hover{background:var(--olive-deep)}
+.hgrid{
+  position:relative;z-index:2;
+  flex:1;display:grid;grid-template-columns:1fr 320px;gap:44px;
+  align-items:stretch;width:100%;
+  padding-top:26px;padding-bottom:26px;
+}
+.hleft{
+  display:flex;flex-direction:column;justify-content:center;
+  min-width:0;padding-bottom:14px;
+}
+.hover-line{
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);
+  font-weight:500;margin:0 0 16px;
+}
+.wm{
+  font-family:'Fraunces',serif;
+  font-weight:420;
+  font-size:clamp(58px,9.6vw,148px);
+  line-height:1.02;
+  letter-spacing:.13em;
+  padding-top:.12em;
+  white-space:nowrap;
+  margin-left:-.045em;
+}
+.om{position:relative}
+.om::after{
+  content:"";position:absolute;
+  top:.09em;left:6%;width:60%;height:.045em;
+  background:var(--ink);
+}
+.hsub{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:clamp(15px,1.7vw,20px);color:var(--olive);
+  margin:14px 0 0;
+}
+.hrate{
+  margin:26px 0 0;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);
+  font-weight:600;
+}
+.hrate .score,.hrate .rc{font-weight:600}
+.hrail{
+  border-left:1px solid var(--line);
+  padding-left:36px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:26px;
+  min-width:0;
+}
+.rk{
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--olive);
+  font-weight:600;margin:4px 0 0;
+}
+.rlist{list-style:none;margin:0;padding:0}
+.rlist li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:8px 0;border-bottom:1px solid var(--line-soft);
+}
+.rlist li span{
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  color:var(--ink);
+}
+.rlist li .pr{font-size:14px;color:var(--ink)}
+.hplate{margin:0;align-self:flex-end;width:min(100%,262px)}
+.hplate img{
+  width:100%;
+  border:1px solid var(--line);
+  padding:8px;background:#F8F4EA;
+}
+.hplate figcaption{
+  font-family:'Fraunces',serif;font-style:italic;font-size:13.5px;color:var(--mut);
+  margin-top:9px;text-align:right;
+}
+.hero .rulerow{position:relative;z-index:2}
+.hero .rr-top{margin-top:2px}
+.hero .rr-bot{border-top:1px solid var(--line);border-bottom:0;padding:9px 0 18px}
+
+/* ---------- ticker strip ---------- */
+.tick{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:var(--bone2);
+  padding:16px 0;
+  text-align:center;
+}
+.tick p{
+  margin:0;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--olive);font-weight:600;line-height:2;
+}
+
+/* ---------- story ---------- */
+.story{background:var(--bone);padding:96px 0 100px}
+.sgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.story h2{
+  font-family:'Fraunces',serif;font-size:clamp(30px,3.6vw,46px);line-height:1.12;
+  margin-bottom:24px;letter-spacing:.01em;
+}
+.story p{margin:0 0 18px;color:#3A3B30;max-width:54ch}
+.story .fine{
+  font-family:'Fraunces',serif;font-style:italic;color:var(--olive);
+  font-size:17px;margin-top:26px;
+}
+.sfig{margin:0;justify-self:end;width:min(100%,420px)}
+.sfig img{border:1px solid var(--line);padding:10px;background:#F8F4EA}
+.sfig figcaption{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);
+  margin-top:12px;font-weight:500;
+}
+
+/* ---------- highlights ---------- */
+.high{background:var(--bone2);border-top:1px solid var(--line-soft);padding:92px 0 100px}
+.hhead{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:44px}
+.high h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.2vw,40px)}
+.hnum{font-family:'Fraunces',serif;font-style:italic;color:var(--mut);font-size:16px;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{border:1px solid var(--line);background:#F6F2E7;padding:12px 12px 22px;min-width:0}
+.card img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.card h3{
+  font-family:'Fraunces',serif;font-size:21px;margin:18px 6px 6px;
+}
+.card p{margin:0 6px;font-size:14.5px;color:#4A4B3E;line-height:1.6}
+.card .cno{
+  display:block;font-size:10px;letter-spacing:.26em;color:var(--olive);
+  text-transform:uppercase;font-weight:600;margin:16px 6px 0;
+}
+
+/* ---------- menu ---------- */
+.menu{background:var(--pan);color:var(--bone);padding:100px 0 104px}
+.menu .kick{color:#A9B080}
+.menu h2{
+  font-family:'Fraunces',serif;font-size:clamp(34px,4vw,54px);letter-spacing:.02em;
+  margin-bottom:10px;
+}
+.mnote{color:var(--pan-mut);font-size:14.5px;max-width:62ch;margin:0 0 52px}
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:0 72px}
+.mcol{min-width:0}
+.mi{padding:20px 0;border-bottom:1px solid var(--pan-line)}
+.mrow{display:flex;align-items:baseline;gap:14px}
+.mrow h3{
+  font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  flex:1;min-width:0;
+}
+.tag{
+  font-size:9.5px;letter-spacing:.12em;color:#A9B080;font-weight:600;
+  border:1px solid rgba(169,176,128,.45);border-radius:3px;padding:1px 5px;
+  white-space:nowrap;
+}
+.pr{
+  font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:var(--bone);
+  font-style:normal;white-space:nowrap;
+}
+.mi p{margin:8px 0 0;font-size:14.5px;color:var(--pan-mut);line-height:1.6}
+.madd{margin-top:8px !important;color:#A9B080 !important;font-size:13px !important}
+.madd .pr{font-size:14px;color:#A9B080}
+.mlist{padding:20px 0;border-bottom:1px solid var(--pan-line)}
+.mlist h3{font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.mlist .lo{font-size:13.5px;color:var(--pan-mut);margin:10px 0 0}
+.srow{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;gap:12px}
+.srow span{font-size:14px;color:var(--pan-mut)}
+.srow .pr{font-size:15px}
+.mfoot{
+  margin-top:56px;padding-top:24px;border-top:1px solid var(--pan-line);
+  display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;
+}
+.mfoot p{margin:0;font-size:13px;color:var(--pan-mut);max-width:58ch}
+.mfoot .drk{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--bone)}
+
+/* ---------- gallery ---------- */
+.gal{background:var(--bone);padding:92px 0 100px}
+.gal h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.2vw,40px);margin-bottom:8px}
+.gsub{color:var(--mut);font-size:14.5px;margin:0 0 44px}
+.gstrip{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:start}
+.gf{margin:0;border:1px solid var(--line);background:#F7F3E9;padding:8px;min-width:0}
+.gf img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gf.tall img{object-position:50% 24%}
+.gf figcaption{
+  display:flex;justify-content:space-between;gap:8px;
+  font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);
+  font-weight:600;padding:9px 2px 3px;
+}
+
+/* ---------- reviews ---------- */
+.rev{background:var(--bone3);border-top:1px solid var(--line-soft);padding:100px 0 104px;text-align:center}
+.rev .kick{margin-bottom:30px}
+.bigq{
+  font-family:'Fraunces',serif;font-weight:420;
+  font-size:clamp(25px,3.4vw,42px);line-height:1.28;
+  max-width:21em;margin:0 auto;
+}
+.battr{
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);
+  font-weight:600;margin:26px 0 0;
+}
+.qgrid{
+  display:grid;grid-template-columns:1fr 1fr;gap:30px;
+  max-width:880px;margin:60px auto 0;text-align:left;
+}
+.q{border:1px solid var(--line);background:var(--bone);padding:28px 30px;min-width:0}
+.q p{font-family:'Fraunces',serif;font-size:18px;line-height:1.5;margin:0}
+.q .battr{margin-top:18px;font-size:10px;letter-spacing:.18em;white-space:nowrap}
+.rline{
+  margin:56px auto 0;font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ink);font-weight:600;
+}
+
+/* ---------- book + visit ---------- */
+.visit{background:var(--bone);padding:96px 0 104px}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.bcard{border:1px solid var(--line);background:#F6F2E7;padding:38px 38px 40px;min-width:0}
+.bcard h2,.vinfo h2{font-family:'Fraunces',serif;font-size:clamp(26px,3vw,36px);margin-bottom:10px}
+.bcard .bsub{font-size:14.5px;color:#4A4B3E;margin:0 0 28px;max-width:44ch}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fld{display:flex;flex-direction:column;gap:7px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.fld input,.fld select{
+  font-family:'Archivo',sans-serif;font-size:15.5px;color:var(--ink);
+  background:transparent;border:0;border-bottom:1px solid var(--line);
+  padding:8px 2px;border-radius:0;appearance:none;-webkit-appearance:none;
+  width:100%;
+}
+.fld input:focus,.fld select:focus{outline:none;border-bottom-color:var(--olive)}
+.bbtns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{
+  display:inline-block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:600;padding:14px 26px;border-radius:99px;cursor:pointer;
+  border:1px solid var(--olive);font-family:'Archivo',sans-serif;
+}
+.btn.solid{background:var(--olive);color:var(--bone)}
+.btn.solid:hover{background:var(--olive-deep);border-color:var(--olive-deep)}
+.btn.ghost{background:transparent;color:var(--olive)}
+.btn.ghost:hover{background:rgba(86,94,60,.09)}
+.bhint{font-size:12.5px;color:var(--mut);margin:18px 0 0;max-width:44ch}
+.bwarn{color:#8A4B2E;font-weight:500}
+.vinfo .kick{margin-bottom:16px}
+.addr{
+  font-family:'Fraunces',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.3;
+  margin:0 0 6px;
+}
+.suburb{font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--olive);margin:0 0 26px}
+.vrow{display:flex;gap:16px;padding:15px 0;border-top:1px solid var(--line-soft);align-items:baseline}
+.vrow .vl{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:600;width:86px;flex:none}
+.vrow .vv{font-size:15.5px}
+.vrow a.vv{border-bottom:1px solid var(--line);padding-bottom:1px;overflow-wrap:anywhere}
+.vrow a.vv:hover{border-bottom-color:var(--ink)}
+.wk{
+  margin-top:30px;border:1px solid var(--line);background:var(--bone2);
+  padding:26px 28px 28px;
+}
+.wkdays{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:20px}
+.wd{
+  text-align:center;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;padding:9px 0 12px;border:1px solid var(--line-soft);
+  background:var(--bone);position:relative;min-width:0;
+}
+.wd.on{color:var(--ink)}
+.wd.on::after{
+  content:"";position:absolute;left:50%;bottom:5px;transform:translateX(-50%);
+  width:4px;height:4px;border-radius:99px;background:var(--olive);
+}
+.wd.off{color:var(--mut);text-decoration:line-through;background:transparent}
+.wkline1{
+  font-family:'Fraunces',serif;font-size:clamp(19px,2.2vw,25px);line-height:1.3;
+  margin:0 0 8px;
+}
+.wkline2{
+  margin:0;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:600;color:var(--olive);
+}
+.vnote{
+  margin-top:30px;border:1px solid var(--line);padding:20px 24px;
+  font-family:'Fraunces',serif;font-style:italic;font-size:15.5px;color:#4A4B3E;
+  background:var(--bone2);
+}
+
+/* ---------- footer ---------- */
+footer{background:var(--pan);color:var(--pan-mut);padding:30px 0 110px}
+.fgrid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.fbrand{font-family:'Fraunces',serif;font-size:18px;color:var(--bone)}
+.fmeta{font-size:12.5px;letter-spacing:.06em;display:flex;gap:10px;flex-wrap:wrap}
+.fmeta i{font-style:normal}
+.flink{
+  color:var(--pan-mut);border-bottom:1px solid var(--pan-line);padding-bottom:1px;
+}
+.flink:hover{color:var(--bone);border-bottom-color:var(--bone)}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:rgba(242,237,225,.96);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);
+  box-shadow:0 0 0 1px rgba(38,39,31,.04);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  display:none;align-items:center;gap:12px;
+}
+.bar::before{
+  content:"";position:absolute;top:3px;left:0;right:0;height:1px;background:var(--line-soft);
+}
+.bar .bbrand{font-family:'Fraunces',serif;font-size:17px;letter-spacing:.03em}
+.bar .blink{
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:2px;
+}
+.bar .bic{
+  margin-left:auto;flex:none;width:37px;height:37px;border-radius:99px;
+  border:1px solid var(--line);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+}
+.bar .bcall{
+  background:var(--olive);color:var(--bone);
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  padding:11px 20px;border-radius:99px;flex:none;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .mcols{grid-template-columns:1fr;gap:0}
+  .gstrip{grid-template-columns:repeat(3,1fr)}
+  .gf:nth-child(4),.gf:nth-child(5){display:none}
+  .sgrid{grid-template-columns:1fr;gap:48px}
+  .sfig{justify-self:start}
+  .vgrid{grid-template-columns:1fr;gap:56px}
+  .hgrid{grid-template-columns:1fr 268px;gap:32px}
+  .hrail{padding-left:26px}
+}
+@media(max-width:900px){
+  .bar{display:flex}
+  footer{padding-bottom:130px}
+}
+@media(max-width:720px){
+  .wrap{padding-inline:20px}
+  .nlinks{display:none}
+  .nav{gap:14px}
+  .nav .ncall{margin-left:auto}
+  .cards{grid-template-columns:1fr}
+  .card img{aspect-ratio:4/3}
+  .card:nth-child(3) img{object-position:50% 74%}
+  .rulerow{gap:10px}
+  .rulerow span{font-size:9px;letter-spacing:.14em}
+  .hover-line{font-size:9.5px;letter-spacing:.22em;margin-bottom:10px}
+  .hgrid{grid-template-columns:1fr;gap:26px;padding-top:16px;padding-bottom:14px;align-content:center}
+  .hleft{justify-content:flex-start;padding-bottom:0}
+  .wm{font-size:clamp(48px,14.5vw,68px)}
+  .hsub{margin-top:8px}
+  .hrate{margin-top:14px;font-size:10px}
+  .hrail{
+    border-left:0;border-top:1px solid var(--line);
+    padding-left:0;padding-top:16px;gap:16px;
+    flex-direction:row;align-items:flex-end;justify-content:space-between;
+  }
+  .hrail > div{flex:1;min-width:0}
+  .rk{margin:0 0 2px}
+  .rlist li{padding:5.5px 0}
+  .rlist li:nth-child(n+5){display:none}
+  .rlist li span{font-size:9.5px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rlist li .pr{font-size:12px}
+  .hplate{width:150px;flex:none;align-self:flex-end}
+  .hplate figcaption{display:none}
+  .tick p{font-size:10px;letter-spacing:.2em}
+  .story,.high,.menu,.gal,.rev,.visit{padding-top:70px;padding-bottom:76px}
+  .gstrip{grid-template-columns:1fr 1fr;gap:14px}
+  .gf:nth-child(4){display:block}
+  .qgrid{grid-template-columns:1fr;margin-top:44px}
+  .bcard{padding:28px 22px 32px}
+  .f2{grid-template-columns:1fr;gap:16px}
+  .mfoot{flex-direction:column}
+}
+@media(max-width:400px){
+  .brand{font-size:19px}
+  .ncall{padding:9px 16px}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#top">Blonde</a>
+      <div class="nlinks">
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <a class="ncall" href="tel:+61390778378">Call</a>
+    </nav>
+    <div class="rulerow rr-top">
+      <span>Blonde Food and Drink</span>
+      <span>Fitzroy · Melbourne</span>
+    </div>
+  </div>
+
+  <div class="hgrid wrap">
+    <div class="hleft">
+      <p class="hover-line">All day food and coffee · 443 Brunswick St</p>
+      <h1 class="wm">BL<span class="om">O</span>NDE</h1>
+      <p class="hsub">food and drink, all day, Monday to Friday</p>
+      <p class="hrate"><b class="score">4.7</b> from <b class="rc">427</b> Google reviews</p>
+    </div>
+    <aside class="hrail">
+      <div>
+        <p class="rk">From the all day menu</p>
+        <ul class="rlist">
+          <li><span>Toast</span><b class="pr">8.5</b></li>
+          <li><span>Ricotta hotcake</span><b class="pr">20.0</b></li>
+          <li><span>Shakshuka</span><b class="pr">21.5</b></li>
+          <li><span>Lamb hash bowl</span><b class="pr">21.0</b></li>
+          <li><span>Chicken wrap</span><b class="pr">19.5</b></li>
+          <li><span>Two eggs your ways</span><b class="pr">14.0</b></li>
+        </ul>
+      </div>
+      <figure class="hplate">
+        <img src="img/06.jpg" alt="Shakshuka in a cast iron skillet with toasted seeded sourdough" width="1600" height="1600">
+        <figcaption>Shakshuka, straight from the pan</figcaption>
+      </figure>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="rulerow rr-bot">
+      <span>Some regulars just say Blondie</span>
+      <span>Weekdays · 7:00 to 3:00</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= TICKER ================= -->
+<section class="tick">
+  <div class="wrap">
+    <p>Open weekdays · Monday to Friday · 7:00 am to 3:00 pm · Closed Saturday and Sunday</p>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="story" id="story">
+  <div class="wrap sgrid">
+    <div>
+      <p class="kick">The room on Brunswick Street</p>
+      <h2>A big menu, done properly, at a fair price</h2>
+      <p>Blonde Food and Drink sits at 443 Brunswick Street, in the middle of the Fitzroy strip. The registered name is the long one, but plenty of regulars have shortened it to Blondie, which tells you the kind of place it is. The room is painted a soft sage green, the chairs are black spindle-backs with olive leather seats, and the floor keeps its old patterned tiles.</p>
+      <p>The kitchen runs one printed all day menu, and it is genuinely big: hotcakes, shakshuka, a 48 hour braised lamb hash, croquettes, a benedict built on a house made hash brown. Reviewers keep landing on the same two points, that there is something for everyone, and that the prices stay reasonable. The coffee is taken as seriously as the food, which in this suburb is saying something.</p>
+      <p class="fine">Cafe · Fitzroy VIC · rated 4.7 by 427 Google reviewers</p>
+    </div>
+    <figure class="sfig">
+      <img src="img/01.jpg" alt="Inside Blonde: sage green brick walls, black spindle chairs and the patterned tile floor" width="1200" height="1600">
+      <figcaption>Sage brick · spindle chairs · the tiled floor</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= HIGHLIGHTS ================= -->
+<section class="high">
+  <div class="wrap">
+    <div class="hhead">
+      <div>
+        <p class="kick">What people come back for</p>
+        <h2>Three things to know</h2>
+      </div>
+      <p class="hnum">no. 1 to 3</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="img/03.jpg" alt="A mocha with heart latte art beside an espresso at Blonde" width="1200" height="1600">
+        <span class="cno">No. 1 · The coffee</span>
+        <h3>Poured properly</h3>
+        <p>Espresso pulled with care and milk drinks finished with real latte art. Reviewers who came for the food make a point of mentioning the cup.</p>
+      </article>
+      <article class="card">
+        <img src="img/04.jpg" alt="Shakshuka in a cast iron pan with toasted sourdough on a timber board" width="1200" height="1600">
+        <span class="cno">No. 2 · The pan</span>
+        <h3>From the cast iron</h3>
+        <p>Shakshuka arrives still in its skillet: baked eggs, fava beans, feta and tahini yoghurt, with thick toast wedged in for the job.</p>
+      </article>
+      <article class="card">
+        <img src="img/05.jpg" alt="Two matcha lattes in black stoneware cups dusted with green tea powder" width="900" height="1600">
+        <span class="cno">No. 3 · The green cup</span>
+        <h3>Matcha in stoneware</h3>
+        <p>Matcha lattes dusted to order and served in black stoneware, for the half of the table that is not drinking espresso today.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <p class="kick">Transcribed from the printed menu</p>
+    <h2>All day food</h2>
+    <p class="mnote">One menu, morning to close. Dietary marks are printed as the kitchen prints them. Tell the team about any allergies before you order.</p>
+
+    <div class="mcols">
+      <div class="mcol">
+        <div class="mi">
+          <div class="mrow"><h3>Toast</h3><b class="pr">8.5</b></div>
+          <p>Sourdough, multigrain, fruit toast or English muffin with seasonal jam, Vegemite or peanut butter.</p>
+          <p class="madd">+ GF soya &amp; quinoa <b class="pr">1.5</b></p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Granola</h3><span class="tag">V</span><b class="pr">17.5</b></div>
+          <p>Paleo crunchy almond coconut granola, poached rhubarb and pear, blueberry infused coconut yogurt.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Porridge</h3><b class="pr">18.0</b></div>
+          <p>Flip Shelton five grain oats, almond crumble, poached rhubarb.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Blueberry Ricotta Hotcake</h3><b class="pr">20.0</b></div>
+          <p>Citrus coulis, maple syrup, grains, strawberries, pistachio dust and vanilla mascarpone.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Breakfast Burrito</h3><span class="tag">VO</span><b class="pr">18.5</b></div>
+          <p>Scrambled egg, crispy bacon, spinach, avocado, tomato, spicy black bean salsa and chilli bechamel.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Avocado</h3><span class="tag">VO</span><b class="pr">19.0</b></div>
+          <p>Smashed avocado, Egyptian dukkah, mint, balsamic cherry tomato and goats feta on seedy wholewheat.</p>
+          <p class="madd">+ poached egg <b class="pr">3.5</b></p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Croquettes</h3><b class="pr">19.5</b></div>
+          <p>Braised mixed greens and pea croquettes, beetroot hummus, roasted shaved almonds, micro herbs, lime and cilantro dressing and a poached egg.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Green Goodness Bowl</h3><span class="tag">GF · VO · N</span><b class="pr">20.0</b></div>
+          <p>Sauteed asparagus, beans, broccoli, kale, spiced chickpeas, super seeds, mixed nuts, pomegranate, feta, avocado, pumpkin hummus and a poached egg.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Chilli Scramble</h3><span class="tag">GFO</span><b class="pr">19.5</b></div>
+          <p>Roast cherry tomatoes, asparagus, house made chilli sambal, feta, soft herbs and angel chilli hair on sourdough.</p>
+        </div>
+      </div>
+
+      <div class="mcol">
+        <div class="mi">
+          <div class="mrow"><h3>Shakshuka</h3><span class="tag">VG · GFO · N</span><b class="pr">21.5</b></div>
+          <p>Middle eastern baked eggs, fava beans, zucchini, eggplant, soft herbs, feta, kale chips and tahini yoghurt.</p>
+          <p class="madd">+ chorizo <b class="pr">5.0</b></p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Lamb Hash Bowl</h3><span class="tag">GF</span><b class="pr">21.0</b></div>
+          <p>48 hour braised lamb, roasted sweet potato and carrot, charred corn, peas, pomegranate, kale, fresh herbs, tahini yoghurt and a fried egg.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Crispy Chicken Wrap</h3><b class="pr">19.5</b></div>
+          <p>Japanese inspired fried chicken, sesame asian slaw, pickled red onion, sticky soy and Kewpie mayo in a burrito wrap.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Hash Brown Benedict</h3><b class="pr">24.0 / 21.0</b></div>
+          <p>Gochujang and soy slow cooked pork, apple and cabbage slaw, maple hollandaise and two poached eggs on house made hash brown. Or sauteed spinach, haloumi, maple hollandaise and two poached eggs on house made hash brown.</p>
+        </div>
+        <div class="mi">
+          <div class="mrow"><h3>Two Eggs Your Ways</h3><b class="pr">14.0</b></div>
+          <p>Poached, scrambled or fried, on toast.</p>
+          <p class="madd">+ GF soya &amp; quinoa <b class="pr">1.5</b></p>
+        </div>
+        <div class="mlist">
+          <h3>Sides</h3>
+          <div class="srow"><span>Extra egg</span><b class="pr">3.5</b></div>
+          <div class="srow"><span>Fries, half serve</span><b class="pr">4.0</b></div>
+          <div class="srow"><span>House beans</span><b class="pr">4.5</b></div>
+          <div class="srow"><span>Avocado</span><b class="pr">4.5</b></div>
+          <div class="srow"><span>Feta</span><b class="pr">4.5</b></div>
+          <div class="srow"><span>Sauteed kale</span><b class="pr">4.5</b></div>
+          <div class="srow"><span>Hash brown</span><b class="pr">4.5</b></div>
+          <div class="srow"><span>Haloumi</span><b class="pr">5.0</b></div>
+          <div class="srow"><span>Chorizo</span><b class="pr">5.0</b></div>
+          <div class="srow"><span>Bacon</span><b class="pr">6.0</b></div>
+        </div>
+        <div class="mlist">
+          <div class="mrow"><h3>For the Little Ones</h3><b class="pr">9.0</b></div>
+          <p class="lo">Egg on toast · grilled cheese toastie · half hotcake with blueberry compote</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mfoot">
+      <p class="drk">Espresso, batch and matcha at the counter, drink prices in store.</p>
+      <p>The kitchen works with dairy, nuts and gluten, so cross contamination cannot be fully ruled out. Speak to the staff about any dietary requirement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gal" id="gallery">
+  <div class="wrap">
+    <p class="kick">Contact prints</p>
+    <h2>From the room and the pass</h2>
+    <p class="gsub">Shot at the cafe, nothing staged.</p>
+    <div class="gstrip">
+      <figure class="gf">
+        <img src="img/01.jpg" alt="The sage green dining room at Blonde" width="1200" height="1600">
+        <figcaption><span>01</span><span>The room</span></figcaption>
+      </figure>
+      <figure class="gf">
+        <img src="img/03.jpg" alt="Mocha and espresso on the dark timber table" width="1200" height="1600">
+        <figcaption><span>02</span><span>The cup</span></figcaption>
+      </figure>
+      <figure class="gf tall">
+        <img src="img/05.jpg" alt="Two matcha lattes seen from above" width="900" height="1600">
+        <figcaption><span>03</span><span>Matcha</span></figcaption>
+      </figure>
+      <figure class="gf">
+        <img src="img/04.jpg" alt="Shakshuka skillet with toast, served inside" width="1200" height="1600">
+        <figcaption><span>04</span><span>The pan</span></figcaption>
+      </figure>
+      <figure class="gf">
+        <img src="img/06.jpg" alt="Shakshuka skillet in bright sun on the footpath table" width="1600" height="1600">
+        <figcaption><span>05</span><span>Outside</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <p class="kick">In their words</p>
+    <blockquote class="bigq">“Blonde Cafe Fitzroy is hands down the best cafe in Fitzroy, and that&rsquo;s saying something”</blockquote>
+    <p class="battr">Jessi Singh · Google review</p>
+    <div class="qgrid">
+      <div class="q">
+        <p>“Finally a cafe that has everything you could ask for on the menu and at a reasonable price”</p>
+        <p class="battr">Katie Lilley · Google review</p>
+      </div>
+      <div class="q">
+        <p>“It&rsquo;s been a while since I reviewed a coffee shop but wanted to give a quick shout out to these guys. Great food”</p>
+        <p class="battr">Kel Lupis · Google review</p>
+      </div>
+    </div>
+    <p class="rline"><b class="score">4.7</b> stars · <b class="rc">427</b> reviews on Google</p>
+  </div>
+</section>
+
+<!-- ================= BOOK + VISIT ================= -->
+<section class="visit" id="visit">
+  <div class="wrap vgrid">
+    <div class="bcard" id="book">
+      <p class="kick">Book direct</p>
+      <h2>Hold a table</h2>
+      <p class="bsub">Fill in the details, then call, or send them by email and the team confirms by reply.</p>
+      <form id="bform">
+        <div class="f2">
+          <div class="fld full">
+            <label for="bn">Name</label>
+            <input type="text" id="bn" name="name" autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="fld">
+            <label for="bd">Date</label>
+            <input type="date" id="bd" name="date">
+          </div>
+          <div class="fld">
+            <label for="bt">Time</label>
+            <input type="time" id="bt" name="time">
+          </div>
+          <div class="fld full">
+            <label for="bg">Guests</label>
+            <select id="bg" name="guests">
+              <option>1</option><option selected>2</option><option>3</option>
+              <option>4</option><option>5</option><option>6</option>
+              <option>7</option><option>8 or more</option>
+            </select>
+          </div>
+        </div>
+        <div class="bbtns">
+          <a class="btn solid" href="tel:+61390778378">Call (03) 9077 8378</a>
+          <button class="btn ghost" type="submit">Email the details</button>
+        </div>
+        <p class="bhint">Calling gets today&rsquo;s answer fastest. The email button opens your mail app with everything already written, addressed to the cafe.</p>
+        <p class="bhint bwarn" id="bwarn" hidden>Blonde opens weekdays only, pick a Monday to Friday date.</p>
+      </form>
+    </div>
+
+    <div class="vinfo">
+      <p class="kick">Find us</p>
+      <h2>On the Brunswick strip</h2>
+      <p class="addr">443 Brunswick St</p>
+      <p class="suburb">Fitzroy VIC 3065</p>
+      <div class="vrow">
+        <span class="vl">Phone</span>
+        <a class="vv" href="tel:+61390778378">(03) 9077 8378</a>
+      </div>
+      <div class="vrow">
+        <span class="vl">Email</span>
+        <a class="vv" href="mailto:blondefoodanddrink@gmail.com">blondefoodanddrink@gmail.com</a>
+      </div>
+      <div class="vrow">
+        <span class="vl">Instagram</span>
+        <a class="vv" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener">@blondefitzroy</a>
+      </div>
+      <div class="vrow">
+        <span class="vl">Map</span>
+        <a class="vv" href="https://www.google.com/maps/search/?api=1&amp;query=Blonde+Food+and+Drink+443+Brunswick+St+Fitzroy+VIC+3065" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+      <div class="wk">
+        <div class="wkdays">
+          <span class="wd on">Mon</span>
+          <span class="wd on">Tue</span>
+          <span class="wd on">Wed</span>
+          <span class="wd on">Thu</span>
+          <span class="wd on">Fri</span>
+          <span class="wd off">Sat</span>
+          <span class="wd off">Sun</span>
+        </div>
+        <p class="wkline1">Monday to Friday, 7:00 am to 3:00 pm</p>
+        <p class="wkline2">Closed Saturday and Sunday</p>
+      </div>
+      <p class="vnote">Walk-ins are always welcome during the week. For bigger tables, a quick call ahead saves the wait.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap fgrid">
+    <span class="fbrand">Blonde Food and Drink</span>
+    <span class="fmeta">
+      <i>443 Brunswick St, Fitzroy VIC 3065</i>
+      <i>·</i>
+      <i>(03) 9077 8378</i>
+      <i>·</i>
+      <i>Weekdays 7:00 to 3:00</i>
+      <i>·</i>
+      <a class="flink" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener">@blondefitzroy</a>
+    </span>
+  </div>
+</footer>
+
+<!-- ================= STICKY BAR ================= -->
+<nav class="bar" aria-label="Quick actions">
+  <span class="bbrand">Bl<span class="om">o</span>nde</span>
+  <a class="blink" href="#menu">Menu</a>
+  <a class="blink" href="#book">Book</a>
+  <a class="bic" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener" aria-label="Blonde on Instagram">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a class="bcall" href="tel:+61390778378">Call</a>
+</nav>
+
+<script>
+(function(){
+  var f=document.getElementById('bform');
+  if(!f)return;
+  var d=document.getElementById('bd');
+  if(d){var t=new Date();d.min=t.toISOString().slice(0,10);}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('bn').value.trim();
+    var dv=document.getElementById('bd').value;
+    var tv=document.getElementById('bt').value;
+    var g=document.getElementById('bg').value;
+    var w=document.getElementById('bwarn');
+    if(dv){
+      var day=new Date(dv+'T12:00:00').getDay();
+      if(day===0||day===6){w.hidden=false;return;}
+    }
+    w.hidden=true;
+    var body='Hi Blonde,\n\nI would like to book a table.\n\n'
+      +'Name: '+(n||'')+'\n'
+      +'Date: '+(dv||'')+'\n'
+      +'Time: '+(tv||'')+'\n'
+      +'Guests: '+g+'\n\n'
+      +'Please confirm by reply. Thank you.';
+    window.location.href='mailto:blondefoodanddrink@gmail.com?subject='
+      +encodeURIComponent('Table request, Blonde Food and Drink')
+      +'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
