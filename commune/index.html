@@ -60,13 +60,13 @@ header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;ov
 h1{font-size:clamp(84px,11.5vw,158px);color:var(--cream);font-weight:340;letter-spacing:-.01em;line-height:.96}
 .hero-eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--amber)}
 .hero-eyebrow i{font-style:normal;color:var(--cream-dim);padding:0 9px}
-.hero-top{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-top:10px}
-.hero-score{text-align:right;flex:0 0 auto;padding-bottom:10px}
-.hs-stars{display:block;color:var(--amber);font-size:14px;letter-spacing:.22em}
-.hs-num{display:block;font-family:var(--disp);font-size:52px;font-weight:340;color:var(--cream);line-height:1;margin-top:2px}
-.hs-sub{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim);margin-top:6px}
+/* the score lives in the dark left column, never over the bright window */
+.hero-score{display:inline-flex;align-items:baseline;gap:10px;margin-left:6px;align-self:center;white-space:nowrap}
+.hs-stars{color:var(--amber);font-size:13px;letter-spacing:.18em}
+.hs-num{font-family:'Fraunces',serif;font-size:30px;font-weight:340;color:var(--cream);line-height:1}
+.hs-sub{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-dim)}
 .hs-sub b{color:var(--cream);font-weight:700}
-.hero-say{margin-top:22px;font-family:var(--disp);font-style:italic;font-weight:300;
+.hero-say{margin-top:22px;font-family:'Fraunces',serif;font-style:italic;font-weight:300;
   font-size:clamp(22px,2.5vw,34px);line-height:1.28;color:var(--cream);max-width:22ch}
 .hero-line{margin-top:18px;font-size:14px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--cream-dim)}
 .hero-line i{font-style:normal;color:var(--amber);padding:0 8px}
@@ -78,11 +78,16 @@ h1{font-size:clamp(84px,11.5vw,158px);color:var(--cream);font-weight:340;letter-
   border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
 .hero-marks li{padding:16px 20px;border-left:1px solid var(--line-d)}
 .hero-marks li:first-child{border-left:0;padding-left:0}
-.hero-marks b{display:block;font-family:var(--disp);font-weight:340;font-size:21px;color:var(--cream);line-height:1}
+.hero-marks b{display:block;font-family:'Fraunces',serif;font-weight:340;font-size:21px;color:var(--cream);line-height:1}
 .hero-marks span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);margin-top:7px}
-.hero-band{margin-top:auto;padding-top:38px}
-.hero-band .hb-frame{border:1px solid var(--line-d);padding:10px;background:rgba(27,19,11,.5)}
-.hero-band img{width:100%;height:clamp(220px,26vh,300px);object-fit:cover;object-position:center 46%}
+/* The photograph carries the hero, per the research (White Coffee, KAFFEE IST KULTUR,
+   Navigating Digital Realms): a real image at full scale with the type over it, never type
+   floating on an empty field. */
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;z-index:1}
+.hero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,rgba(24,17,10,.94) 0%,rgba(24,17,10,.86) 38%,rgba(24,17,10,.42) 66%,rgba(24,17,10,.30) 100%),
+             linear-gradient(180deg,rgba(24,17,10,.78) 0%,rgba(24,17,10,.12) 34%,rgba(24,17,10,.55) 100%)}
+.hero-marks{margin-bottom:6px}
 
 /* ---------- SCORE · the one confident element ---------- */
 .score-band{background:var(--board);border-top:1px solid var(--line-d);padding:84px 0 90px}
@@ -239,10 +244,8 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
   .nav-links{display:none}
   header{min-height:clamp(600px,92svh,820px);max-height:860px}
   .hero-in{padding:88px 20px 24px}
-  .hero-top{flex-direction:column;align-items:flex-start;gap:10px}
-  .hero-score{text-align:left;padding-bottom:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .hs-num{font-size:34px;margin-top:0}
-  .hs-stars,.hs-sub{margin-top:0}
+  .hero-score{margin-left:0;width:100%;margin-top:4px}
+  .hs-num{font-size:26px}
   .hero-say{font-size:20px;margin-top:16px;max-width:none}
   .hero-say br{display:none}
   .hero-marks{grid-template-columns:repeat(2,1fr);margin-top:26px}
@@ -297,19 +300,17 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
 <header id="top" class="grain">
   <div class="hero-in">
     <p class="hero-eyebrow">Fitzroy<i>·</i>Brunswick Street</p>
-    <div class="hero-top">
-      <h1>commune</h1>
-      <div class="hero-score">
-        <span class="hs-stars" aria-hidden="true">★★★★★</span>
-        <span class="hs-num">5.0</span>
-        <span class="hs-sub">across <b>436</b> Google reviews</span>
-      </div>
-    </div>
+    <h1>commune</h1>
     <p class="hero-say">The coffee routine, kept daily<br>from six in the morning.</p>
     <p class="hero-line">Specialty coffee<i>·</i>Modern Turkish brunch</p>
     <div class="hero-acts">
       <a class="btn btn-amber" href="#book">Book a table</a>
       <a class="btn btn-oline" href="#drinks">The drinks board</a>
+      <span class="hero-score">
+        <span class="hs-stars" aria-hidden="true">★★★★★</span>
+        <span class="hs-num">5.0</span>
+        <span class="hs-sub">from <b>436</b> reviews</span>
+      </span>
     </div>
     <ul class="hero-marks">
       <li><b>Spectrum</b><span>Coffee partner</span></li>
@@ -317,12 +318,9 @@ footer{background:var(--board);border-top:1px solid var(--line-d);padding:52px 0
       <li><b>House baked</b><span>In the cabinet</span></li>
       <li><b>Turkish</b><span>On the brunch menu</span></li>
     </ul>
-    <figure class="hero-band">
-      <div class="hb-frame">
-        <img src="img/05.jpg" alt="The house baked cabinet at Commune: almond croissants, caneles and muffins with handwritten tags" fetchpriority="high">
-      </div>
-    </figure>
   </div>
+  <img class="hero-bg" src="img/01.jpg" alt="Commune at dusk on Brunswick Street, the lit awning and the warm window" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
 </header>
 
 <section class="score-band grain">
