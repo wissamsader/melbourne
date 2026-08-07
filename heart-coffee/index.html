@@ -8,268 +8,159 @@
 <meta name="description" content="Heart Coffee, 378 Burnley St Richmond. Hand-painted sign, Dukes Coffee, toasted sandwiches and the cinnamon scroll regulars call the best in Melbourne.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+/* ============================================================================
+   Heart Coffee, Richmond.
+   Reference: awwwards.com, Sunbeam Bagel & Coffee Co. (sunbeambagels.com).
+   What is taken: a warm cream field, a FAT high contrast display serif set
+   enormous with hard full stops one phrase per line, a script line as the
+   counterpoint above it, product photographed and placed at a scale that
+   overlaps the type, and a floating pill nav. Their own navy is the accent,
+   not the reference's orange. Nothing on this page moves on scroll.
+   Photography: their own Instagram, @heartcoffeemelbourne (gate 32).
+   ========================================================================= */
 :root{
-  --bone:#F4EFE5;
-  --bone2:#ECE5D6;
-  --ink:#171512;
-  --ink2:#221F1A;
-  --taupe:#6C5F4B;
-  --line:rgba(23,21,18,.18);
-  --shadow:6px 6px 0 rgba(23,21,18,.14);
+  --cream:#F7F0E4;
+  --cream2:#EFE5D4;
+  --white:#FFFCF7;
+  --ink:#171514;
+  --mut:#5F594F;
+  --dim:#6E665B;
+  --navy:#2A3566;      /* their own painted navy */
+  --navy2:#1E2750;
+  --red:#B8402A;       /* the script counterpoint */
+  --line:rgba(23,21,20,.14);
+  --disp:'Playfair Display',Georgia,serif;
+  --script:'Playfair Display',Georgia,serif;
+  --body:'Instrument Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
 }
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{
-  background:var(--bone);
-  color:var(--ink);
-  font-family:"Instrument Sans",sans-serif;
-  font-size:17px;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--cream);color:var(--mut);font-family:var(--body);font-size:16.5px;
+  line-height:1.75;overflow-x:clip}
 img{display:block;max-width:100%}
-a{color:var(--ink)}
-h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-height:1.04;letter-spacing:-.015em}
-.mono{font-family:"IBM Plex Mono",monospace}
-.wrap{max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px}
-section{position:relative}
-[id]{scroll-margin-top:24px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--navy);color:var(--cream)}
+:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
 
-/* ---------- buttons: the house signature, typed rectangles with a set-off shadow ---------- */
-.btn{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  padding:13px 20px;border:2px solid var(--ink);border-radius:2px;text-decoration:none;
-  background:var(--ink);color:var(--bone);
-  box-shadow:var(--shadow);
-  transition:transform .18s ease, box-shadow .18s ease;
-  white-space:nowrap;
-}
-.btn:hover{transform:translate(-1px,-1px);box-shadow:8px 8px 0 rgba(23,21,18,.14)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn svg{width:16px;height:16px;flex:none}
-.onink .btn{border-color:var(--bone);background:var(--bone);color:var(--ink);box-shadow:6px 6px 0 rgba(0,0,0,.35)}
-.onink .btn.ghost{background:transparent;color:var(--bone)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(20px,5vw,60px)}
+section{padding:clamp(70px,8.6vw,124px) 0;position:relative}
+h1,h2,h3{font-family:var(--disp);font-weight:700;color:var(--ink);letter-spacing:-.015em}
+h2{font-size:clamp(32px,5.2vw,72px);line-height:.98;max-width:13em}
+h3{font-size:19px;line-height:1.25;letter-spacing:-.005em}
+.kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--dim);display:flex;align-items:center;gap:9px}
+.orn{color:var(--red);font-size:13px}
+.hero-sub,.story p,.scroll-grid p,.card p{color:var(--mut)}
+.score{font-family:var(--mono);font-size:12.5px;color:var(--ink);margin-top:20px}
+.score b{font-family:var(--disp);font-size:20px;color:var(--navy)}
 
-/* ---------- nav ---------- */
-nav{border-bottom:2px solid var(--ink);background:var(--bone)}
-.nav-in{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:26px;height:64px}
-.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
-.nav-links{display:flex;gap:22px;margin-left:auto}
-.nav-links a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid transparent;padding:4px 0}
-.nav-links a:hover{border-bottom-color:var(--ink)}
-.nav-cta{margin-left:6px;box-shadow:none;padding:10px 15px}
-.nav-cta:hover{box-shadow:none;transform:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--body);font-weight:600;font-size:12.5px;letter-spacing:.06em;
+  padding:15px 28px;border-radius:100px;cursor:pointer;
+  background:var(--navy);color:var(--cream);border:1.5px solid var(--navy);
+  transition:background .25s,color .25s}
+.btn:hover{background:var(--navy2);border-color:var(--navy2)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn svg{width:15px;height:15px;flex:0 0 auto}
 
-/* ---------- hero: the painted wordmark, photographed, hanging from the top rule ---------- */
-.hero{overflow:hidden}
-.hero-grid{
-  max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px;
-  display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,4.5vw,72px);
-  min-height:clamp(600px,92svh,820px);max-height:860px;
-}
-.hero-copy{padding-top:clamp(56px,9vh,110px);padding-bottom:56px;min-width:0}
-.kicker{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);display:flex;align-items:center;gap:10px}
-.orn{display:inline-block;font-size:17px;color:var(--ink);line-height:1}
-.hero-copy h1{font-size:clamp(2.35rem,4.6vw,4.35rem);margin:18px 0 20px;max-width:12ch}
-.hero-sub{font-size:clamp(1rem,1.35vw,1.2rem);color:var(--ink2);max-width:46ch}
-.score{display:inline-flex;align-items:center;gap:10px;margin-top:26px;border:1.5px solid var(--ink);border-radius:2px;padding:7px 13px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.05em}
-.score b{font-weight:600}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-.hero-hang{position:relative;min-width:0;display:flex;flex-direction:column;align-items:flex-end}
-.hang-frame{
-  width:min(100%,464px);
-  aspect-ratio:9/12.5;
-  border:2px solid var(--ink);border-top:none;border-radius:0 0 2px 2px;
-  box-shadow:10px 12px 0 rgba(23,21,18,.12);
-  position:relative;overflow:hidden;background:var(--bone2);
-}
-.clip01{position:absolute;left:-14%;top:0;width:114%;max-width:none;height:100%;object-fit:cover;object-position:50% 40%}
-.hang-cap{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);padding:12px 2px 20px;text-align:right}
+/* ---------- the floating pill nav ---------- */
+nav{position:sticky;top:14px;z-index:60;padding-inline:clamp(14px,4vw,40px)}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:24px;
+  background:var(--white);border:1.5px solid var(--ink);border-radius:100px;
+  padding:11px 14px 11px 24px}
+.nav-in>a:first-child,.brand{font-family:var(--disp);font-weight:700;font-size:20px;
+  color:var(--ink);letter-spacing:-.02em}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav-links a{font-family:var(--body);font-weight:500;font-size:13px;color:var(--ink);opacity:.78}
+.nav-links a:hover{opacity:1;color:var(--navy)}
+.nav-links a.btn{opacity:1;padding:11px 22px}
+@media (max-width:900px){.nav-links a:not(.btn){display:none}}
 
-/* ---------- ticker strip ---------- */
-.strip{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--bone)}
-.strip p{
-  max-width:1180px;margin:0 auto;padding:16px 28px;
-  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
-  text-align:center;color:var(--ink);
-}
+/* ---------- hero: the fat serif stack, product overlapping it ---------- */
+.hero{padding:clamp(40px,5vw,72px) 0 0}
+.hero-grid{max-width:1180px;margin:0 auto;padding-inline:clamp(20px,5vw,60px);
+  display:grid;grid-template-columns:1.06fr .84fr;gap:clamp(24px,4vw,56px);align-items:center}
+.hero-copy h1{font-size:clamp(42px,7.4vw,104px);line-height:.94;max-width:11em}
+.hero-sub{margin-top:22px;max-width:31em;font-size:17px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ig-btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.hero-hang{position:relative}
+.hang-frame{border-radius:200px 200px 14px 14px;overflow:hidden;border:1.5px solid var(--ink);
+  background:var(--white)}
+.hang-frame img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.hang-cap{margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);text-align:center}
+@media (max-width:920px){.hero-grid{grid-template-columns:1fr}
+  .hang-frame{max-width:420px;margin-inline:auto}}
 
-/* ---------- story ---------- */
-.story{padding:clamp(72px,9vw,120px) 0}
-.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,84px);align-items:start}
-.story-grid > *{min-width:0}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin-bottom:16px}
-.story h2,.counter h2,.menu h2,.reviews h2,.visit h2{font-size:clamp(1.9rem,3.1vw,2.9rem);margin-bottom:22px}
-.story p{color:var(--ink2);max-width:58ch}
-.story p + p{margin-top:18px}
-.spec{margin-top:34px;border-top:2px solid var(--ink)}
-.spec div{display:flex;gap:18px;justify-content:space-between;align-items:baseline;padding:11px 2px;border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:13px}
-.spec dt{font-weight:600;letter-spacing:.1em;text-transform:uppercase;flex:none}
-.spec dd{color:var(--taupe);text-align:right}
-.frame{border:2px solid var(--ink);border-radius:2px;box-shadow:var(--shadow);overflow:hidden;background:var(--bone2)}
-.frame img{width:100%;height:100%;object-fit:cover}
-.fig-cap{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);padding-top:12px}
-.story-side .frame{aspect-ratio:3/4}
+/* ---------- the marquee strip ---------- */
+.strip{background:var(--navy);color:var(--cream);margin-top:clamp(46px,6vw,86px);
+  padding:16px clamp(20px,5vw,60px)}
+.strip p{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  text-align:center;max-width:1180px;margin:0 auto}
 
-/* ---------- the scroll, ink field ---------- */
-.scrollband{background:var(--ink);color:var(--bone);padding:clamp(76px,9vw,130px) 0}
-.scrollband .eyebrow{color:rgba(244,239,229,.62)}
-.scroll-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,84px);align-items:center}
-.scroll-grid > *{min-width:0}
-.scrollband h2{font-size:clamp(2.3rem,4vw,3.7rem);margin-bottom:20px;color:var(--bone)}
-.scrollband .lead{color:rgba(244,239,229,.85);max-width:54ch}
-.vars{margin-top:32px;border-top:2px solid var(--bone)}
-.vars div{display:flex;gap:20px;align-items:baseline;padding:12px 2px;border-bottom:1px solid rgba(244,239,229,.28)}
-.vars dt{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.12em;flex:none;min-width:150px}
-.vars dd{color:rgba(244,239,229,.7);font-size:15px}
-.scroll-note{margin-top:26px;font-size:15px;color:rgba(244,239,229,.7);max-width:52ch}
-.scroll-note a{color:var(--bone)}
-.scroll-photo .frame{border-color:var(--bone);box-shadow:8px 10px 0 rgba(0,0,0,.4);aspect-ratio:10/14.5}
-.scroll-photo img{object-position:50% 100%}
-.scroll-photo .fig-cap{color:rgba(244,239,229,.6)}
+/* ---------- story and scroll band ---------- */
+.story-grid,.scroll-grid{display:grid;grid-template-columns:1.02fr .88fr;
+  gap:clamp(28px,4.4vw,66px);align-items:center}
+.scroll-grid{grid-template-columns:.88fr 1.02fr}
+.story p,.scroll-grid p{margin-top:18px;max-width:33em}
+.frame{border:1.5px solid var(--ink);background:var(--white);border-radius:14px;overflow:hidden}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.scrollband{background:var(--cream2)}
+.scroll-photo .frame{border-radius:200px 14px 200px 14px}
+@media (max-width:900px){.story-grid,.scroll-grid{grid-template-columns:1fr}}
 
-/* ---------- at the counter ---------- */
-.counter{padding:clamp(72px,9vw,120px) 0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,34px);margin-top:16px}
-.cards > *{min-width:0}
-.card .frame{aspect-ratio:4/3;box-shadow:var(--shadow)}
-.card h3{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:16px 0 8px}
-.card p{font-size:15px;color:var(--taupe)}
-.card .cup-crop img{object-position:50% 30%}
-/* typed panels: one photo one place, so the sign lives in the hero and the mark on the menu */
-.card .frame.tpanel{display:flex;flex-direction:column;justify-content:center;padding:clamp(18px,2vw,28px) clamp(16px,1.9vw,24px)}
-.card .tp-kick{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
-.tp-board{list-style:none;margin-top:10px;border-top:2px solid var(--ink)}
-.tp-board li{padding:7px 2px;border-bottom:1px solid var(--line);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.02rem,1.3vw,1.25rem);line-height:1.2;letter-spacing:-.01em}
-.card .tp-foot{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
-.card .frame.inked{background:var(--ink);color:var(--bone);align-items:center;text-align:center}
-.card .inked .tp-kick{color:rgba(244,239,229,.62)}
-.card .tp-word{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2rem,2.9vw,2.8rem);line-height:1;letter-spacing:-.015em;margin-top:10px;color:var(--bone)}
-.card .tp-lock{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-top:9px;color:rgba(244,239,229,.85)}
-.tp-rule{display:block;width:44px;border-top:2px solid rgba(244,239,229,.5);margin:14px auto 12px}
-.card .inked .tp-foot{margin-top:0;color:rgba(244,239,229,.62)}
+/* ---------- the three cards ---------- */
+.counter .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,30px);
+  margin-top:clamp(32px,4vw,50px)}
+.card h3{margin-top:16px}
+.card p{margin-top:7px;font-size:14.5px}
+.cup-crop img{aspect-ratio:1/1}
+.tpanel{background:var(--navy);color:var(--cream);border-color:var(--navy);
+  aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(20px,2.6vw,32px);gap:10px}
+.tpanel *{color:var(--cream)}
+.tpanel .tp-kick,.tpanel .tp-foot{color:rgba(247,240,228,.82)}
+.tpanel .tp-word,.tpanel .tp-lock,.tpanel .tp-line{color:var(--cream)}
+.tpanel.inked{background:var(--ink);border-color:var(--ink)}
+@media (max-width:860px){.counter .cards{grid-template-columns:1fr;max-width:430px;margin-inline:auto}}
 
 /* ---------- menu ---------- */
-.menu{background:var(--bone2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:clamp(76px,9vw,124px) 0}
-.menu-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,5vw,90px);align-items:start}
-.menu-grid > *{min-width:0}
-.menu-list{border-top:2px solid var(--ink)}
-.mi{padding:17px 2px;border-bottom:1px solid var(--line)}
-.mi-top{display:flex;align-items:baseline;gap:14px}
-.mi-top h3{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14.5px;letter-spacing:.07em;text-transform:uppercase}
-.mi-top .dots{flex:1;border-bottom:2px dotted rgba(23,21,18,.35);transform:translateY(-4px)}
-.pr{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14.5px;white-space:nowrap}
-.mi p{font-size:14.5px;color:var(--taupe);margin-top:5px;max-width:52ch}
-.menu-note{margin-top:24px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.06em;color:var(--taupe);max-width:48ch}
-.menu-side .frame{aspect-ratio:9/15;box-shadow:var(--shadow)}
-.menu-side img{object-fit:contain;background:var(--bone2)}
+.menu{background:var(--white)}
+.menu-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,64px);
+  align-items:start}
+.menu-list{margin-top:clamp(26px,3.2vw,42px);border-top:1.5px solid var(--ink)}
+.mi{padding:14px 0;border-bottom:1px solid var(--line)}
+.mi-top{display:flex;align-items:baseline;gap:12px}
+.mi-top h3{font-family:var(--body);font-weight:600;font-size:16px;letter-spacing:0}
+.dots{flex:1;border-bottom:1px dotted rgba(23,21,20,.28);transform:translateY(-4px)}
+.pr{font-family:var(--disp);font-weight:700;font-size:17px;color:var(--navy);white-space:nowrap}
+.mi p{margin-top:5px;font-size:14px;color:var(--dim)}
+@media (max-width:900px){.menu-grid{grid-template-columns:1fr}}
 
-/* ---------- reviews ---------- */
-.reviews{padding:clamp(76px,9vw,124px) 0}
-.rev-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:18px 34px;margin-bottom:34px}
-.rev-score{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(3rem,5vw,4.4rem);line-height:1}
-.rev-of{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,34px)}
-.quotes > *{min-width:0}
-.q{border:2px solid var(--ink);border-radius:2px;background:var(--bone);box-shadow:var(--shadow);padding:26px 24px;display:flex;flex-direction:column;gap:16px}
-.qmark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:44px;line-height:.6;padding-top:10px}
-.q p{font-size:16px;color:var(--ink2)}
-.q cite{margin-top:auto;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
+/* ---------- sticky rail, unique to this site: a cream pill floating on the page ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:70;padding:0 12px 12px;
+  padding-bottom:calc(12px + env(safe-area-inset-bottom));pointer-events:none}
+.bar-in{display:flex;align-items:center;gap:9px;max-width:640px;margin:0 auto;
+  background:var(--white);border:1.5px solid var(--ink);border-radius:100px;
+  padding:9px 9px 9px 18px;pointer-events:auto;box-shadow:0 10px 30px rgba(23,21,20,.14)}
+.bar-tag{font-family:var(--mono);font-size:9.5px;line-height:1.35;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.bar-in .btn{padding:11px 18px;font-size:11.5px}
+.bar-in .btn.icon{padding:11px;width:40px;height:40px}
+.bar-in .btn.icon svg{width:16px;height:16px}
+@media (min-width:901px){.bar{display:none}}
+@media (max-width:400px){.bar-tag{display:none}.bar-in{padding-left:9px}}
 
-/* ---------- visit + order ahead ---------- */
-.visit{background:var(--bone2);border-top:2px solid var(--ink);padding:clamp(76px,9vw,124px) 0}
-.visit-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(40px,5vw,90px);align-items:start}
-.visit-grid > *{min-width:0}
-.addr-big{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(1.25rem,1.9vw,1.7rem);line-height:1.25;max-width:20ch}
-.hours{margin-top:30px;border-top:2px solid var(--ink);max-width:430px}
-.hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 2px;border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:13.5px}
-.hours dt{font-weight:600;letter-spacing:.09em;text-transform:uppercase}
-.hours dd .hx{font-style:normal}
-.nophone{margin-top:34px;border:2px solid var(--ink);border-radius:2px;background:var(--bone);box-shadow:var(--shadow);padding:22px 24px;max-width:470px}
-.nophone h3{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
-.nophone p{font-size:15px;color:var(--ink2)}
-.visit-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
-.book{background:var(--ink);color:var(--bone);border:2px solid var(--ink);border-radius:2px;box-shadow:10px 12px 0 rgba(23,21,18,.16);padding:clamp(28px,3vw,40px)}
-.book h3{font-size:clamp(1.6rem,2.4vw,2.1rem);color:var(--bone);margin-bottom:12px}
-.book > p{color:rgba(244,239,229,.78);font-size:15.5px;max-width:46ch}
-.field{margin-top:18px}
-.field label{display:block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,239,229,.65);margin-bottom:7px}
-.field input,.field select{
-  width:100%;background:var(--bone);color:var(--ink);border:2px solid var(--bone);border-radius:2px;
-  font-family:"IBM Plex Mono",monospace;font-size:14.5px;padding:12px 13px;appearance:none;
-}
-.field input:focus,.field select:focus{outline:3px solid rgba(244,239,229,.45);outline-offset:1px}
-.book-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;align-items:center}
-.book-alt{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.05em;color:rgba(244,239,229,.7)}
-.book-alt a{color:var(--bone)}
-.em-line{margin-top:18px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.05em;color:rgba(244,239,229,.6)}
-.em-line a{color:var(--bone);text-decoration:underline}
+/* the footer was styled by the old sheet; keep it plain and on-brand */
+footer{border-top:1.5px solid var(--ink);background:var(--white);
+  padding:clamp(44px,5.5vw,74px) 0 clamp(96px,9vw,108px)}
 
-/* ---------- footer ---------- */
-footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);padding:56px 0 120px}
-.foot{display:flex;flex-wrap:wrap;gap:26px 60px;align-items:baseline;justify-content:space-between}
-.foot-brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;letter-spacing:.01em}
-.foot-meta{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.08em;color:rgba(244,239,229,.62);display:flex;flex-wrap:wrap;gap:8px 26px}
-.foot-meta a{color:rgba(244,239,229,.85)}
-
-/* ---------- sticky bar, typed-rule signature, phones only ---------- */
-.bar{
-  position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
-  background:var(--bone);
-  border-top:2px solid var(--ink);
-  box-shadow:0 -1px 0 var(--bone), 0 -3px 0 var(--ink), 0 -12px 24px rgba(23,21,18,.12);
-  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-}
-.bar-in{display:flex;align-items:center;gap:10px}
-.bar-tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;line-height:1.35;color:var(--taupe);flex:1;min-width:0}
-.bar .btn{padding:11px 14px;font-size:12px;box-shadow:3px 3px 0 rgba(23,21,18,.16)}
-.bar .btn.icon{padding:11px 12px}
-
-/* ---------- responsive ---------- */
-@media (max-width:1020px){
-  .nav-links a:nth-child(2){display:none}
-}
-@media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr;min-height:clamp(600px,92svh,820px);max-height:860px;gap:0}
-  .hero-hang{order:-1;align-items:center}
-  .hang-frame{width:min(100%,430px);aspect-ratio:10/11}
-  .clip01{object-position:50% 36%}
-  .hang-cap{text-align:center;padding-bottom:6px}
-  .hero-copy{padding-top:18px;padding-bottom:28px}
-  .hero-copy h1{font-size:clamp(2rem,7vw,2.7rem);margin-top:14px}
-  .hero-ctas{margin-top:22px}
-  .hero-ctas .ig-btn{display:none}
-  .score{margin-top:20px}
-  .story-grid,.scroll-grid,.menu-grid,.visit-grid{grid-template-columns:1fr}
-  .story-side{max-width:520px}
-  .scroll-photo{max-width:520px}
-  .menu-side{max-width:460px}
-  .cards{grid-template-columns:1fr 1fr}
-  .quotes{grid-template-columns:1fr}
-  footer{padding-bottom:150px}
-}
-@media (max-width:880px){
-  .nav-links{display:none}
-  .bar{display:block}
-}
-@media (max-width:620px){
-  .wrap{padding-left:20px;padding-right:20px}
-  .hero-grid{padding-left:20px;padding-right:20px}
-  .cards{grid-template-columns:1fr}
-  .hero-ctas .btn{flex:1;justify-content:center}
-  .hero-ctas .ig-btn{flex:1 1 100%}
-  .strip p{letter-spacing:.09em}
-}
-@media (max-width:400px){
-  .bar-tag{display:none}
-  .bar-in{justify-content:space-between}
-  .bar .btn{flex:1;justify-content:center}
-  .bar .btn.icon{flex:0}
-}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 <style data-fx-orn>
 .orn{animation:hpulse 12s ease-in-out infinite;transform-origin:center}
@@ -310,7 +201,7 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
     </div>
     <div class="hero-hang">
       <div class="hang-frame">
-        <img class="clip01" src="img/01.jpg?v=aa168de8" alt="The Heart Coffee shopfront on Burnley Street, with the hand-painted wordmark across the window and the painted sign hanging above the footpath">
+        <img class="clip01" src="img/20.jpg?v=69bbc83a" alt="The Heart Coffee shopfront on Burnley Street, with the hand-painted wordmark across the window">
       </div>
       <p class="hang-cap" data-edit="t13" data-edit-label="Text: The window at 378, painted by hand">The window at 378, painted by hand</p>
     </div>
@@ -337,7 +228,7 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
         </dl>
       </div>
       <div class="story-side">
-        <div class="frame"><img src="img/04.jpg?v=724d46ed" alt="A flat white with a heart poured in the milk, on a white table"></div>
+        <div class="frame"><img src="img/04.jpg?v=a1bcca74" alt="A coffee with latte art in a white cup at Heart Coffee"></div>
         <p class="fig-cap" data-edit="t27" data-edit-label="Text: Flat white, heart first">Flat white, heart first</p>
       </div>
     </div>
@@ -360,7 +251,7 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
         <p class="scroll-note">Baked through the morning and priced at the counter. When the tray is empty, that is it until tomorrow, so if you are crossing town for one, <a href="#book" data-edit="t39" data-edit-label="Button / link: ask us to put one aside">ask us to put one aside</a>.</p>
       </div>
       <div class="scroll-photo">
-        <div class="frame"><img src="img/03.jpg?v=98e64604" alt="A thickly glazed cinnamon scroll beside a black coffee on a white table at Heart Coffee"></div>
+        <div class="frame"><img src="img/03.jpg?v=3a390abf" alt="A tray of glazed cinnamon scrolls with their chalk price tag at Heart Coffee"></div>
         <p class="fig-cap" data-edit="t40" data-edit-label="Text: The original, with a black coffee">The original, with a black coffee</p>
       </div>
     </div>
@@ -387,7 +278,7 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
         <p data-edit="t50" data-edit-label="Text: Four ways out of the oven. The seasona…">Four ways out of the oven. The seasonal one changes without warning.</p>
       </div>
       <div class="card">
-        <div class="frame cup-crop"><img src="img/05.jpg?v=bbb22e50" alt="A hot chocolate dusted with cocoa and a morning muffin on a steel tray, with a HEART printed napkin"></div>
+        <div class="frame cup-crop"><img src="img/05.jpg?v=eb9dce6a" alt="The breakfast burger with a fried egg at Heart Coffee"></div>
         <h3 data-edit="t51" data-edit-label="Heading: Hot chocolate">Hot chocolate</h3>
         <p data-edit="t52" data-edit-label="Text: Dusted heavy, with the morning muffin …">Dusted heavy, with the morning muffin riding on steel. The napkin underneath says HEART three times.</p>
       </div>
@@ -453,7 +344,7 @@ footer{background:var(--ink);color:var(--bone);border-top:2px solid var(--ink);p
         <p class="menu-note" data-edit="t88" data-edit-label="Text: Prices in Australian dollars. Coffee, …">Prices in Australian dollars. Coffee, hot chocolate, the scrolls and the rest of the baked things are priced at the counter.</p>
       </div>
       <div class="menu-side">
-        <div class="frame"><img src="img/02.jpg?v=98a3c59b" alt="The Heart Coffee printed menu, typed in a typewriter face with the hand-inked wordmark at the bottom"></div>
+        <div class="frame"><img src="img/06.jpg?v=3253830f" alt="The Heart Coffee menu board on the white brick wall"></div>
         <p class="fig-cap" data-edit="t89" data-edit-label="Text: Typed the old way, signed by hand">Typed the old way, signed by hand</p>
       </div>
     </div>
