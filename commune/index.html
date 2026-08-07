@@ -119,7 +119,7 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
 .score-in{display:flex;align-items:center;gap:clamp(22px,4vw,54px);flex-wrap:wrap}
 .score-big{font-family:var(--disp);font-size:clamp(58px,9vw,124px);line-height:.86;
   color:var(--gold);font-weight:300}
-.score-tx{max-width:26em}
+.score-tx{max-width:900px;flex:1;min-width:0}
 .score-tx p{color:var(--mut)}
 
 /* ---------- the day ---------- */
@@ -181,6 +181,115 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
 @media (min-width:901px){.bar{display:none}}
 @media (max-width:390px){.bar-brand{display:none}.bt{margin-left:0;flex:1}}
 
+
+/* ---------- everything the first pass left unstyled ---------- */
+.eyebrow,.sub{font-family:var(--body);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--dim)}
+.sub{margin-top:12px;letter-spacing:.16em;text-transform:none;font-size:14.5px;color:var(--mut)}
+.brand{font-family:var(--disp);font-size:22px;color:var(--ink);letter-spacing:.04em}
+.nav-call,.btn-amber,.btn-ink,.btn.btn-amber,.btn.btn-ink,.btn.nav-call{
+  border:1px solid var(--ink);background:var(--ink);color:var(--white)!important;
+  padding:14px 26px;border-bottom-color:var(--ink)}
+.nav-call{padding:11px 20px;font-size:10.5px}
+.btn-amber:hover,.btn-ink:hover{background:var(--gold);border-color:var(--gold)}
+.btn-ghost,.btn-oline{border:1px solid var(--line);background:transparent;color:var(--ink);
+  padding:14px 26px;border-bottom-color:var(--line)}
+.btn-ghost:hover,.btn-oline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* the drinks board */
+.drinks{background:var(--white2)}
+.menu{margin-top:clamp(22px,3vw,34px);border-top:1px solid var(--line)}
+.m-row{display:grid;grid-template-columns:1fr 68px 68px;gap:12px;align-items:baseline;
+  padding:11px 0;border-bottom:1px solid rgba(26,24,21,.08)}
+.m-head{border-bottom:1px solid var(--line);padding-bottom:9px}
+.m-head .col{font-family:var(--body);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dim);text-align:right}
+.nm{font-size:15.5px;color:var(--ink)}
+.m-row .pr{font-family:var(--body);font-size:14px;color:var(--gold);text-align:right}
+.pr-span{grid-column:2/4}
+.m-extras{margin-top:16px;font-size:14px;color:var(--mut)}
+.cab-panel{margin-top:clamp(22px,3vw,34px);border:1px solid var(--line);background:var(--white);
+  padding:clamp(18px,2.4vw,26px)}
+.cab-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;
+  border-bottom:1px solid rgba(26,24,21,.08);font-size:14.5px;color:var(--ink)}
+.cab-note{margin-top:12px;font-size:13px;color:var(--dim)}
+
+/* reviews */
+.reviews.light{background:var(--white)}
+.rev-head{max-width:36em}
+.stars{color:var(--gold);letter-spacing:.2em;font-size:14px;margin-top:12px;display:block}
+.score-line{font-family:var(--disp);font-size:clamp(38px,5.4vw,72px);color:var(--gold);line-height:1}
+.score-sub{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-top:8px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,30px);
+  margin-top:clamp(28px,3.4vw,44px)}
+.quote{border-top:1px solid var(--line);padding-top:18px}
+.qm{font-family:var(--disp);font-size:40px;line-height:.6;color:var(--gold);display:block;
+  margin-bottom:10px}
+.quote p{font-size:15.5px;color:var(--ink)}
+.quote cite,.quote .qm+p+p{font-style:normal;display:block;margin-top:12px;font-size:10.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+
+/* book */
+.book{background:var(--white2)}
+.book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,4vw,64px);align-items:start}
+.bl{margin-top:16px;max-width:32em}
+.book-steps{list-style:none;margin-top:20px;counter-reset:s}
+.book-steps li{counter-increment:s;position:relative;padding-left:34px;margin-bottom:12px;
+  font-size:15px;color:var(--mut)}
+.book-steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:22px;height:22px;
+  border:1px solid var(--gold);color:var(--gold);border-radius:50%;display:grid;place-items:center;
+  font-size:10.5px}
+.bform{border:1px solid var(--line);background:var(--white);padding:clamp(22px,3vw,34px)}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f-cell{display:flex;flex-direction:column;gap:7px}
+.f-cell.full{grid-column:1/-1}
+.f-cell label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.f-cell input,.f-cell select,.f-cell textarea{background:transparent;border:0;
+  border-bottom:1px solid var(--line);color:var(--ink);font-family:var(--body);font-size:15.5px;
+  padding:9px 2px}
+.f-cell input:focus,.f-cell select:focus{outline:none;border-bottom-color:var(--gold)}
+.b-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.b-note{margin-top:14px;font-size:13px;color:var(--dim)}
+@media (max-width:900px){.book-grid{grid-template-columns:1fr}}
+@media (max-width:460px){.f-grid{grid-template-columns:1fr}}
+
+/* visit */
+.visit.light{background:var(--white)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:start}
+.addr{font-style:normal;margin-top:16px;font-size:17px;color:var(--ink)}
+.addr-2{margin-top:4px;color:var(--mut)}
+.visit-note{margin-top:14px;font-size:14.5px;color:var(--mut)}
+.visit-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.visit-phone{margin-top:16px;font-size:14.5px;color:var(--mut)}
+.ph{color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:2px}
+.hours{border-top:1px solid var(--line);padding-top:16px}
+.hours h3{font-size:16px}
+.early{margin-top:6px;font-size:13px;color:var(--dim)}
+.h-row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;
+  border-bottom:1px solid rgba(26,24,21,.08);font-size:14.5px}
+.h-row .d{color:var(--mut)}
+.h-row .t,.h-row .tt{color:var(--ink);white-space:nowrap}
+.dim{color:var(--dim)}
+@media (max-width:880px){.visit-grid{grid-template-columns:1fr}}
+
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--white);
+  padding:clamp(44px,5.4vw,74px) 0 clamp(94px,9vw,104px)}
+.foot{display:flex;flex-direction:column;gap:12px;text-align:center}
+.foot p{font-size:13.5px;color:var(--dim)}
+.fb{font-family:var(--disp);font-size:clamp(26px,3.6vw,44px);color:var(--ink);letter-spacing:.04em}
+.f-grid.foot,.foot .f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(22px,3vw,44px)}
+.foot .brand{font-size:clamp(26px,3.6vw,44px)}
+.f-cell.col,.foot .col{font-size:13.5px;line-height:2;color:var(--dim)}
+.fb,.foot a{color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:2px}
+.card{border:1px solid var(--line);background:var(--white)}
+.qm+p{margin-top:0}
+
+.routine{background:var(--white)}
+.ad{font-style:normal;color:var(--ink)}
+.bt-call{border-color:var(--line)}
+
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
@@ -222,22 +331,22 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
       <li><b data-edit="t19" data-edit-label="Text: Turkish">Turkish</b><span data-edit="t20" data-edit-label="Text: On the brunch menu">On the brunch menu</span></li>
     </ul>
   </div>
-  <img class="hero-bg" src="img/07.jpg?v=3657b481" alt="Still life: the crema surface of freshly brewed coffee" fetchpriority="high">
+  <img class="hero-bg" src="img/07.jpg?v=443cff91" alt="Still life: the crema surface of freshly brewed coffee" fetchpriority="high">
   <div class="hero-scrim" aria-hidden="true"></div>
 </header>
 
 <!-- bands, taken from his pin: close-up coffee matter carries the page -->
 <section class="bands" aria-label="The coffee">
   <figure class="band">
-    <img src="img/08.jpg?v=f191f2c1" alt="Still life: roasted coffee beans spilling from a cloth bag">
+    <img src="img/08.jpg?v=cc77c0ae" alt="Still life: roasted coffee beans spilling from a cloth bag">
     <figcaption><b data-edit="t21" data-edit-label="Text: The bean">The bean</b><span data-edit="t22" data-edit-label="Text: Roasted by Spectrum, ground to order">Roasted by Spectrum, ground to order</span></figcaption>
   </figure>
   <figure class="band">
-    <img src="img/09.jpg?v=9676c9a5" alt="Still life: brewed coffee, ground coffee and whole beans in three cups">
+    <img src="img/09.jpg?v=52ba4a67" alt="Still life: brewed coffee, ground coffee and whole beans in three cups">
     <figcaption><b data-edit="t23" data-edit-label="Text: Brewed, ground, whole">Brewed, ground, whole</b><span data-edit="t24" data-edit-label="Text: Black, white, batch brew, pour over">Black, white, batch brew, pour over</span></figcaption>
   </figure>
   <figure class="band">
-    <img src="img/07.jpg?v=3657b481" alt="Still life: the crema surface of freshly brewed coffee">
+    <img src="img/07.jpg?v=443cff91" alt="Still life: the crema surface of freshly brewed coffee">
     <figcaption><b data-edit="t25" data-edit-label="Text: The crema">The crema</b><span data-edit="t26" data-edit-label="Text: Pulled to order">Pulled to order</span></figcaption>
   </figure>
 </section>
@@ -257,7 +366,7 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
   <div class="wrap">
     <div class="routine-head">
       <span class="eyebrow" data-edit="t31" data-edit-label="Text: The coffee routine">The coffee routine</span>
-      <h2 data-edit="t32" data-edit-label="Title: A day at 359 Brunswick St">A day at 359 Brunswick St</h2>
+      <h2>A day at 359 <span style="white-space:nowrap" data-edit="t32" data-edit-label="Text: Brunswick St">Brunswick St</span></h2>
     </div>
     <div class="slots">
       <div class="slot">
@@ -295,7 +404,7 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
         </div>
       </div>
       <figure class="story-photo">
-        <img src="img/03.jpg?v=8a49b970" alt="A flat white on the window counter, Brunswick Street beyond the glass" loading="lazy">
+        <img src="img/03.jpg?v=b12563f8" alt="A flat white on the window counter, Brunswick Street beyond the glass" loading="lazy">
         <figcaption data-edit="t50" data-edit-label="Caption: The window seat, Brunswick Street beyo…">The window seat, Brunswick Street beyond the glass</figcaption>
       </figure>
     </div>
@@ -313,14 +422,14 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
     </div>
     <div class="cards">
       <article class="card">
-        <div class="card-ph"><img src="img/04.jpg?v=c90abbff" alt="Flat white with latte art on a timber table" loading="lazy"></div>
+        <div class="card-ph"><img src="img/04.jpg?v=61f674cb" alt="Flat white with latte art on a timber table" loading="lazy"></div>
         <div class="card-tx">
           <h3 data-edit="t54" data-edit-label="Heading: The coffee">The coffee</h3>
           <p data-edit="t55" data-edit-label="Text: Spectrum Coffee through the machine: b…">Spectrum Coffee through the machine: black, white, batch brew, and a pour over worth sitting down for. The first cup leaves the counter at six.</p>
         </div>
       </article>
       <article class="card">
-        <div class="card-ph"><img src="img/06.jpg?v=f56c00e9" alt="Pain au chocolat and canele beside a flat white" loading="lazy"></div>
+        <div class="card-ph"><img src="img/06.jpg?v=8b5bc2cc" alt="Pain au chocolat and canele beside a flat white" loading="lazy"></div>
         <div class="card-tx">
           <h3 data-edit="t56" data-edit-label="Heading: House baked">House baked</h3>
           <p data-edit="t57" data-edit-label="Text: Pain au chocolat, almond croissants, c…">Pain au chocolat, almond croissants, caneles and muffins, all baked in house and priced on the handwritten tags. Best claimed before the mid-morning rush.</p>
@@ -471,7 +580,7 @@ header#top p{max-width:30em;margin-top:clamp(20px,2.6vw,30px);color:var(--mut)}
         </div>
       </div>
       <figure class="street-photo">
-        <img src="img/01.jpg?v=32a5b1ab" alt="The Commune storefront at dusk, the black awning lit over Brunswick Street" loading="lazy">
+        <img src="img/01.jpg?v=87ae414a" alt="The Commune storefront at dusk, the black awning lit over Brunswick Street" loading="lazy">
         <figcaption data-edit="t156" data-edit-label="Caption: The black awning at dusk, lit and easy…">The black awning at dusk, lit and easy to spot</figcaption>
       </figure>
     </div>

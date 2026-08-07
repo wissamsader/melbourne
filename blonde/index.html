@@ -67,7 +67,7 @@ h3{font-size:20px;line-height:1.3}
 .btn.solid:hover{background:var(--red2);border-color:var(--red2)}
 .btn.ghost{border-color:var(--line);color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.bic{width:15px;height:15px;flex:0 0 auto}
+.btn svg,.bic{width:14px;height:14px;flex:0 0 auto}
 
 /* ---------- nav ---------- */
 .nav{display:flex;align-items:center;gap:26px;height:70px}
@@ -121,9 +121,13 @@ h1.wm .om{color:var(--green);font-style:italic}
   font-size:12.5px;color:var(--ink)}
 .hrate .hnum,.hrate b{font-family:var(--disp);font-size:22px;color:var(--red)}
 .hrail{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.high,.tick{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
+.high{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
   padding:8px 14px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink)}
+/* the hours strip is a full-bleed band, not a floating chip glued to the left edge */
+section.tick,.tick{display:block;background:var(--paper2);border-block:1px solid var(--line);
+  padding:14px clamp(20px,5vw,60px);text-align:center;font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
 .bbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .hplate{border:1px solid var(--line);background:var(--panel);padding:10px}
 .hplate img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 62%}
@@ -235,6 +239,10 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
   .rr-bot{margin-top:26px}
 }
 
+.visit{background:var(--paper)}
+.vinfo{display:flex;flex-direction:column}
+.fld.full{grid-column:1/-1}
+
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
@@ -265,30 +273,37 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
       <h1 class="wm">BL<span class="om" data-edit="t10" data-edit-label="Text: O">O</span>NDE</h1>
       <p class="hsub" data-edit="t11" data-edit-label="Text: food and drink, all day, Monday to Fri…">food and drink, all day, Monday to Friday</p>
       <p class="hrate"><b class="score" data-edit="t12" data-edit-label="Text: 4.7">4.7</b> from <b class="rc" data-edit="t13" data-edit-label="Text: 427">427</b> Google reviews</p>
+      <div class="bbtns">
+        <a class="btn solid" href="#book" data-edit="t14" data-edit-label="Button / link: Book a table">Book a table</a>
+          <a class="btn ghost" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>
+            @blondefitzroy
+          </a>
+      </div>
     </div>
     <aside class="hrail">
       <div>
-        <p class="rk" data-edit="t14" data-edit-label="Text: From the all day menu">From the all day menu</p>
+        <p class="rk" data-edit="t15" data-edit-label="Text: From the all day menu">From the all day menu</p>
         <ul class="rlist">
-          <li><span data-edit="t15" data-edit-label="Text: Toast">Toast</span><b class="pr" data-edit="t16" data-edit-label="Text: 8.5">8.5</b></li>
-          <li><span data-edit="t17" data-edit-label="Text: Ricotta hotcake">Ricotta hotcake</span><b class="pr" data-edit="t18" data-edit-label="Text: 20.0">20.0</b></li>
-          <li><span data-edit="t19" data-edit-label="Text: Shakshuka">Shakshuka</span><b class="pr" data-edit="t20" data-edit-label="Text: 21.5">21.5</b></li>
-          <li><span data-edit="t21" data-edit-label="Text: Lamb hash bowl">Lamb hash bowl</span><b class="pr" data-edit="t22" data-edit-label="Text: 21.0">21.0</b></li>
-          <li><span data-edit="t23" data-edit-label="Text: Chicken wrap">Chicken wrap</span><b class="pr" data-edit="t24" data-edit-label="Text: 19.5">19.5</b></li>
-          <li><span data-edit="t25" data-edit-label="Text: Two eggs your ways">Two eggs your ways</span><b class="pr" data-edit="t26" data-edit-label="Text: 14.0">14.0</b></li>
+          <li><span data-edit="t16" data-edit-label="Text: Toast">Toast</span><b class="pr" data-edit="t17" data-edit-label="Text: 8.5">8.5</b></li>
+          <li><span data-edit="t18" data-edit-label="Text: Ricotta hotcake">Ricotta hotcake</span><b class="pr" data-edit="t19" data-edit-label="Text: 20.0">20.0</b></li>
+          <li><span data-edit="t20" data-edit-label="Text: Shakshuka">Shakshuka</span><b class="pr" data-edit="t21" data-edit-label="Text: 21.5">21.5</b></li>
+          <li><span data-edit="t22" data-edit-label="Text: Lamb hash bowl">Lamb hash bowl</span><b class="pr" data-edit="t23" data-edit-label="Text: 21.0">21.0</b></li>
+          <li><span data-edit="t24" data-edit-label="Text: Chicken wrap">Chicken wrap</span><b class="pr" data-edit="t25" data-edit-label="Text: 19.5">19.5</b></li>
+          <li><span data-edit="t26" data-edit-label="Text: Two eggs your ways">Two eggs your ways</span><b class="pr" data-edit="t27" data-edit-label="Text: 14.0">14.0</b></li>
         </ul>
       </div>
       <figure class="hplate">
-        <img src="img/03.jpg?v=96f26e13" alt="A plated brunch dish photographed from above at Blonde" width="1600" height="1600">
-        <figcaption data-edit="t27" data-edit-label="Caption: Shakshuka, straight from the pan">Shakshuka, straight from the pan</figcaption>
+        <img src="img/03.jpg?v=4433a5e6" alt="A plated brunch dish photographed from above at Blonde" width="1600" height="1600">
+        <figcaption data-edit="t28" data-edit-label="Caption: Shakshuka, straight from the pan">Shakshuka, straight from the pan</figcaption>
       </figure>
     </aside>
   </div>
 
   <div class="wrap">
     <div class="rulerow rr-bot">
-      <span data-edit="t28" data-edit-label="Text: Some regulars just say Blondie">Some regulars just say Blondie</span>
-      <span data-edit="t29" data-edit-label="Text: Weekdays · 7:00 to 3:00">Weekdays · 7:00 to 3:00</span>
+      <span data-edit="t29" data-edit-label="Text: Some regulars just say Blondie">Some regulars just say Blondie</span>
+      <span data-edit="t30" data-edit-label="Text: Weekdays · 7:00 to 3:00">Weekdays · 7:00 to 3:00</span>
     </div>
   </div>
 </header>
@@ -296,7 +311,7 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
 <!-- ================= TICKER ================= -->
 <section class="tick">
   <div class="wrap">
-    <p data-edit="t30" data-edit-label="Text: Open weekdays · Monday to Friday · 7:0…">Open weekdays · Monday to Friday · 7:00 am to 3:00 pm · Closed Saturday and Sunday</p>
+    <p data-edit="t31" data-edit-label="Text: Open weekdays · Monday to Friday · 7:0…">Open weekdays · Monday to Friday · 7:00 am to 3:00 pm · Closed Saturday and Sunday</p>
   </div>
 </section>
 
@@ -304,15 +319,15 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
 <section class="story" id="story">
   <div class="wrap sgrid">
     <div>
-      <p class="kick" data-edit="t31" data-edit-label="Text: The room on Brunswick Street">The room on Brunswick Street</p>
-      <h2 data-edit="t32" data-edit-label="Title: A big menu, done properly, at a fair p…">A big menu, done properly, at a fair price</h2>
-      <p data-edit="t33" data-edit-label="Text: Blonde Food and Drink sits at 443 Brun…">Blonde Food and Drink sits at 443 Brunswick Street, in the middle of the Fitzroy strip. The registered name is the long one, but plenty of regulars have shortened it to Blondie, which tells you the kind of place it is. The room is painted a soft sage green, the chairs are black spindle-backs with olive leather seats, and the floor keeps its old patterned tiles.</p>
-      <p data-edit="t34" data-edit-label="Text: The kitchen runs one printed all day m…">The kitchen runs one printed all day menu, and it is genuinely big: hotcakes, shakshuka, a 48 hour braised lamb hash, croquettes, a benedict built on a house made hash brown. Reviewers keep landing on the same two points, that there is something for everyone, and that the prices stay reasonable. The coffee is taken as seriously as the food, which in this suburb is saying something.</p>
-      <p class="fine" data-edit="t35" data-edit-label="Text: Cafe · Fitzroy VIC · rated 4.7 by 427 …">Cafe · Fitzroy VIC · rated 4.7 by 427 Google reviewers</p>
+      <p class="kick" data-edit="t32" data-edit-label="Text: The room on Brunswick Street">The room on Brunswick Street</p>
+      <h2 data-edit="t33" data-edit-label="Title: A big menu, done properly, at a fair p…">A big menu, done properly, at a fair price</h2>
+      <p data-edit="t34" data-edit-label="Text: Blonde Food and Drink sits at 443 Brun…">Blonde Food and Drink sits at 443 Brunswick Street, in the middle of the Fitzroy strip. The registered name is the long one, but plenty of regulars have shortened it to Blondie, which tells you the kind of place it is. The room is painted a soft sage green, the chairs are black spindle-backs with olive leather seats, and the floor keeps its old patterned tiles.</p>
+      <p data-edit="t35" data-edit-label="Text: The kitchen runs one printed all day m…">The kitchen runs one printed all day menu, and it is genuinely big: hotcakes, shakshuka, a 48 hour braised lamb hash, croquettes, a benedict built on a house made hash brown. Reviewers keep landing on the same two points, that there is something for everyone, and that the prices stay reasonable. The coffee is taken as seriously as the food, which in this suburb is saying something.</p>
+      <p class="fine" data-edit="t36" data-edit-label="Text: Cafe · Fitzroy VIC · rated 4.7 by 427 …">Cafe · Fitzroy VIC · rated 4.7 by 427 Google reviewers</p>
     </div>
     <figure class="sfig">
-      <img src="img/01.jpg?v=c10c8f7d" alt="Inside Blonde: white brick, the green banquette and the hanging plants" width="1200" height="1600">
-      <figcaption data-edit="t36" data-edit-label="Caption: Sage brick · spindle chairs · the tile…">Sage brick · spindle chairs · the tiled floor</figcaption>
+      <img src="img/01.jpg?v=af9a1a1d" alt="Inside Blonde: white brick, the green banquette and the hanging plants" width="1200" height="1600">
+      <figcaption data-edit="t37" data-edit-label="Caption: Sage brick · spindle chairs · the tile…">Sage brick · spindle chairs · the tiled floor</figcaption>
     </figure>
   </div>
 </section>
@@ -322,29 +337,29 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
   <div class="wrap">
     <div class="hhead">
       <div>
-        <p class="kick" data-edit="t37" data-edit-label="Text: What people come back for">What people come back for</p>
-        <h2 data-edit="t38" data-edit-label="Title: Three things to know">Three things to know</h2>
+        <p class="kick" data-edit="t38" data-edit-label="Text: What people come back for">What people come back for</p>
+        <h2 data-edit="t39" data-edit-label="Title: Three things to know">Three things to know</h2>
       </div>
-      <p class="hnum" data-edit="t39" data-edit-label="Text: no. 1 to 3">no. 1 to 3</p>
+      <p class="hnum" data-edit="t40" data-edit-label="Text: no. 1 to 3">no. 1 to 3</p>
     </div>
     <div class="cards">
       <article class="card">
-        <img src="img/05.jpg?v=cce1eae2" alt="A flat white with latte art handed across the counter at Blonde" width="1200" height="1600">
-        <span class="cno" data-edit="t40" data-edit-label="Text: No. 1 · The coffee">No. 1 · The coffee</span>
-        <h3 data-edit="t41" data-edit-label="Heading: Poured properly">Poured properly</h3>
-        <p data-edit="t42" data-edit-label="Text: Espresso pulled with care and milk dri…">Espresso pulled with care and milk drinks finished with real latte art. Reviewers who came for the food make a point of mentioning the cup.</p>
+        <img src="img/05.jpg?v=7a0b768f" alt="A flat white with latte art handed across the counter at Blonde" width="1200" height="1600">
+        <span class="cno" data-edit="t41" data-edit-label="Text: No. 1 · The coffee">No. 1 · The coffee</span>
+        <h3 data-edit="t42" data-edit-label="Heading: Poured properly">Poured properly</h3>
+        <p data-edit="t43" data-edit-label="Text: Espresso pulled with care and milk dri…">Espresso pulled with care and milk drinks finished with real latte art. Reviewers who came for the food make a point of mentioning the cup.</p>
       </article>
       <article class="card">
-        <img src="img/04.jpg?v=d085137f" alt="A stacked brunch plate at Blonde" width="1200" height="1600">
-        <span class="cno" data-edit="t43" data-edit-label="Text: No. 2 · The plate">No. 2 · The plate</span>
-        <h3 data-edit="t44" data-edit-label="Heading: Built up high">Built up high</h3>
-        <p data-edit="t45" data-edit-label="Text: Their plates arrive built, not spread …">Their plates arrive built, not spread out: the hotcake stack, the lamb hash bowl, the benedict on a house made hash brown.</p>
+        <img src="img/04.jpg?v=ac7d5052" alt="A stacked brunch plate at Blonde" width="1200" height="1600">
+        <span class="cno" data-edit="t44" data-edit-label="Text: No. 2 · The plate">No. 2 · The plate</span>
+        <h3 data-edit="t45" data-edit-label="Heading: Built up high">Built up high</h3>
+        <p data-edit="t46" data-edit-label="Text: Their plates arrive built, not spread …">Their plates arrive built, not spread out: the hotcake stack, the lamb hash bowl, the benedict on a house made hash brown.</p>
       </article>
       <article class="card">
-        <img src="img/06.jpg?v=aa35a7d2" alt="The pastry tray with fresh juice at Blonde" width="900" height="1600">
-        <span class="cno" data-edit="t46" data-edit-label="Text: No. 3 · The tray">No. 3 · The tray</span>
-        <h3 data-edit="t47" data-edit-label="Heading: A little of everything">A little of everything</h3>
-        <p data-edit="t48" data-edit-label="Text: The share tray: pastries from the cabi…">The share tray: pastries from the cabinet, fresh juice, and whatever the kitchen has plated that morning.</p>
+        <img src="img/06.jpg?v=1866ad25" alt="The pastry tray with fresh juice at Blonde" width="900" height="1600">
+        <span class="cno" data-edit="t47" data-edit-label="Text: No. 3 · The tray">No. 3 · The tray</span>
+        <h3 data-edit="t48" data-edit-label="Heading: A little of everything">A little of everything</h3>
+        <p data-edit="t49" data-edit-label="Text: The share tray: pastries from the cabi…">The share tray: pastries from the cabinet, fresh juice, and whatever the kitchen has plated that morning.</p>
       </article>
     </div>
   </div>
@@ -353,98 +368,98 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
 <!-- ================= MENU ================= -->
 <section class="menu" id="menu">
   <div class="wrap">
-    <p class="kick" data-edit="t49" data-edit-label="Text: Transcribed from the printed menu">Transcribed from the printed menu</p>
-    <h2 data-edit="t50" data-edit-label="Title: All day food">All day food</h2>
-    <p class="mnote" data-edit="t51" data-edit-label="Text: One menu, morning to close. Dietary ma…">One menu, morning to close. Dietary marks are printed as the kitchen prints them. Tell the team about any allergies before you order.</p>
+    <p class="kick" data-edit="t50" data-edit-label="Text: Transcribed from the printed menu">Transcribed from the printed menu</p>
+    <h2 data-edit="t51" data-edit-label="Title: All day food">All day food</h2>
+    <p class="mnote" data-edit="t52" data-edit-label="Text: One menu, morning to close. Dietary ma…">One menu, morning to close. Dietary marks are printed as the kitchen prints them. Tell the team about any allergies before you order.</p>
 
     <div class="mcols">
       <div class="mcol">
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t52" data-edit-label="Heading: Toast">Toast</h3><b class="pr" data-edit="t53" data-edit-label="Text: 8.5">8.5</b></div>
-          <p data-edit="t54" data-edit-label="Text: Sourdough, multigrain, fruit toast or …">Sourdough, multigrain, fruit toast or English muffin with seasonal jam, Vegemite or peanut butter.</p>
-          <p class="madd">+ GF soya &amp; quinoa <b class="pr" data-edit="t55" data-edit-label="Text: 1.5">1.5</b></p>
+          <div class="mrow"><h3 data-edit="t53" data-edit-label="Heading: Toast">Toast</h3><b class="pr" data-edit="t54" data-edit-label="Text: 8.5">8.5</b></div>
+          <p data-edit="t55" data-edit-label="Text: Sourdough, multigrain, fruit toast or …">Sourdough, multigrain, fruit toast or English muffin with seasonal jam, Vegemite or peanut butter.</p>
+          <p class="madd">+ GF soya &amp; quinoa <b class="pr" data-edit="t56" data-edit-label="Text: 1.5">1.5</b></p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t56" data-edit-label="Heading: Granola">Granola</h3><span class="tag" data-edit="t57" data-edit-label="Text: V">V</span><b class="pr" data-edit="t58" data-edit-label="Text: 17.5">17.5</b></div>
-          <p data-edit="t59" data-edit-label="Text: Paleo crunchy almond coconut granola, …">Paleo crunchy almond coconut granola, poached rhubarb and pear, blueberry infused coconut yogurt.</p>
+          <div class="mrow"><h3 data-edit="t57" data-edit-label="Heading: Granola">Granola</h3><span class="tag" data-edit="t58" data-edit-label="Text: V">V</span><b class="pr" data-edit="t59" data-edit-label="Text: 17.5">17.5</b></div>
+          <p data-edit="t60" data-edit-label="Text: Paleo crunchy almond coconut granola, …">Paleo crunchy almond coconut granola, poached rhubarb and pear, blueberry infused coconut yogurt.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t60" data-edit-label="Heading: Porridge">Porridge</h3><b class="pr" data-edit="t61" data-edit-label="Text: 18.0">18.0</b></div>
-          <p data-edit="t62" data-edit-label="Text: Flip Shelton five grain oats, almond c…">Flip Shelton five grain oats, almond crumble, poached rhubarb.</p>
+          <div class="mrow"><h3 data-edit="t61" data-edit-label="Heading: Porridge">Porridge</h3><b class="pr" data-edit="t62" data-edit-label="Text: 18.0">18.0</b></div>
+          <p data-edit="t63" data-edit-label="Text: Flip Shelton five grain oats, almond c…">Flip Shelton five grain oats, almond crumble, poached rhubarb.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t63" data-edit-label="Heading: Blueberry Ricotta Hotcake">Blueberry Ricotta Hotcake</h3><b class="pr" data-edit="t64" data-edit-label="Text: 20.0">20.0</b></div>
-          <p data-edit="t65" data-edit-label="Text: Citrus coulis, maple syrup, grains, st…">Citrus coulis, maple syrup, grains, strawberries, pistachio dust and vanilla mascarpone.</p>
+          <div class="mrow"><h3 data-edit="t64" data-edit-label="Heading: Blueberry Ricotta Hotcake">Blueberry Ricotta Hotcake</h3><b class="pr" data-edit="t65" data-edit-label="Text: 20.0">20.0</b></div>
+          <p data-edit="t66" data-edit-label="Text: Citrus coulis, maple syrup, grains, st…">Citrus coulis, maple syrup, grains, strawberries, pistachio dust and vanilla mascarpone.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t66" data-edit-label="Heading: Breakfast Burrito">Breakfast Burrito</h3><span class="tag" data-edit="t67" data-edit-label="Text: VO">VO</span><b class="pr" data-edit="t68" data-edit-label="Text: 18.5">18.5</b></div>
-          <p data-edit="t69" data-edit-label="Text: Scrambled egg, crispy bacon, spinach, …">Scrambled egg, crispy bacon, spinach, avocado, tomato, spicy black bean salsa and chilli bechamel.</p>
+          <div class="mrow"><h3 data-edit="t67" data-edit-label="Heading: Breakfast Burrito">Breakfast Burrito</h3><span class="tag" data-edit="t68" data-edit-label="Text: VO">VO</span><b class="pr" data-edit="t69" data-edit-label="Text: 18.5">18.5</b></div>
+          <p data-edit="t70" data-edit-label="Text: Scrambled egg, crispy bacon, spinach, …">Scrambled egg, crispy bacon, spinach, avocado, tomato, spicy black bean salsa and chilli bechamel.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t70" data-edit-label="Heading: Avocado">Avocado</h3><span class="tag" data-edit="t71" data-edit-label="Text: VO">VO</span><b class="pr" data-edit="t72" data-edit-label="Text: 19.0">19.0</b></div>
-          <p data-edit="t73" data-edit-label="Text: Smashed avocado, Egyptian dukkah, mint…">Smashed avocado, Egyptian dukkah, mint, balsamic cherry tomato and goats feta on seedy wholewheat.</p>
-          <p class="madd">+ poached egg <b class="pr" data-edit="t74" data-edit-label="Text: 3.5">3.5</b></p>
+          <div class="mrow"><h3 data-edit="t71" data-edit-label="Heading: Avocado">Avocado</h3><span class="tag" data-edit="t72" data-edit-label="Text: VO">VO</span><b class="pr" data-edit="t73" data-edit-label="Text: 19.0">19.0</b></div>
+          <p data-edit="t74" data-edit-label="Text: Smashed avocado, Egyptian dukkah, mint…">Smashed avocado, Egyptian dukkah, mint, balsamic cherry tomato and goats feta on seedy wholewheat.</p>
+          <p class="madd">+ poached egg <b class="pr" data-edit="t75" data-edit-label="Text: 3.5">3.5</b></p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t75" data-edit-label="Heading: Croquettes">Croquettes</h3><b class="pr" data-edit="t76" data-edit-label="Text: 19.5">19.5</b></div>
-          <p data-edit="t77" data-edit-label="Text: Braised mixed greens and pea croquette…">Braised mixed greens and pea croquettes, beetroot hummus, roasted shaved almonds, micro herbs, lime and cilantro dressing and a poached egg.</p>
+          <div class="mrow"><h3 data-edit="t76" data-edit-label="Heading: Croquettes">Croquettes</h3><b class="pr" data-edit="t77" data-edit-label="Text: 19.5">19.5</b></div>
+          <p data-edit="t78" data-edit-label="Text: Braised mixed greens and pea croquette…">Braised mixed greens and pea croquettes, beetroot hummus, roasted shaved almonds, micro herbs, lime and cilantro dressing and a poached egg.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t78" data-edit-label="Heading: Green Goodness Bowl">Green Goodness Bowl</h3><span class="tag" data-edit="t79" data-edit-label="Text: GF · VO · N">GF · VO · N</span><b class="pr" data-edit="t80" data-edit-label="Text: 20.0">20.0</b></div>
-          <p data-edit="t81" data-edit-label="Text: Sauteed asparagus, beans, broccoli, ka…">Sauteed asparagus, beans, broccoli, kale, spiced chickpeas, super seeds, mixed nuts, pomegranate, feta, avocado, pumpkin hummus and a poached egg.</p>
+          <div class="mrow"><h3 data-edit="t79" data-edit-label="Heading: Green Goodness Bowl">Green Goodness Bowl</h3><span class="tag" data-edit="t80" data-edit-label="Text: GF · VO · N">GF · VO · N</span><b class="pr" data-edit="t81" data-edit-label="Text: 20.0">20.0</b></div>
+          <p data-edit="t82" data-edit-label="Text: Sauteed asparagus, beans, broccoli, ka…">Sauteed asparagus, beans, broccoli, kale, spiced chickpeas, super seeds, mixed nuts, pomegranate, feta, avocado, pumpkin hummus and a poached egg.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t82" data-edit-label="Heading: Chilli Scramble">Chilli Scramble</h3><span class="tag" data-edit="t83" data-edit-label="Text: GFO">GFO</span><b class="pr" data-edit="t84" data-edit-label="Text: 19.5">19.5</b></div>
-          <p data-edit="t85" data-edit-label="Text: Roast cherry tomatoes, asparagus, hous…">Roast cherry tomatoes, asparagus, house made chilli sambal, feta, soft herbs and angel chilli hair on sourdough.</p>
+          <div class="mrow"><h3 data-edit="t83" data-edit-label="Heading: Chilli Scramble">Chilli Scramble</h3><span class="tag" data-edit="t84" data-edit-label="Text: GFO">GFO</span><b class="pr" data-edit="t85" data-edit-label="Text: 19.5">19.5</b></div>
+          <p data-edit="t86" data-edit-label="Text: Roast cherry tomatoes, asparagus, hous…">Roast cherry tomatoes, asparagus, house made chilli sambal, feta, soft herbs and angel chilli hair on sourdough.</p>
         </div>
       </div>
 
       <div class="mcol">
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t86" data-edit-label="Heading: Shakshuka">Shakshuka</h3><span class="tag" data-edit="t87" data-edit-label="Text: VG · GFO · N">VG · GFO · N</span><b class="pr" data-edit="t88" data-edit-label="Text: 21.5">21.5</b></div>
-          <p data-edit="t89" data-edit-label="Text: Middle eastern baked eggs, fava beans,…">Middle eastern baked eggs, fava beans, zucchini, eggplant, soft herbs, feta, kale chips and tahini yoghurt.</p>
-          <p class="madd">+ chorizo <b class="pr" data-edit="t90" data-edit-label="Text: 5.0">5.0</b></p>
+          <div class="mrow"><h3 data-edit="t87" data-edit-label="Heading: Shakshuka">Shakshuka</h3><span class="tag" data-edit="t88" data-edit-label="Text: VG · GFO · N">VG · GFO · N</span><b class="pr" data-edit="t89" data-edit-label="Text: 21.5">21.5</b></div>
+          <p data-edit="t90" data-edit-label="Text: Middle eastern baked eggs, fava beans,…">Middle eastern baked eggs, fava beans, zucchini, eggplant, soft herbs, feta, kale chips and tahini yoghurt.</p>
+          <p class="madd">+ chorizo <b class="pr" data-edit="t91" data-edit-label="Text: 5.0">5.0</b></p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t91" data-edit-label="Heading: Lamb Hash Bowl">Lamb Hash Bowl</h3><span class="tag" data-edit="t92" data-edit-label="Text: GF">GF</span><b class="pr" data-edit="t93" data-edit-label="Text: 21.0">21.0</b></div>
-          <p data-edit="t94" data-edit-label="Text: 48 hour braised lamb, roasted sweet po…">48 hour braised lamb, roasted sweet potato and carrot, charred corn, peas, pomegranate, kale, fresh herbs, tahini yoghurt and a fried egg.</p>
+          <div class="mrow"><h3 data-edit="t92" data-edit-label="Heading: Lamb Hash Bowl">Lamb Hash Bowl</h3><span class="tag" data-edit="t93" data-edit-label="Text: GF">GF</span><b class="pr" data-edit="t94" data-edit-label="Text: 21.0">21.0</b></div>
+          <p data-edit="t95" data-edit-label="Text: 48 hour braised lamb, roasted sweet po…">48 hour braised lamb, roasted sweet potato and carrot, charred corn, peas, pomegranate, kale, fresh herbs, tahini yoghurt and a fried egg.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t95" data-edit-label="Heading: Crispy Chicken Wrap">Crispy Chicken Wrap</h3><b class="pr" data-edit="t96" data-edit-label="Text: 19.5">19.5</b></div>
-          <p data-edit="t97" data-edit-label="Text: Japanese inspired fried chicken, sesam…">Japanese inspired fried chicken, sesame asian slaw, pickled red onion, sticky soy and Kewpie mayo in a burrito wrap.</p>
+          <div class="mrow"><h3 data-edit="t96" data-edit-label="Heading: Crispy Chicken Wrap">Crispy Chicken Wrap</h3><b class="pr" data-edit="t97" data-edit-label="Text: 19.5">19.5</b></div>
+          <p data-edit="t98" data-edit-label="Text: Japanese inspired fried chicken, sesam…">Japanese inspired fried chicken, sesame asian slaw, pickled red onion, sticky soy and Kewpie mayo in a burrito wrap.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t98" data-edit-label="Heading: Hash Brown Benedict">Hash Brown Benedict</h3><b class="pr" data-edit="t99" data-edit-label="Text: 24.0 / 21.0">24.0 / 21.0</b></div>
-          <p data-edit="t100" data-edit-label="Text: Gochujang and soy slow cooked pork, ap…">Gochujang and soy slow cooked pork, apple and cabbage slaw, maple hollandaise and two poached eggs on house made hash brown. Or sauteed spinach, haloumi, maple hollandaise and two poached eggs on house made hash brown.</p>
+          <div class="mrow"><h3 data-edit="t99" data-edit-label="Heading: Hash Brown Benedict">Hash Brown Benedict</h3><b class="pr" data-edit="t100" data-edit-label="Text: 24.0 / 21.0">24.0 / 21.0</b></div>
+          <p data-edit="t101" data-edit-label="Text: Gochujang and soy slow cooked pork, ap…">Gochujang and soy slow cooked pork, apple and cabbage slaw, maple hollandaise and two poached eggs on house made hash brown. Or sauteed spinach, haloumi, maple hollandaise and two poached eggs on house made hash brown.</p>
         </div>
         <div class="mi">
-          <div class="mrow"><h3 data-edit="t101" data-edit-label="Heading: Two Eggs Your Ways">Two Eggs Your Ways</h3><b class="pr" data-edit="t102" data-edit-label="Text: 14.0">14.0</b></div>
-          <p data-edit="t103" data-edit-label="Text: Poached, scrambled or fried, on toast.">Poached, scrambled or fried, on toast.</p>
-          <p class="madd">+ GF soya &amp; quinoa <b class="pr" data-edit="t104" data-edit-label="Text: 1.5">1.5</b></p>
+          <div class="mrow"><h3 data-edit="t102" data-edit-label="Heading: Two Eggs Your Ways">Two Eggs Your Ways</h3><b class="pr" data-edit="t103" data-edit-label="Text: 14.0">14.0</b></div>
+          <p data-edit="t104" data-edit-label="Text: Poached, scrambled or fried, on toast.">Poached, scrambled or fried, on toast.</p>
+          <p class="madd">+ GF soya &amp; quinoa <b class="pr" data-edit="t105" data-edit-label="Text: 1.5">1.5</b></p>
         </div>
         <div class="mlist">
-          <h3 data-edit="t105" data-edit-label="Heading: Sides">Sides</h3>
-          <div class="srow"><span data-edit="t106" data-edit-label="Text: Extra egg">Extra egg</span><b class="pr" data-edit="t107" data-edit-label="Text: 3.5">3.5</b></div>
-          <div class="srow"><span data-edit="t108" data-edit-label="Text: Fries, half serve">Fries, half serve</span><b class="pr" data-edit="t109" data-edit-label="Text: 4.0">4.0</b></div>
-          <div class="srow"><span data-edit="t110" data-edit-label="Text: House beans">House beans</span><b class="pr" data-edit="t111" data-edit-label="Text: 4.5">4.5</b></div>
-          <div class="srow"><span data-edit="t112" data-edit-label="Text: Avocado">Avocado</span><b class="pr" data-edit="t113" data-edit-label="Text: 4.5">4.5</b></div>
-          <div class="srow"><span data-edit="t114" data-edit-label="Text: Feta">Feta</span><b class="pr" data-edit="t115" data-edit-label="Text: 4.5">4.5</b></div>
-          <div class="srow"><span data-edit="t116" data-edit-label="Text: Sauteed kale">Sauteed kale</span><b class="pr" data-edit="t117" data-edit-label="Text: 4.5">4.5</b></div>
-          <div class="srow"><span data-edit="t118" data-edit-label="Text: Hash brown">Hash brown</span><b class="pr" data-edit="t119" data-edit-label="Text: 4.5">4.5</b></div>
-          <div class="srow"><span data-edit="t120" data-edit-label="Text: Haloumi">Haloumi</span><b class="pr" data-edit="t121" data-edit-label="Text: 5.0">5.0</b></div>
-          <div class="srow"><span data-edit="t122" data-edit-label="Text: Chorizo">Chorizo</span><b class="pr" data-edit="t123" data-edit-label="Text: 5.0">5.0</b></div>
-          <div class="srow"><span data-edit="t124" data-edit-label="Text: Bacon">Bacon</span><b class="pr" data-edit="t125" data-edit-label="Text: 6.0">6.0</b></div>
+          <h3 data-edit="t106" data-edit-label="Heading: Sides">Sides</h3>
+          <div class="srow"><span data-edit="t107" data-edit-label="Text: Extra egg">Extra egg</span><b class="pr" data-edit="t108" data-edit-label="Text: 3.5">3.5</b></div>
+          <div class="srow"><span data-edit="t109" data-edit-label="Text: Fries, half serve">Fries, half serve</span><b class="pr" data-edit="t110" data-edit-label="Text: 4.0">4.0</b></div>
+          <div class="srow"><span data-edit="t111" data-edit-label="Text: House beans">House beans</span><b class="pr" data-edit="t112" data-edit-label="Text: 4.5">4.5</b></div>
+          <div class="srow"><span data-edit="t113" data-edit-label="Text: Avocado">Avocado</span><b class="pr" data-edit="t114" data-edit-label="Text: 4.5">4.5</b></div>
+          <div class="srow"><span data-edit="t115" data-edit-label="Text: Feta">Feta</span><b class="pr" data-edit="t116" data-edit-label="Text: 4.5">4.5</b></div>
+          <div class="srow"><span data-edit="t117" data-edit-label="Text: Sauteed kale">Sauteed kale</span><b class="pr" data-edit="t118" data-edit-label="Text: 4.5">4.5</b></div>
+          <div class="srow"><span data-edit="t119" data-edit-label="Text: Hash brown">Hash brown</span><b class="pr" data-edit="t120" data-edit-label="Text: 4.5">4.5</b></div>
+          <div class="srow"><span data-edit="t121" data-edit-label="Text: Haloumi">Haloumi</span><b class="pr" data-edit="t122" data-edit-label="Text: 5.0">5.0</b></div>
+          <div class="srow"><span data-edit="t123" data-edit-label="Text: Chorizo">Chorizo</span><b class="pr" data-edit="t124" data-edit-label="Text: 5.0">5.0</b></div>
+          <div class="srow"><span data-edit="t125" data-edit-label="Text: Bacon">Bacon</span><b class="pr" data-edit="t126" data-edit-label="Text: 6.0">6.0</b></div>
         </div>
         <div class="mlist">
-          <div class="mrow"><h3 data-edit="t126" data-edit-label="Heading: For the Little Ones">For the Little Ones</h3><b class="pr" data-edit="t127" data-edit-label="Text: 9.0">9.0</b></div>
-          <p class="lo" data-edit="t128" data-edit-label="Text: Egg on toast · grilled cheese toastie …">Egg on toast · grilled cheese toastie · half hotcake with blueberry compote</p>
+          <div class="mrow"><h3 data-edit="t127" data-edit-label="Heading: For the Little Ones">For the Little Ones</h3><b class="pr" data-edit="t128" data-edit-label="Text: 9.0">9.0</b></div>
+          <p class="lo" data-edit="t129" data-edit-label="Text: Egg on toast · grilled cheese toastie …">Egg on toast · grilled cheese toastie · half hotcake with blueberry compote</p>
         </div>
       </div>
     </div>
 
     <div class="mfoot">
-      <p class="drk" data-edit="t129" data-edit-label="Text: Espresso, batch and matcha at the coun…">Espresso, batch and matcha at the counter, drink prices in store.</p>
-      <p data-edit="t130" data-edit-label="Text: The kitchen works with dairy, nuts and…">The kitchen works with dairy, nuts and gluten, so cross contamination cannot be fully ruled out. Speak to the staff about any dietary requirement.</p>
+      <p class="drk" data-edit="t130" data-edit-label="Text: Espresso, batch and matcha at the coun…">Espresso, batch and matcha at the counter, drink prices in store.</p>
+      <p data-edit="t131" data-edit-label="Text: The kitchen works with dairy, nuts and…">The kitchen works with dairy, nuts and gluten, so cross contamination cannot be fully ruled out. Speak to the staff about any dietary requirement.</p>
     </div>
   </div>
 </section>
@@ -452,20 +467,20 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
 <!-- ================= REVIEWS ================= -->
 <section class="rev" id="reviews">
   <div class="wrap">
-    <p class="kick" data-edit="t131" data-edit-label="Text: In their words">In their words</p>
-    <blockquote class="bigq" data-edit="t132" data-edit-label="Quote: “Blonde Cafe Fitzroy is hands down the…">“Blonde Cafe Fitzroy is hands down the best cafe in Fitzroy, and that&rsquo;s saying something”</blockquote>
-    <p class="battr" data-edit="t133" data-edit-label="Text: Jessi Singh · Google review">Jessi Singh · Google review</p>
+    <p class="kick" data-edit="t132" data-edit-label="Text: In their words">In their words</p>
+    <blockquote class="bigq" data-edit="t133" data-edit-label="Quote: “Blonde Cafe Fitzroy is hands down the…">“Blonde Cafe Fitzroy is hands down the best cafe in Fitzroy, and that&rsquo;s saying something”</blockquote>
+    <p class="battr" data-edit="t134" data-edit-label="Text: Jessi Singh · Google review">Jessi Singh · Google review</p>
     <div class="qgrid">
       <div class="q">
-        <p data-edit="t134" data-edit-label="Text: “Finally a cafe that has everything yo…">“Finally a cafe that has everything you could ask for on the menu and at a reasonable price”</p>
-        <p class="battr" data-edit="t135" data-edit-label="Text: Katie Lilley · Google review">Katie Lilley · Google review</p>
+        <p data-edit="t135" data-edit-label="Text: “Finally a cafe that has everything yo…">“Finally a cafe that has everything you could ask for on the menu and at a reasonable price”</p>
+        <p class="battr" data-edit="t136" data-edit-label="Text: Katie Lilley · Google review">Katie Lilley · Google review</p>
       </div>
       <div class="q">
-        <p data-edit="t136" data-edit-label="Text: “It&rsquo;s been a while since I revie…">“It&rsquo;s been a while since I reviewed a coffee shop but wanted to give a quick shout out to these guys. Great food”</p>
-        <p class="battr" data-edit="t137" data-edit-label="Text: Kel Lupis · Google review">Kel Lupis · Google review</p>
+        <p data-edit="t137" data-edit-label="Text: “It&rsquo;s been a while since I revie…">“It&rsquo;s been a while since I reviewed a coffee shop but wanted to give a quick shout out to these guys. Great food”</p>
+        <p class="battr" data-edit="t138" data-edit-label="Text: Kel Lupis · Google review">Kel Lupis · Google review</p>
       </div>
     </div>
-    <p class="rline"><b class="score" data-edit="t138" data-edit-label="Text: 4.7">4.7</b> stars · <b class="rc" data-edit="t139" data-edit-label="Text: 427">427</b> reviews on Google</p>
+    <p class="rline"><b class="score" data-edit="t139" data-edit-label="Text: 4.7">4.7</b> stars · <b class="rc" data-edit="t140" data-edit-label="Text: 427">427</b> reviews on Google</p>
   </div>
 </section>
 
@@ -473,25 +488,25 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
 <section class="visit" id="visit">
   <div class="wrap vgrid">
     <div class="bcard" id="book">
-      <p class="kick" data-edit="t140" data-edit-label="Text: Book direct">Book direct</p>
-      <h2 data-edit="t141" data-edit-label="Title: Hold a table">Hold a table</h2>
-      <p class="bsub" data-edit="t142" data-edit-label="Text: Fill in the details, then call, or sen…">Fill in the details, then call, or send them by email and the team confirms by reply.</p>
+      <p class="kick" data-edit="t141" data-edit-label="Text: Book direct">Book direct</p>
+      <h2 data-edit="t142" data-edit-label="Title: Hold a table">Hold a table</h2>
+      <p class="bsub" data-edit="t143" data-edit-label="Text: Fill in the details, then call, or sen…">Fill in the details, then call, or send them by email and the team confirms by reply.</p>
       <form id="bform">
         <div class="f2">
           <div class="fld full">
-            <label for="bn" data-edit="t143" data-edit-label="Label: Name">Name</label>
+            <label for="bn" data-edit="t144" data-edit-label="Label: Name">Name</label>
             <input type="text" id="bn" name="name" autocomplete="name" placeholder="Your name">
           </div>
           <div class="fld">
-            <label for="bd" data-edit="t144" data-edit-label="Label: Date">Date</label>
+            <label for="bd" data-edit="t145" data-edit-label="Label: Date">Date</label>
             <input type="date" id="bd" name="date">
           </div>
           <div class="fld">
-            <label for="bt" data-edit="t145" data-edit-label="Label: Time">Time</label>
+            <label for="bt" data-edit="t146" data-edit-label="Label: Time">Time</label>
             <input type="time" id="bt" name="time">
           </div>
           <div class="fld full">
-            <label for="bg" data-edit="t146" data-edit-label="Label: Guests">Guests</label>
+            <label for="bg" data-edit="t147" data-edit-label="Label: Guests">Guests</label>
             <select id="bg" name="guests">
               <option>1</option><option selected>2</option><option>3</option>
               <option>4</option><option>5</option><option>6</option>
@@ -500,49 +515,49 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
           </div>
         </div>
         <div class="bbtns">
-          <a class="btn solid" href="tel:+61390778378" data-edit="t147" data-edit-label="Button / link: Call (03) 9077 8378">Call (03) 9077 8378</a>
-          <button class="btn ghost" type="submit" data-edit="t148" data-edit-label="Button: Email the details">Email the details</button>
+          <a class="btn solid" href="tel:+61390778378" data-edit="t148" data-edit-label="Button / link: Call (03) 9077 8378">Call (03) 9077 8378</a>
+          <button class="btn ghost" type="submit" data-edit="t149" data-edit-label="Button: Email the details">Email the details</button>
         </div>
-        <p class="bhint" data-edit="t149" data-edit-label="Text: Calling gets today&rsquo;s answer fast…">Calling gets today&rsquo;s answer fastest. The email button opens your mail app with everything already written, addressed to the cafe.</p>
-        <p class="bhint bwarn" id="bwarn" hidden data-edit="t150" data-edit-label="Text: Blonde opens weekdays only, pick a Mon…">Blonde opens weekdays only, pick a Monday to Friday date.</p>
+        <p class="bhint" data-edit="t150" data-edit-label="Text: Calling gets today&rsquo;s answer fast…">Calling gets today&rsquo;s answer fastest. The email button opens your mail app with everything already written, addressed to the cafe.</p>
+        <p class="bhint bwarn" id="bwarn" hidden data-edit="t151" data-edit-label="Text: Blonde opens weekdays only, pick a Mon…">Blonde opens weekdays only, pick a Monday to Friday date.</p>
       </form>
     </div>
 
     <div class="vinfo">
-      <p class="kick" data-edit="t151" data-edit-label="Text: Find us">Find us</p>
-      <h2 data-edit="t152" data-edit-label="Title: On the Brunswick strip">On the Brunswick strip</h2>
-      <p class="addr" data-edit="t153" data-edit-label="Text: 443 Brunswick St">443 Brunswick St</p>
-      <p class="suburb" data-edit="t154" data-edit-label="Text: Fitzroy VIC 3065">Fitzroy VIC 3065</p>
+      <p class="kick" data-edit="t152" data-edit-label="Text: Find us">Find us</p>
+      <h2 data-edit="t153" data-edit-label="Title: On the Brunswick strip">On the Brunswick strip</h2>
+      <p class="addr" data-edit="t154" data-edit-label="Text: 443 Brunswick St">443 Brunswick St</p>
+      <p class="suburb" data-edit="t155" data-edit-label="Text: Fitzroy VIC 3065">Fitzroy VIC 3065</p>
       <div class="vrow">
-        <span class="vl" data-edit="t155" data-edit-label="Text: Phone">Phone</span>
-        <a class="vv" href="tel:+61390778378" data-edit="t156" data-edit-label="Button / link: (03) 9077 8378">(03) 9077 8378</a>
+        <span class="vl" data-edit="t156" data-edit-label="Text: Phone">Phone</span>
+        <a class="vv" href="tel:+61390778378" data-edit="t157" data-edit-label="Button / link: (03) 9077 8378">(03) 9077 8378</a>
       </div>
       <div class="vrow">
-        <span class="vl" data-edit="t157" data-edit-label="Text: Email">Email</span>
-        <a class="vv" href="mailto:blondefoodanddrink@gmail.com" data-edit="t158" data-edit-label="Button / link: blondefoodanddrink@gmail.com">blondefoodanddrink@gmail.com</a>
+        <span class="vl" data-edit="t158" data-edit-label="Text: Email">Email</span>
+        <a class="vv" href="mailto:blondefoodanddrink@gmail.com" data-edit="t159" data-edit-label="Button / link: blondefoodanddrink@gmail.com">blondefoodanddrink@gmail.com</a>
       </div>
       <div class="vrow">
-        <span class="vl" data-edit="t159" data-edit-label="Text: Instagram">Instagram</span>
-        <a class="vv" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener" data-edit="t160" data-edit-label="Button / link: @blondefitzroy">@blondefitzroy</a>
+        <span class="vl" data-edit="t160" data-edit-label="Text: Instagram">Instagram</span>
+        <a class="vv" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener" data-edit="t161" data-edit-label="Button / link: @blondefitzroy">@blondefitzroy</a>
       </div>
       <div class="vrow">
-        <span class="vl" data-edit="t161" data-edit-label="Text: Map">Map</span>
-        <a class="vv" href="https://www.google.com/maps/search/?api=1&amp;query=Blonde+Food+and+Drink+443+Brunswick+St+Fitzroy+VIC+3065" target="_blank" rel="noopener" data-edit="t162" data-edit-label="Button / link: Open in Google Maps">Open in Google Maps</a>
+        <span class="vl" data-edit="t162" data-edit-label="Text: Map">Map</span>
+        <a class="vv" href="https://www.google.com/maps/search/?api=1&amp;query=Blonde+Food+and+Drink+443+Brunswick+St+Fitzroy+VIC+3065" target="_blank" rel="noopener" data-edit="t163" data-edit-label="Button / link: Open in Google Maps">Open in Google Maps</a>
       </div>
       <div class="wk">
         <div class="wkdays">
-          <span class="wd on" data-edit="t163" data-edit-label="Text: Mon">Mon</span>
-          <span class="wd on" data-edit="t164" data-edit-label="Text: Tue">Tue</span>
-          <span class="wd on" data-edit="t165" data-edit-label="Text: Wed">Wed</span>
-          <span class="wd on" data-edit="t166" data-edit-label="Text: Thu">Thu</span>
-          <span class="wd on" data-edit="t167" data-edit-label="Text: Fri">Fri</span>
-          <span class="wd off" data-edit="t168" data-edit-label="Text: Sat">Sat</span>
-          <span class="wd off" data-edit="t169" data-edit-label="Text: Sun">Sun</span>
+          <span class="wd on" data-edit="t164" data-edit-label="Text: Mon">Mon</span>
+          <span class="wd on" data-edit="t165" data-edit-label="Text: Tue">Tue</span>
+          <span class="wd on" data-edit="t166" data-edit-label="Text: Wed">Wed</span>
+          <span class="wd on" data-edit="t167" data-edit-label="Text: Thu">Thu</span>
+          <span class="wd on" data-edit="t168" data-edit-label="Text: Fri">Fri</span>
+          <span class="wd off" data-edit="t169" data-edit-label="Text: Sat">Sat</span>
+          <span class="wd off" data-edit="t170" data-edit-label="Text: Sun">Sun</span>
         </div>
-        <p class="wkline1" data-edit="t170" data-edit-label="Text: Monday to Friday, 7:00 am to 3:00 pm">Monday to Friday, 7:00 am to 3:00 pm</p>
-        <p class="wkline2" data-edit="t171" data-edit-label="Text: Closed Saturday and Sunday">Closed Saturday and Sunday</p>
+        <p class="wkline1" data-edit="t171" data-edit-label="Text: Monday to Friday, 7:00 am to 3:00 pm">Monday to Friday, 7:00 am to 3:00 pm</p>
+        <p class="wkline2" data-edit="t172" data-edit-label="Text: Closed Saturday and Sunday">Closed Saturday and Sunday</p>
       </div>
-      <p class="vnote" data-edit="t172" data-edit-label="Text: Walk-ins are always welcome during the…">Walk-ins are always welcome during the week. For bigger tables, a quick call ahead saves the wait.</p>
+      <p class="vnote" data-edit="t173" data-edit-label="Text: Walk-ins are always welcome during the…">Walk-ins are always welcome during the week. For bigger tables, a quick call ahead saves the wait.</p>
     </div>
   </div>
 </section>
@@ -550,28 +565,28 @@ footer,.f2{border-top:1px solid var(--line);padding:clamp(46px,5.5vw,76px) 0 cla
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap fgrid">
-    <span class="fbrand" data-edit="t173" data-edit-label="Text: Blonde Food and Drink">Blonde Food and Drink</span>
+    <span class="fbrand" data-edit="t174" data-edit-label="Text: Blonde Food and Drink">Blonde Food and Drink</span>
     <span class="fmeta">
-      <i data-edit="t174" data-edit-label="Text: 443 Brunswick St, Fitzroy VIC 3065">443 Brunswick St, Fitzroy VIC 3065</i>
+      <i data-edit="t175" data-edit-label="Text: 443 Brunswick St, Fitzroy VIC 3065">443 Brunswick St, Fitzroy VIC 3065</i>
       <i>·</i>
-      <i data-edit="t175" data-edit-label="Text: (03) 9077 8378">(03) 9077 8378</i>
+      <i data-edit="t176" data-edit-label="Text: (03) 9077 8378">(03) 9077 8378</i>
       <i>·</i>
-      <i data-edit="t176" data-edit-label="Text: Weekdays 7:00 to 3:00">Weekdays 7:00 to 3:00</i>
+      <i data-edit="t177" data-edit-label="Text: Weekdays 7:00 to 3:00">Weekdays 7:00 to 3:00</i>
       <i>·</i>
-      <a class="flink" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener" data-edit="t177" data-edit-label="Button / link: @blondefitzroy">@blondefitzroy</a>
+      <a class="flink" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener" data-edit="t178" data-edit-label="Button / link: @blondefitzroy">@blondefitzroy</a>
     </span>
   </div>
 </footer>
 
 <!-- ================= STICKY BAR ================= -->
 <nav class="bar" aria-label="Quick actions">
-  <span class="bbrand">Bl<span class="om" data-edit="t178" data-edit-label="Text: o">o</span>nde</span>
-  <a class="blink" href="#menu" data-edit="t179" data-edit-label="Button / link: Menu">Menu</a>
-  <a class="blink" href="#book" data-edit="t180" data-edit-label="Button / link: Book">Book</a>
+  <span class="bbrand">Bl<span class="om" data-edit="t179" data-edit-label="Text: o">o</span>nde</span>
+  <a class="blink" href="#menu" data-edit="t180" data-edit-label="Button / link: Menu">Menu</a>
+  <a class="blink" href="#book" data-edit="t181" data-edit-label="Button / link: Book">Book</a>
   <a class="bic" href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener" aria-label="Blonde on Instagram">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
   </a>
-  <a class="bcall" href="tel:+61390778378" data-edit="t181" data-edit-label="Button / link: Call">Call</a>
+  <a class="bcall" href="tel:+61390778378" data-edit="t182" data-edit-label="Button / link: Call">Call</a>
 </nav>
 
 <script>
