@@ -291,6 +291,35 @@ footer{border-top:1px solid var(--line);background:var(--white);
 .bt-call{border-color:var(--line)}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+
+
+
+/* ============================================================================
+   SCROLL MOTION, injected by tools/add_motion.py. Reference: damaria-roma.webflow.io,
+   source-verified (its pagetransition.js was read, so these are its real numbers).
+   THREE behaviours, and deliberately nothing else. The reference moves ONLY display
+   type, hairlines and photographs; body copy, cards and buttons stay put, and that
+   contrast is what reads premium rather than busy.
+     1. headings reveal per character, ONE SHOT on entry, on their own clock
+     2. photographs lag the page with a smoothed parallax, the only scrubbed thing
+     3. hairline rules draw themselves in
+   ========================================================================= */
+.mw{display:inline-block;white-space:nowrap}
+.mc{display:inline-block;opacity:0;transform:translateX(12px);
+  transition:opacity .4s cubic-bezier(.39,.575,.565,1),transform .4s cubic-bezier(.39,.575,.565,1)}
+.mc.on{opacity:1;transform:none}
+.mc.done{transition:none;transform:none;will-change:auto}
+.mpar{overflow:hidden}
+.mpar>img,.mpar .mimg{will-change:transform}
+.mrule{transform:translateX(48px) scaleX(0);transform-origin:left center;
+  transition:transform .8s cubic-bezier(.215,.61,.355,1)}
+.mrule.on{transform:none}
+@media (prefers-reduced-motion:reduce){
+  .mc{opacity:1!important;transform:none!important;transition:none!important}
+  .mrule{transform:none!important;transition:none!important}
+  .mpar>img,.mpar .mimg{transform:none!important}
+}
 </style>
 </head>
 <body>
@@ -331,22 +360,22 @@ footer{border-top:1px solid var(--line);background:var(--white);
       <li><b data-edit="t19" data-edit-label="Text: Turkish">Turkish</b><span data-edit="t20" data-edit-label="Text: On the brunch menu">On the brunch menu</span></li>
     </ul>
   </div>
-  <img class="hero-bg" src="img/07.jpg?v=443cff91" alt="Still life: the crema surface of freshly brewed coffee" fetchpriority="high">
+  <img class="hero-bg" src="img/07.jpg?v=859cfcb6" alt="Still life: the crema surface of freshly brewed coffee" fetchpriority="high">
   <div class="hero-scrim" aria-hidden="true"></div>
 </header>
 
 <!-- bands, taken from his pin: close-up coffee matter carries the page -->
 <section class="bands" aria-label="The coffee">
   <figure class="band">
-    <img src="img/08.jpg?v=cc77c0ae" alt="Still life: roasted coffee beans spilling from a cloth bag">
+    <img src="img/08.jpg?v=cccee4bc" alt="Still life: roasted coffee beans spilling from a cloth bag">
     <figcaption><b data-edit="t21" data-edit-label="Text: The bean">The bean</b><span data-edit="t22" data-edit-label="Text: Roasted by Spectrum, ground to order">Roasted by Spectrum, ground to order</span></figcaption>
   </figure>
   <figure class="band">
-    <img src="img/09.jpg?v=52ba4a67" alt="Still life: brewed coffee, ground coffee and whole beans in three cups">
+    <img src="img/09.jpg?v=b02f8a62" alt="Still life: brewed coffee, ground coffee and whole beans in three cups">
     <figcaption><b data-edit="t23" data-edit-label="Text: Brewed, ground, whole">Brewed, ground, whole</b><span data-edit="t24" data-edit-label="Text: Black, white, batch brew, pour over">Black, white, batch brew, pour over</span></figcaption>
   </figure>
   <figure class="band">
-    <img src="img/07.jpg?v=443cff91" alt="Still life: the crema surface of freshly brewed coffee">
+    <img src="img/07.jpg?v=859cfcb6" alt="Still life: the crema surface of freshly brewed coffee">
     <figcaption><b data-edit="t25" data-edit-label="Text: The crema">The crema</b><span data-edit="t26" data-edit-label="Text: Pulled to order">Pulled to order</span></figcaption>
   </figure>
 </section>
@@ -404,7 +433,7 @@ footer{border-top:1px solid var(--line);background:var(--white);
         </div>
       </div>
       <figure class="story-photo">
-        <img src="img/03.jpg?v=b12563f8" alt="A flat white on the window counter, Brunswick Street beyond the glass" loading="lazy">
+        <img src="img/03.jpg?v=526a74af" alt="A flat white on the window counter, Brunswick Street beyond the glass" loading="lazy">
         <figcaption data-edit="t50" data-edit-label="Caption: The window seat, Brunswick Street beyo…">The window seat, Brunswick Street beyond the glass</figcaption>
       </figure>
     </div>
@@ -422,14 +451,14 @@ footer{border-top:1px solid var(--line);background:var(--white);
     </div>
     <div class="cards">
       <article class="card">
-        <div class="card-ph"><img src="img/04.jpg?v=61f674cb" alt="Flat white with latte art on a timber table" loading="lazy"></div>
+        <div class="card-ph"><img src="img/04.jpg?v=c466d583" alt="Flat white with latte art on a timber table" loading="lazy"></div>
         <div class="card-tx">
           <h3 data-edit="t54" data-edit-label="Heading: The coffee">The coffee</h3>
           <p data-edit="t55" data-edit-label="Text: Spectrum Coffee through the machine: b…">Spectrum Coffee through the machine: black, white, batch brew, and a pour over worth sitting down for. The first cup leaves the counter at six.</p>
         </div>
       </article>
       <article class="card">
-        <div class="card-ph"><img src="img/06.jpg?v=8b5bc2cc" alt="Pain au chocolat and canele beside a flat white" loading="lazy"></div>
+        <div class="card-ph"><img src="img/06.jpg?v=3a188f31" alt="Pain au chocolat and canele beside a flat white" loading="lazy"></div>
         <div class="card-tx">
           <h3 data-edit="t56" data-edit-label="Heading: House baked">House baked</h3>
           <p data-edit="t57" data-edit-label="Text: Pain au chocolat, almond croissants, c…">Pain au chocolat, almond croissants, caneles and muffins, all baked in house and priced on the handwritten tags. Best claimed before the mid-morning rush.</p>
@@ -580,7 +609,7 @@ footer{border-top:1px solid var(--line);background:var(--white);
         </div>
       </div>
       <figure class="street-photo">
-        <img src="img/01.jpg?v=87ae414a" alt="The Commune storefront at dusk, the black awning lit over Brunswick Street" loading="lazy">
+        <img src="img/01.jpg?v=bb007042" alt="The Commune storefront at dusk, the black awning lit over Brunswick Street" loading="lazy">
         <figcaption data-edit="t156" data-edit-label="Caption: The black awning at dusk, lit and easy…">The black awning at dusk, lit and easy to spot</figcaption>
       </figure>
     </div>
@@ -618,6 +647,135 @@ footer{border-top:1px solid var(--line);background:var(--white);
   ['bn','bd','bt','bg'].forEach(function(i){$(i).addEventListener('input',upd);$(i).addEventListener('change',upd)});
   upd();
 })();
+</script>
+
+
+
+
+<script data-motion-system>
+
+(function(){
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function ready(fn){
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(fn);
+    else addEventListener('load', fn);
+  }
+
+  ready(function(){
+
+  /* ==== 1. HEADINGS: per character, ONE SHOT on entry ====================
+     The reference does NOT scrub text to scroll. It plays on its own clock with a
+     50ms per-character stagger and never replays. Scrub-tied text stutters with the
+     wheel and reads mechanical, the single biggest tell of a home-made copy. */
+  var TEXT_SEL = 'h1,h2,h3,h4,blockquote,.lede,.lead,.hero-sub,.hsub,.hero-den,.tag,' +
+                 '.bigq,.hb-title,.big,.dbig,.f-brand,.fbrand,.foot-brand,.score-big,' +
+                 '.rev-score,.rnum,.score-line,.hero-say,.addr-big,.disp,.tbig,.hword,' +
+                 '.mark,.kicker,.shead,.eyebrow,.overline,.hero-eyebrow';
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var chars = en.target.__mc;
+      var step = en.target.__meta ? 60 : 50;
+      chars.forEach(function(c,i){
+        c.style.transitionDelay = (i*step) + 'ms';
+        c.classList.add('on');
+      });
+      setTimeout(function(){
+        chars.forEach(function(c){ c.classList.add('done'); c.style.transitionDelay=''; });
+      }, chars.length*step + 500);
+      io.unobserve(en.target);
+    });
+  }, {rootMargin:'0px 0px -25% 0px', threshold:0});
+
+  [].forEach.call(document.querySelectorAll(TEXT_SEL), function(el){
+    if(el.closest('.bar,.tray,nav,.nav,.langchip')) return;
+    if(el.getAttribute('data-motion-done')) return;
+    if(!el.textContent.trim()) return;
+    el.setAttribute('data-motion-done','1');
+    var walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null), n, nodes=[];
+    while((n=walk.nextNode())) if(n.nodeValue.trim()) nodes.push(n);
+    if(!nodes.length) return;
+    var label = el.textContent.trim();
+    nodes.forEach(function(tn){
+      var frag=document.createDocumentFragment();
+      tn.nodeValue.split(/(\s+)/).forEach(function(tok){
+        if(!tok) return;
+        if(/^\s+$/.test(tok)){ frag.appendChild(document.createTextNode(tok)); return; }
+        var w=document.createElement('span'); w.className='mw';
+        tok.split('').forEach(function(ch){
+          var s=document.createElement('span'); s.className='mc'; s.textContent=ch;
+          w.appendChild(s);
+        });
+        frag.appendChild(w);
+      });
+      tn.parentNode.replaceChild(frag,tn);
+    });
+    var chars=[].slice.call(el.querySelectorAll('.mc'));
+    if(!chars.length) return;
+    el.__mc = chars;
+    el.__meta = /kicker|shead|eyebrow|overline/.test(el.className);
+    el.setAttribute('aria-label', label);
+    chars.forEach(function(c){ c.setAttribute('aria-hidden','true'); });
+    io.observe(el);
+  });
+
+  /* ==== 2. HAIRLINES: draw themselves in ================================= */
+  var io2 = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io2.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -25% 0px', threshold:0});
+  [].forEach.call(document.querySelectorAll('.rule,.rulerow,.rr-top,.rr-bot,hr'), function(el){
+    if(el.closest('.bar,.tray,nav')) return;
+    if(el.getAttribute('data-motion-done')) return;
+    el.setAttribute('data-motion-done','1');
+    el.classList.add('mrule'); io2.observe(el);
+  });
+
+  /* ==== 3. PHOTOGRAPHS: smoothed parallax, the ONLY scrubbed thing ========
+     scale(1.1) buys 5% headroom so the edges never show while the picture drifts
+     down by 5%, lagging the page. The lag is lerped (about a 1.2s catch-up); raw
+     scrollY strobes because wheel input is stepped, and the lag IS the luxury. */
+  var pars=[];
+  [].forEach.call(document.querySelectorAll('figure,.frame,.ph,.shot,.card-ph,.hplate,.hang-frame,.sfig,.band,.hero-ph,.hero-shot,.story-photo,.menuph,.chartpanel,.mphoto,.brd'), function(f){
+    if(f.getAttribute('data-par-done')) return;
+    var img=f.querySelector('img'); if(!img) return;
+    if(img.closest('.bar,.tray,nav')) return;
+    f.setAttribute('data-par-done','1');
+    f.classList.add('mpar');
+    pars.push({f:f,img:img,s:0,top:0,h:1});
+  });
+  function measure(){
+    var y=window.pageYOffset;
+    pars.forEach(function(o){
+      var r=o.f.getBoundingClientRect();
+      o.top=r.top+y; o.h=Math.max(1,r.height);
+    });
+  }
+  measure(); addEventListener('resize', measure); addEventListener('load', measure);
+  var running=false;
+  function loop(){
+    var y=window.pageYOffset, H=innerHeight, moving=false;
+    pars.forEach(function(o){
+      if(o.top+o.h < y-200 || o.top > y+H+200) return;
+      var p=(y-(o.top-H))/(o.h+H);
+      p = p<0?0:(p>1?1:p);
+      o.s += (p-o.s)*0.08;
+      if(Math.abs(p-o.s) > 0.001) moving=true;
+      o.img.style.transform='translate3d(0,'+(o.s*5).toFixed(3)+'%,0) scale(1.1)';
+    });
+    running=moving;
+    if(moving) requestAnimationFrame(loop);
+  }
+  function kick(){ if(!running){ running=true; requestAnimationFrame(loop); } }
+  addEventListener('scroll', kick, {passive:true});
+  addEventListener('resize', kick, {passive:true});
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) kick(); });
+  kick();
+
+  });
+})();
+
 </script>
 </body>
 </html>

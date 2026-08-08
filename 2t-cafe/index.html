@@ -272,6 +272,35 @@ a.ph:hover{color:var(--gold)}
 .orn svg{animation:ornspin 84s linear infinite;transform-origin:50% 50%}
 @keyframes ornspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion: reduce){.orn svg{animation:none}}
+
+
+
+
+/* ============================================================================
+   SCROLL MOTION, injected by tools/add_motion.py. Reference: damaria-roma.webflow.io,
+   source-verified (its pagetransition.js was read, so these are its real numbers).
+   THREE behaviours, and deliberately nothing else. The reference moves ONLY display
+   type, hairlines and photographs; body copy, cards and buttons stay put, and that
+   contrast is what reads premium rather than busy.
+     1. headings reveal per character, ONE SHOT on entry, on their own clock
+     2. photographs lag the page with a smoothed parallax, the only scrubbed thing
+     3. hairline rules draw themselves in
+   ========================================================================= */
+.mw{display:inline-block;white-space:nowrap}
+.mc{display:inline-block;opacity:0;transform:translateX(12px);
+  transition:opacity .4s cubic-bezier(.39,.575,.565,1),transform .4s cubic-bezier(.39,.575,.565,1)}
+.mc.on{opacity:1;transform:none}
+.mc.done{transition:none;transform:none;will-change:auto}
+.mpar{overflow:hidden}
+.mpar>img,.mpar .mimg{will-change:transform}
+.mrule{transform:translateX(48px) scaleX(0);transform-origin:left center;
+  transition:transform .8s cubic-bezier(.215,.61,.355,1)}
+.mrule.on{transform:none}
+@media (prefers-reduced-motion:reduce){
+  .mc{opacity:1!important;transform:none!important;transition:none!important}
+  .mrule{transform:none!important;transition:none!important}
+  .mpar>img,.mpar .mimg{transform:none!important}
+}
 </style>
 </head>
 <body id="top">
@@ -291,7 +320,7 @@ a.ph:hover{color:var(--gold)}
 
 <header class="hero">
   <div class="hero-red"></div>
-  <div class="hero-ph"><img src="img/03.jpg?v=453d901d" alt="Cross-section of a 2T Cafe bánh mì, roast pork and pickled carrot in a crusty roll"></div>
+  <div class="hero-ph"><img src="img/03.jpg?v=bb7af568" alt="Cross-section of a 2T Cafe bánh mì, roast pork and pickled carrot in a crusty roll"></div>
   <div class="orn" aria-hidden="true">
     <svg viewBox="0 0 132 132">
       <defs><path id="cir" d="M66,66 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs>
@@ -334,7 +363,7 @@ a.ph:hover{color:var(--gold)}
       </div>
     </div>
     <figure class="sph">
-      <img src="img/06.jpg?v=c47a228a" alt="The 2T Cafe cabinet stacked with rice paper rolls, herbs, pickles and cold drinks">
+      <img src="img/06.jpg?v=8fd68b4b" alt="The 2T Cafe cabinet stacked with rice paper rolls, herbs, pickles and cold drinks">
       <figcaption data-edit="t24" data-edit-label="Caption: The cabinet: gỏi cuốn packed through t…">The cabinet: gỏi cuốn packed through the day</figcaption>
     </figure>
   </div>
@@ -514,7 +543,7 @@ a.ph:hover{color:var(--gold)}
     <h2 data-edit="t200" data-edit-label="Title: The board in the window">The board in the window</h2>
     <p class="gnote" data-edit="t201" data-edit-label="Text: Every price above is read straight off…">Every price above is read straight off this board, photographed on the window at 130 Gertrude St. What the glass says is what the counter charges.</p>
     <figure>
-      <img src="img/02.jpg?v=921cbbde" alt="The 2T Cafe food menu board in the window: bánh mì, bún, steam rice, salads and rice paper rolls with prices">
+      <img src="img/02.jpg?v=54d32f4d" alt="The 2T Cafe food menu board in the window: bánh mì, bún, steam rice, salads and rice paper rolls with prices">
       <figcaption data-edit="t202" data-edit-label="Caption: The food menu board on the glass, pric…">The food menu board on the glass, prices as posted</figcaption>
     </figure>
   </div>
@@ -589,7 +618,7 @@ a.ph:hover{color:var(--gold)}
       <a class="vmap" href="https://maps.google.com/?cid=7606260918270599025" target="_blank" rel="noopener" data-edit="t232" data-edit-label="Button / link: Open in Google Maps">Open in Google Maps</a>
     </div>
     <figure class="vph">
-      <img src="img/01.jpg?v=c14581b0" alt="The 2T Cafe shopfront to look for on Gertrude St">
+      <img src="img/01.jpg?v=41430584" alt="The 2T Cafe shopfront to look for on Gertrude St">
       <figcaption data-edit="t233" data-edit-label="Caption: Under the black sign, next to the Leon…">Under the black sign, next to the Leonard St. corner</figcaption>
     </figure>
   </div>
@@ -632,5 +661,134 @@ a.ph:hover{color:var(--gold)}
 })();
 </script>
 
+
+
+
+
+<script data-motion-system>
+
+(function(){
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function ready(fn){
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(fn);
+    else addEventListener('load', fn);
+  }
+
+  ready(function(){
+
+  /* ==== 1. HEADINGS: per character, ONE SHOT on entry ====================
+     The reference does NOT scrub text to scroll. It plays on its own clock with a
+     50ms per-character stagger and never replays. Scrub-tied text stutters with the
+     wheel and reads mechanical, the single biggest tell of a home-made copy. */
+  var TEXT_SEL = 'h1,h2,h3,h4,blockquote,.lede,.lead,.hero-sub,.hsub,.hero-den,.tag,' +
+                 '.bigq,.hb-title,.big,.dbig,.f-brand,.fbrand,.foot-brand,.score-big,' +
+                 '.rev-score,.rnum,.score-line,.hero-say,.addr-big,.disp,.tbig,.hword,' +
+                 '.mark,.kicker,.shead,.eyebrow,.overline,.hero-eyebrow';
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var chars = en.target.__mc;
+      var step = en.target.__meta ? 60 : 50;
+      chars.forEach(function(c,i){
+        c.style.transitionDelay = (i*step) + 'ms';
+        c.classList.add('on');
+      });
+      setTimeout(function(){
+        chars.forEach(function(c){ c.classList.add('done'); c.style.transitionDelay=''; });
+      }, chars.length*step + 500);
+      io.unobserve(en.target);
+    });
+  }, {rootMargin:'0px 0px -25% 0px', threshold:0});
+
+  [].forEach.call(document.querySelectorAll(TEXT_SEL), function(el){
+    if(el.closest('.bar,.tray,nav,.nav,.langchip')) return;
+    if(el.getAttribute('data-motion-done')) return;
+    if(!el.textContent.trim()) return;
+    el.setAttribute('data-motion-done','1');
+    var walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null), n, nodes=[];
+    while((n=walk.nextNode())) if(n.nodeValue.trim()) nodes.push(n);
+    if(!nodes.length) return;
+    var label = el.textContent.trim();
+    nodes.forEach(function(tn){
+      var frag=document.createDocumentFragment();
+      tn.nodeValue.split(/(\s+)/).forEach(function(tok){
+        if(!tok) return;
+        if(/^\s+$/.test(tok)){ frag.appendChild(document.createTextNode(tok)); return; }
+        var w=document.createElement('span'); w.className='mw';
+        tok.split('').forEach(function(ch){
+          var s=document.createElement('span'); s.className='mc'; s.textContent=ch;
+          w.appendChild(s);
+        });
+        frag.appendChild(w);
+      });
+      tn.parentNode.replaceChild(frag,tn);
+    });
+    var chars=[].slice.call(el.querySelectorAll('.mc'));
+    if(!chars.length) return;
+    el.__mc = chars;
+    el.__meta = /kicker|shead|eyebrow|overline/.test(el.className);
+    el.setAttribute('aria-label', label);
+    chars.forEach(function(c){ c.setAttribute('aria-hidden','true'); });
+    io.observe(el);
+  });
+
+  /* ==== 2. HAIRLINES: draw themselves in ================================= */
+  var io2 = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io2.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -25% 0px', threshold:0});
+  [].forEach.call(document.querySelectorAll('.rule,.rulerow,.rr-top,.rr-bot,hr'), function(el){
+    if(el.closest('.bar,.tray,nav')) return;
+    if(el.getAttribute('data-motion-done')) return;
+    el.setAttribute('data-motion-done','1');
+    el.classList.add('mrule'); io2.observe(el);
+  });
+
+  /* ==== 3. PHOTOGRAPHS: smoothed parallax, the ONLY scrubbed thing ========
+     scale(1.1) buys 5% headroom so the edges never show while the picture drifts
+     down by 5%, lagging the page. The lag is lerped (about a 1.2s catch-up); raw
+     scrollY strobes because wheel input is stepped, and the lag IS the luxury. */
+  var pars=[];
+  [].forEach.call(document.querySelectorAll('figure,.frame,.ph,.shot,.card-ph,.hplate,.hang-frame,.sfig,.band,.hero-ph,.hero-shot,.story-photo,.menuph,.chartpanel,.mphoto,.brd'), function(f){
+    if(f.getAttribute('data-par-done')) return;
+    var img=f.querySelector('img'); if(!img) return;
+    if(img.closest('.bar,.tray,nav')) return;
+    f.setAttribute('data-par-done','1');
+    f.classList.add('mpar');
+    pars.push({f:f,img:img,s:0,top:0,h:1});
+  });
+  function measure(){
+    var y=window.pageYOffset;
+    pars.forEach(function(o){
+      var r=o.f.getBoundingClientRect();
+      o.top=r.top+y; o.h=Math.max(1,r.height);
+    });
+  }
+  measure(); addEventListener('resize', measure); addEventListener('load', measure);
+  var running=false;
+  function loop(){
+    var y=window.pageYOffset, H=innerHeight, moving=false;
+    pars.forEach(function(o){
+      if(o.top+o.h < y-200 || o.top > y+H+200) return;
+      var p=(y-(o.top-H))/(o.h+H);
+      p = p<0?0:(p>1?1:p);
+      o.s += (p-o.s)*0.08;
+      if(Math.abs(p-o.s) > 0.001) moving=true;
+      o.img.style.transform='translate3d(0,'+(o.s*5).toFixed(3)+'%,0) scale(1.1)';
+    });
+    running=moving;
+    if(moving) requestAnimationFrame(loop);
+  }
+  function kick(){ if(!running){ running=true; requestAnimationFrame(loop); } }
+  addEventListener('scroll', kick, {passive:true});
+  addEventListener('resize', kick, {passive:true});
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) kick(); });
+  kick();
+
+  });
+})();
+
+</script>
 </body>
 </html>
