@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Blonde Food and Drink &middot; All day cafe on Brunswick Street, Fitzroy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F1E9;
+  --red:#C02438;
+  --ink:#141414;
+  --rule:rgba(192,36,56,.55);
+  --display:"Bodoni Moda",serif;
+  --body:"EB Garamond",Georgia,serif;
+  --gutter:clamp(18px,4vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* double red rule, in the document so it scrolls with the page */
+.page{position:relative;margin:14px;border:1px solid var(--rule);min-height:calc(100vh - 28px)}
+.page::before{content:"";position:absolute;inset:5px;border:1px solid var(--rule);pointer-events:none}
+@media(max-width:600px){.page{margin:8px}}
+
+/* scroll reveals */
+.reveal{opacity:0;transform:translateY(26px);
+  transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.10s}
+.reveal.d2{transition-delay:.20s}
+.reveal.d3{transition-delay:.30s}
+.reveal-type{overflow:hidden;display:block;padding:.18em 0 .24em;margin:-.18em 0 -.24em}
+.reveal-type>span{display:block;transform:translateY(102%);
+  transition:transform 1.05s cubic-bezier(.22,.61,.36,1)}
+.reveal-type.in>span{transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-type>span{opacity:1;transform:none;transition:none}
+}
+
+.shell{max-width:1440px;margin:0 auto;padding:0 var(--gutter)}
+section{position:relative}
+
+.display{font-family:var(--display);font-weight:700;color:var(--red);
+  line-height:.84;letter-spacing:-.015em;margin:0;font-size:clamp(3.2rem,13vw,11.5rem)}
+.label{font-family:var(--body);font-style:italic;font-size:.78rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.eyebrow{font-family:var(--display);font-style:italic;font-weight:700;
+  color:var(--red);font-size:clamp(1.1rem,2.4vw,1.6rem);line-height:1.15}
+.body-col{max-width:46ch}
+.body-col p{margin:0 0 1em}
+.dropcap::first-letter{float:left;font-family:var(--display);font-weight:700;
+  font-size:3.1rem;line-height:.86;background:var(--ink);color:var(--paper);
+  padding:.16em .2em .1em;margin:.1em .5rem 0 0}
+
+.btn{display:inline-block;font-family:var(--display);font-style:italic;font-weight:700;
+  font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);
+  border:1px solid var(--rule);border-radius:999px;padding:.68em 1.9em;
+  text-decoration:none;background:transparent;transition:background .25s ease,color .25s ease}
+.btn:hover,.btn:focus-visible{background:var(--red);color:var(--paper)}
+.hr-thin{border:0;border-top:1px solid var(--rule);margin:0}
+
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:2.4rem 0 1.2rem}
+.badge{display:grid;place-items:center;border:1px solid var(--rule);border-radius:999px;
+  width:74px;height:74px;font-family:var(--display);font-style:italic;font-weight:700;
+  color:var(--red);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;flex:none}
+.badge small{display:block;font-style:normal;font-size:.62rem;letter-spacing:.16em;opacity:.75}
+.wordmark{border:1px solid var(--rule);padding:.5rem 1.6rem;text-align:center}
+.wordmark b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--red)}
+.wordmark span{font-family:var(--display);font-style:italic;font-size:.8rem;letter-spacing:.08em}
+.badge--wide{width:auto;padding:0 1.5rem;height:44px;border-radius:999px}
+@media(max-width:620px){
+  .masthead{gap:.5rem;padding:1.6rem 0 1rem;flex-wrap:nowrap}
+  .badge{width:58px;height:58px;font-size:.66rem}
+  .badge small{font-size:.55rem}
+  .badge--wide{height:36px;padding:0 .85rem;font-size:.66rem}
+  .wordmark{padding:.4rem .75rem}
+  .wordmark b{font-size:.82rem;letter-spacing:.16em}
+  .wordmark span{font-size:.7rem}
+}
+
+.hero{padding-bottom:1.5rem}
+.hero-type{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.hero-type h1{font-size:clamp(3.4rem,15.5vw,13.5rem)}
+.hero-type h1 .cross{font-size:.34em;vertical-align:.52em;margin:0 .12em}
+.hero-aside{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding-bottom:.9rem}
+.hero-note{font-family:var(--display);font-style:italic;font-size:.92rem;color:var(--red);margin:0;white-space:nowrap}
+.hero-figure{position:relative;margin-top:1.4rem}
+.hero-figure img{width:100%;height:clamp(280px,48vw,560px);object-fit:cover;object-position:center 58%}
+.pullquote{position:absolute;left:0;bottom:0;max-width:min(440px,84%);
+  background:#141414;color:#F1F1E9;padding:1.5rem 1.7rem;font-size:.98rem;line-height:1.5}
+@media(max-width:700px){.pullquote{position:static;max-width:none}}
+
+.stamp{width:118px;height:118px;flex:none;opacity:.85;animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:rotate(-9deg) scale(1)}50%{transform:rotate(-9deg) scale(1.045)}}
+@media(prefers-reduced-motion:reduce){.stamp{animation:none}}
+@media(max-width:900px){.stamp{display:none}}
+
+.split{display:grid;gap:clamp(1.6rem,4vw,3.4rem);padding:clamp(3rem,7vw,6rem) 0}
+.split--2{grid-template-columns:1fr 1fr}
+.split--sidebar{grid-template-columns:1.35fr .8fr}
+@media(max-width:860px){.split--2,.split--sidebar{grid-template-columns:1fr}}
+
+.stack{display:flex;flex-direction:column;gap:1.5rem}
+.center{text-align:center}
+.info-block{margin-bottom:1.6rem}
+.info-block dt{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.3rem}
+.info-block dd{margin:0;line-height:1.5}
+.phone{font-family:var(--display);font-style:italic;font-weight:700;color:var(--red);
+  font-size:clamp(1.2rem,2.6vw,1.7rem);text-decoration:none}
+.phone:hover{text-decoration:underline}
+
+.redbox{background:var(--red);color:var(--paper);padding:clamp(1.4rem,3vw,2.6rem)}
+.redbox .display{color:var(--paper)}
+.reserve-tag{background:var(--red);color:var(--paper);display:inline-block;padding:.3rem 1.4rem .5rem}
+
+.art{width:100%;max-width:340px;margin-inline:auto}
+.art svg{width:100%;height:auto;display:block}
+
+.specials{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-content:start}
+.special-card{border:1px solid var(--rule);padding:1.5rem 1.1rem;display:flex;flex-direction:column;gap:.9rem}
+.special-card p{margin:0}
+.cooks{grid-column:1/-1;text-align:center;font-size:clamp(1.7rem,4vw,2.8rem);margin:.4rem 0 0}
+@media(max-width:640px){.specials{grid-template-columns:1fr}}
+
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem)}
+@media(max-width:760px){.products{grid-template-columns:1fr}}
+.product figure{margin:0;background:#EAEAE1;padding:1.6rem;display:grid;place-items:center;aspect-ratio:4/3}
+.product h4{font-family:var(--display);font-weight:700;color:var(--red);font-size:.92rem;margin:.9rem 0 .2rem}
+.product p{margin:0;font-size:.92rem}
+
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.6rem}
+@media(max-width:700px){.formgrid{grid-template-columns:1fr}}
+.field label{display:block;font-family:var(--display);font-style:italic;font-weight:700;
+  color:var(--red);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.4rem}
+.field input{width:100%;background:#E8E8DF;border:0;border-bottom:1px solid var(--rule);
+  padding:.85rem 1rem;font-family:var(--body);font-size:16px;color:var(--ink)}
+.field input::placeholder{color:#8a8a80;font-style:italic}
+.field input:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.zigzag{height:14px;margin:2.5rem 0;
+  background:repeating-linear-gradient(135deg,var(--red) 0 2px,transparent 2px 9px);opacity:.65}
+
+footer{padding:clamp(2.5rem,6vw,5rem) 0 4rem}
+.footcols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+@media(max-width:700px){.footcols{grid-template-columns:1fr;gap:1.6rem}}
+.footcols h5{font-family:var(--display);font-style:italic;font-weight:700;font-size:.82rem;
+  letter-spacing:.18em;text-transform:uppercase;margin:0 0 .7rem}
+.footcols ul{list-style:none;margin:0;padding:0}
+.footcols li{margin-bottom:.35rem}
+.footcols a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.footcols a:hover{border-color:var(--rule)}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="shell">
+
+  <header class="masthead">
+    <a class="badge" href="#menu">Menu<small>01</small></a>
+    <div class="wordmark"><b>Blonde</b><span>Food &#10010; Drink</span></div>
+    <a class="badge badge--wide" href="#book">Book</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-type">
+      <h1 class="display reveal-type"><span>Blonde</span></h1>
+      <div class="hero-aside">
+        <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" fill="none" stroke="#C02438" stroke-width="1"/>
+          <circle cx="60" cy="60" r="47" fill="none" stroke="#C02438" stroke-width="1" stroke-dasharray="3 4"/>
+          <text x="60" y="52" text-anchor="middle" font-family="Bodoni Moda, serif" font-size="17" font-weight="700" fill="#C02438">4.7</text>
+          <text x="60" y="68" text-anchor="middle" font-family="Bodoni Moda, serif" font-size="10" font-weight="700" fill="#C02438">GOOGLE</text>
+          <text x="60" y="84" text-anchor="middle" font-family="EB Garamond, serif" font-size="8.5" letter-spacing="1.2" fill="#C02438">427 REVIEWS</text>
+        </svg>
+        <p class="hero-note">All day food and coffee &middot; Fitzroy</p>
+      </div>
+    </div>
+
+    <figure class="hero-figure reveal">
+      <img src="img/03.jpg" alt="A plated brunch dish photographed from above at Blonde">
+      <figcaption class="pullquote">
+        One printed all day menu, morning to close: hotcakes, shakshuka, a 48 hour braised lamb hash,
+        croquettes, and a benedict built on a house made hash brown.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="menu" class="split split--2">
+    <div class="stack">
+      <h2 class="display reveal-type"><span>Menu</span></h2>
+      <div class="art reveal d1">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <ellipse cx="150" cy="130" rx="96" ry="62" fill="none" stroke="#141414" stroke-width="1.1"/>
+          <ellipse cx="150" cy="130" rx="78" ry="49" fill="none" stroke="#141414" stroke-width=".7"/>
+          <rect x="104" y="52" width="92" height="112" fill="#F1F1E9" stroke="#141414" stroke-width="1.1"/>
+          <text x="150" y="80" text-anchor="middle" font-family="Bodoni Moda, serif" font-size="14" font-weight="700" fill="#141414" letter-spacing="1.5">ALL DAY</text>
+          <g stroke="#141414" stroke-width=".7">
+            <line x1="118" y1="96" x2="182" y2="96"/><line x1="118" y1="108" x2="182" y2="108"/>
+            <line x1="118" y1="120" x2="170" y2="120"/><line x1="118" y1="132" x2="182" y2="132"/>
+            <line x1="118" y1="144" x2="162" y2="144"/>
+          </g>
+          <g stroke="#141414" stroke-width="1.1" fill="none">
+            <path d="M46 74v52M38 74v22a8 8 0 0 0 16 0V74M46 126v58"/>
+            <path d="M256 74c10 0 12 30 4 40l-4 4v66"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div>
+        <span class="label">Walk in or call ahead</span>
+        <h2 class="display reserve-tag reveal" style="font-size:clamp(2.6rem,7.5vw,5.4rem)">Book</h2>
+      </div>
+      <div class="art reveal d1" style="max-width:220px">
+        <svg viewBox="0 0 240 210" aria-hidden="true">
+          <g fill="none" stroke="#141414" stroke-width="1.1">
+            <path d="M52 74h108v56a44 44 0 0 1-44 44H96a44 44 0 0 1-44-44z"/>
+            <path d="M160 90h22a24 24 0 0 1 0 48h-22"/>
+            <path d="M40 186h132"/>
+            <g stroke-width=".8">
+              <path d="M88 52c0-12 12-14 12-26M112 52c0-12 12-14 12-26M136 52c0-12 12-14 12-26"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <a class="phone" href="tel:+61390778378">(03) 9077 8378</a>
+      <dl class="info-block reveal" style="margin:0">
+        <dt>Opening times</dt>
+        <dd>Monday to Friday<br>7:00 am &ndash; 3:00 pm<br>Closed Saturday and Sunday</dd>
+      </dl>
+      <dl class="info-block reveal" style="margin:0">
+        <dt>Address</dt>
+        <dd>443 Brunswick St<br>Fitzroy VIC 3065</dd>
+      </dl>
+    </div>
+  </section>
+
+  <hr class="hr-thin">
+
+  <section class="split split--sidebar">
+    <div class="body-col reveal d1">
+      <p class="dropcap">Blonde Food and Drink sits at 443 Brunswick Street, in the middle of the Fitzroy
+      strip. The kitchen runs one printed all day menu, and it is genuinely big, from toast and granola
+      through to a 48 hour braised lamb hash bowl. Espresso, batch and matcha at the counter, milk drinks
+      finished with real latte art.</p>
+      <a class="btn" href="#menu">View menu</a>
+    </div>
+    <div>
+      <dl class="info-block reveal">
+        <dt>Mail</dt>
+        <dd><a href="mailto:blondefoodanddrink@gmail.com">blondefoodanddrink@gmail.com</a></dd>
+      </dl>
+      <dl class="info-block reveal">
+        <dt>Instagram</dt>
+        <dd><a href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener">@blondefitzroy</a></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="split split--2">
+    <div class="stack">
+      <span class="label">Get to know us</span>
+      <h2 class="display redbox reveal" style="font-size:clamp(2.6rem,8vw,6rem)">The<br>room</h2>
+      <div class="body-col reveal d1">
+        <p class="dropcap">White brick, a green banquette and a long counter, in the middle of the
+        Brunswick Street strip. Walk-ins are always welcome during the week. For bigger tables, a quick
+        call ahead saves the wait.</p>
+        <a class="btn" href="#book">Hold a table</a>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <img src="img/01.jpg" alt="Inside Blonde: white brick, the green banquette and the counter">
+    </div>
+  </section>
+
+  <section class="split split--sidebar">
+    <div>
+      <h2 class="display reveal-type"><span>Three<br>things</span></h2>
+      <dl class="info-block reveal" style="margin-top:2rem">
+        <dt>Rated</dt><dd>4.7 stars from 427 Google reviews</dd>
+      </dl>
+      <dl class="info-block reveal">
+        <dt>Where</dt><dd>Middle of the Brunswick Street strip, Fitzroy</dd>
+      </dl>
+    </div>
+    <div class="specials">
+      <div class="special-card center reveal">
+        <p class="eyebrow">Poured<br>properly</p>
+        <div class="art" style="max-width:104px">
+          <svg viewBox="0 0 140 150" aria-hidden="true">
+            <g fill="none" stroke="#141414" stroke-width="1.1">
+              <path d="M30 46h68v42a34 34 0 0 1-68 0z"/>
+              <path d="M98 58h14a18 18 0 0 1 0 36H98"/>
+              <path d="M22 132h84"/>
+              <path d="M52 30c0-8 8-10 8-18M74 30c0-8 8-10 8-18" stroke-width=".8"/>
+            </g>
+          </svg>
+        </div>
+        <p class="label">Real latte art</p>
+      </div>
+
+      <div class="special-card center reveal d1">
+        <p class="eyebrow">Built<br>up high</p>
+        <div class="art" style="max-width:104px">
+          <svg viewBox="0 0 140 150" aria-hidden="true">
+            <g fill="none" stroke="#141414" stroke-width="1.1">
+              <ellipse cx="70" cy="118" rx="56" ry="16"/>
+              <ellipse cx="70" cy="96" rx="42" ry="13"/>
+              <ellipse cx="70" cy="76" rx="38" ry="12"/>
+              <ellipse cx="70" cy="58" rx="33" ry="11"/>
+              <path d="M70 47c6-9 16-10 20-6" stroke-width=".8"/>
+              <circle cx="94" cy="38" r="4.5"/>
+            </g>
+          </svg>
+        </div>
+        <p class="label">Hotcake stack</p>
+      </div>
+
+      <p class="eyebrow cooks reveal d2">A little of everything</p>
+    </div>
+  </section>
+
+  <section class="split split--sidebar">
+    <div class="stack">
+      <h2 class="display reveal-type"><span>All day<br>food</span></h2>
+      <div class="body-col reveal d1">
+        <p class="dropcap">One menu, morning to close. Dietary marks are printed as the kitchen prints
+        them. The kitchen works with dairy, nuts and gluten, so cross contamination cannot be fully
+        ruled out. Tell the team about any allergies before you order.</p>
+      </div>
+    </div>
+    <div class="redbox center reveal d1">
+      <p class="eyebrow" style="color:var(--paper)">In their words</p>
+      <p style="margin:1rem 0">Reviewers who came for the food make a point of mentioning the cup, and
+      the plates arrive built rather than spread out.</p>
+      <p class="eyebrow" style="color:var(--paper)">4.7 &middot; 427 reviews</p>
+    </div>
+  </section>
+
+  <section style="padding-bottom:clamp(3rem,7vw,6rem)">
+    <div class="products">
+      <article class="product reveal">
+        <figure>
+          <svg viewBox="0 0 120 140" width="104" aria-hidden="true"><g fill="none" stroke="#141414" stroke-width="1.1">
+            <path d="M26 46c0-14 16-22 34-22s34 8 34 22v52a10 10 0 0 1-10 10H36a10 10 0 0 1-10-10z"/>
+            <path d="M40 62h40M40 78h32" stroke-width=".7"/>
+          </g></svg>
+        </figure>
+        <h4>Toast</h4><p>8.5</p>
+      </article>
+      <article class="product reveal d1">
+        <figure>
+          <svg viewBox="0 0 120 140" width="104" aria-hidden="true"><g fill="none" stroke="#141414" stroke-width="1.1">
+            <ellipse cx="60" cy="102" rx="46" ry="13"/><ellipse cx="60" cy="84" rx="36" ry="11"/>
+            <ellipse cx="60" cy="67" rx="32" ry="10"/><ellipse cx="60" cy="51" rx="28" ry="9"/>
+            <path d="M60 42c5-8 14-9 17-5" stroke-width=".8"/>
+          </g></svg>
+        </figure>
+        <h4>Blueberry ricotta hotcake</h4><p>20.0</p>
+      </article>
+      <article class="product reveal d2">
+        <figure>
+          <svg viewBox="0 0 120 140" width="104" aria-hidden="true"><g fill="none" stroke="#141414" stroke-width="1.1">
+            <circle cx="60" cy="74" r="40"/><circle cx="60" cy="74" r="31" stroke-width=".7"/>
+            <circle cx="49" cy="66" r="8"/><circle cx="72" cy="80" r="8"/>
+            <path d="M100 74h12M8 74h12" stroke-width=".8"/>
+          </g></svg>
+        </figure>
+        <h4>Shakshuka</h4><p>21.5</p>
+      </article>
+      <article class="product reveal">
+        <figure>
+          <svg viewBox="0 0 120 140" width="104" aria-hidden="true"><g fill="none" stroke="#141414" stroke-width="1.1">
+            <path d="M18 78a42 26 0 0 0 84 0z"/><ellipse cx="60" cy="78" rx="42" ry="10" stroke-width=".7"/>
+            <path d="M34 66c8-8 18-10 26-6M64 60c8-6 16-6 22-2" stroke-width=".8"/>
+          </g></svg>
+        </figure>
+        <h4>Lamb hash bowl</h4><p>21.0</p>
+      </article>
+      <article class="product reveal d1">
+        <figure>
+          <svg viewBox="0 0 120 140" width="104" aria-hidden="true"><g fill="none" stroke="#141414" stroke-width="1.1">
+            <path d="M36 30h48l14 80a14 14 0 0 1-14 16H36a14 14 0 0 1-14-16z"/>
+            <path d="M30 62h60" stroke-width=".7"/><path d="M44 30c0 30 6 60 6 96" stroke-width=".6"/>
+          </g></svg>
+        </figure>
+        <h4>Crispy chicken wrap</h4><p>19.5</p>
+      </article>
+      <article class="product reveal d2">
+        <figure>
+          <svg viewBox="0 0 120 140" width="104" aria-hidden="true"><g fill="none" stroke="#141414" stroke-width="1.1">
+            <ellipse cx="44" cy="80" rx="30" ry="22"/><circle cx="44" cy="80" r="10"/>
+            <ellipse cx="80" cy="66" rx="26" ry="19"/><circle cx="80" cy="66" r="8.5"/>
+          </g></svg>
+        </figure>
+        <h4>Two eggs your ways</h4><p>14.0</p>
+      </article>
+    </div>
+    <p style="margin-top:2rem"><a class="btn" href="#menu">Full menu</a></p>
+  </section>
+
+  <div class="zigzag" aria-hidden="true"></div>
+
+  <section id="book" class="split split--sidebar">
+    <div class="stack">
+      <h2 class="display reveal-type"><span>Hold a<br>table</span></h2>
+      <div class="body-col reveal d1">
+        <p class="dropcap">Fill in the details, then call or send them by email and the team confirms by
+        reply. Calling gets today's answer fastest. Blonde opens weekdays only, so pick a Monday to
+        Friday date.</p>
+      </div>
+    </div>
+
+    <form class="stack reveal d1" onsubmit="event.preventDefault();this.querySelector('.ok').hidden=false">
+      <div class="formgrid">
+        <div class="field"><label for="n">Name</label><input id="n" name="name" placeholder="Jane Doe" autocomplete="name"></div>
+        <div class="field"><label for="e">E-mail</label><input id="e" type="email" name="email" placeholder="jane@example.com" autocomplete="email"></div>
+        <div class="field"><label for="p">Phone number</label><input id="p" type="tel" name="phone" placeholder="0400 000 000" autocomplete="tel"></div>
+        <div class="field"><label for="g">People</label><input id="g" name="people" placeholder="2 people"></div>
+        <div class="field"><label for="d">Date &amp; time</label><input id="d" name="datetime" placeholder="Weekday, 7:00 am to 3:00 pm"></div>
+      </div>
+      <p style="display:flex;gap:.8rem;flex-wrap:wrap">
+        <a class="btn" href="tel:+61390778378">Call the cafe</a>
+        <button class="btn" type="submit">Send by email</button>
+      </p>
+      <p class="ok label" hidden style="color:var(--red)">Thanks. The team confirms by reply.</p>
+    </form>
+  </section>
+
+  <hr class="hr-thin">
+
+  <footer>
+    <div class="footcols reveal">
+      <div>
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="#top">Home</a></li><li><a href="#menu">Menu</a></li>
+          <li><a href="#book">Book</a></li><li><a href="#menu">All day food</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Socials</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/blondefitzroy" target="_blank" rel="noopener">@blondefitzroy</a></li>
+          <li><a href="mailto:blondefoodanddrink@gmail.com">blondefoodanddrink@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Blonde+Food+and+Drink+443+Brunswick+St+Fitzroy" target="_blank" rel="noopener">Open in Google Maps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Find us</h5>
+        <ul>
+          <li>443 Brunswick St</li><li>Fitzroy VIC 3065</li>
+          <li>Monday to Friday, 7:00 am to 3:00 pm</li>
+          <li><a href="tel:+61390778378">(03) 9077 8378</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal, .reveal-type');
+  if (!('IntersectionObserver' in window) ||
+      matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
